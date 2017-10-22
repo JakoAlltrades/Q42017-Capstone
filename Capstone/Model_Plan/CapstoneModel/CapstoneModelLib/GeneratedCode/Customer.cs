@@ -11,7 +11,11 @@ using System.Text;
 
 public class Customer : User
 {
-	public virtual List<Order> previousOrders
+    public Customer(int ID, string userName, string passHash, string fName, string lName) : base(ID, userName, passHash, fName, lName)
+    {
+    }
+
+    public virtual List<Order> previousOrders
 	{
 		get;
 		set;

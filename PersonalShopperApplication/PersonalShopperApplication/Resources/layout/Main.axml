@@ -19,7 +19,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/Username"
         android:tag="Username"
         android:textSize="18dp"
         android:padding="10dp"
@@ -32,7 +32,7 @@
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/Password"
         android:hint="Password..."
         android:textSize="18dp"
         android:padding="10dp"
@@ -64,6 +64,7 @@
             android:layout_width="158.0dp"
             android:layout_height="match_parent"
             android:id="@+id/button2"
-            android:textSize="24dp" />
+            android:textSize="24dp"
+            android:onClick="CreateAccount" />
     </LinearLayout>
 </LinearLayout>

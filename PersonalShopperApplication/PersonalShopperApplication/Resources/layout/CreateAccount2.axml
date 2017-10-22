@@ -75,7 +75,7 @@
             android:layout_height="match_parent"
             android:id="@+id/space2" />
         <Button
-            android:text="Next page"
+            android:text="Finish Creation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/button1" />

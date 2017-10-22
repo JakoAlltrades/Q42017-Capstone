@@ -44,14 +44,20 @@ namespace PersonalShopperApplication
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f04000e
+			public const int Password = 2130968590;
+			
 			// aapt resource value: 0x7f04000b
 			public const int States = 2130968587;
+			
+			// aapt resource value: 0x7f04000d
+			public const int Username = 2130968589;
 			
 			// aapt resource value: 0x7f040009
 			public const int button1 = 2130968585;
 			
-			// aapt resource value: 0x7f04000f
-			public const int button2 = 2130968591;
+			// aapt resource value: 0x7f040011
+			public const int button2 = 2130968593;
 			
 			// aapt resource value: 0x7f040002
 			public const int editText1 = 2130968578;
@@ -83,11 +89,11 @@ namespace PersonalShopperApplication
 			// aapt resource value: 0x7f040008
 			public const int space2 = 2130968584;
 			
-			// aapt resource value: 0x7f04000d
-			public const int space3 = 2130968589;
+			// aapt resource value: 0x7f04000f
+			public const int space3 = 2130968591;
 			
-			// aapt resource value: 0x7f04000e
-			public const int space4 = 2130968590;
+			// aapt resource value: 0x7f040010
+			public const int space4 = 2130968592;
 			
 			// aapt resource value: 0x7f040000
 			public const int textView1 = 2130968576;
@@ -112,7 +118,10 @@ namespace PersonalShopperApplication
 			public const int CreateAccount2 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Main = 2130837506;
+			public const int Home = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Main = 2130837507;
 			
 			static Layout()
 			{
