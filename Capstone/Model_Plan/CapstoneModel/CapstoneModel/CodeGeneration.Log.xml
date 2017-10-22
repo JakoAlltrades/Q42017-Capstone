@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 14.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="ProjectPath = ..\CapstoneModelLib\CapstoneModelLib.csproj" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2017-10-09T12:28:55" Importance="Medium" Text="CapstoneModel's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'CapstoneModel::UserActionsDB' -  (Class), 'CapstoneModel::User' -  (Class), 'CapstoneModel::Order' -  (Class), 'CapstoneModel::BaseDB' -  (Class), 'CapstoneModel::CustomerActionDB' -  (Class), 'CapstoneModel::Customer' -  (Class), 'CapstoneModel::OrderItem' -  (Class), 'CapstoneModel::OrderActionsDB' -  (Class), 'CapstoneModel::ShopperActionsDB' -  (Class), 'CapstoneModel::Shopper' -  (Class) " />
+  <Message Timestamp="2017-10-09T12:29:07" Importance="Medium" Text="Project Added: C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\CapstoneModelLib.csproj" />
+  <Message Timestamp="2017-10-09T12:29:07" Importance="Medium" Text="'CapstoneModel::UserActionsDB' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\UserActionsDB.cs" />
+  <Message Timestamp="2017-10-09T12:29:08" Importance="Medium" Text="'CapstoneModel::User' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\User.cs" />
+  <Message Timestamp="2017-10-09T12:29:08" Importance="Medium" Text="'CapstoneModel::Order' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\Order.cs" />
+  <Message Timestamp="2017-10-09T12:29:08" Importance="Medium" Text="'CapstoneModel::BaseDB' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\BaseDB.cs" />
+  <Message Timestamp="2017-10-09T12:29:08" Importance="Medium" Text="'CapstoneModel::CustomerActionDB' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\CustomerActionDB.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="'CapstoneModel::Customer' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\Customer.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="'CapstoneModel::OrderItem' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\OrderItem.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="'CapstoneModel::OrderActionsDB' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\OrderActionsDB.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="'CapstoneModel::ShopperActionsDB' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\ShopperActionsDB.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="'CapstoneModel::Shopper' -  (Class) : success (file created) - C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\GeneratedCode\Shopper.cs" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="ProjectPath = ..\CapstoneModelLib\CapstoneModelLib.csproj" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2017-10-09T12:29:09" Importance="Medium" Text="CapstoneModel's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'CapstoneModel::UserActionsDB' -  (Class), 'CapstoneModel::User' -  (Class), 'CapstoneModel::Order' -  (Class), 'CapstoneModel::BaseDB' -  (Class), 'CapstoneModel::CustomerActionDB' -  (Class), 'CapstoneModel::Customer' -  (Class), 'CapstoneModel::OrderItem' -  (Class), 'CapstoneModel::OrderActionsDB' -  (Class), 'CapstoneModel::ShopperActionsDB' -  (Class), 'CapstoneModel::Shopper' -  (Class) " />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::UserActionsDB' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::User' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::Order' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::BaseDB' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::CustomerActionDB' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::Customer' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::OrderItem' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::OrderActionsDB' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::ShopperActionsDB' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::Shopper' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="The selection included 8 elements which were not bound to a template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'3f9d6f99-3e9b-45d9-b641-f180bdc1fb98' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'88aba352-3bbf-450e-881f-068e196393df' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::' -  (Dependency): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'929c4247-b2df-4f82-86ab-8646f39a85ff' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'CapstoneModel::' -  (Dependency): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'2736265f-f0be-4656-85f9-f9b2dad2b1e1' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'34353135-cfd1-45ee-b595-b61b643077ff' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="Diagnostic" Text="'b4521397-d216-46a7-ada8-d26541d24d96' -  (Generalization): no bound template." />
+  <Message Timestamp="2017-10-09T12:29:10" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

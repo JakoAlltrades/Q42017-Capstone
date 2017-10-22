@@ -1,0 +1,4 @@
+DemoApp.MainActivity, DemoApp;md57d5d51b0c5f7995e3ca4631df2013a9a.MainActivity
+DemoApp.MainActivity, DemoApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d5d51b0c5f7995e3ca4631df2013a9a.MainActivity
+DemoApp.MainActivity;md57d5d51b0c5f7995e3ca4631df2013a9a.MainActivity
+demoapp.MainActivity;md57d5d51b0c5f7995e3ca4631df2013a9a.MainActivity

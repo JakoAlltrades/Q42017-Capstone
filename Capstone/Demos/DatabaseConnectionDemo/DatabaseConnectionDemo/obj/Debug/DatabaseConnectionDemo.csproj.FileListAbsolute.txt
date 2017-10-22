@@ -1,0 +1,17 @@
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\DatabaseConnectionDemo.exe.config
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\DatabaseConnectionDemo.exe
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\DatabaseConnectionDemo.pdb
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Bson.dll
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Driver.dll
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Bson.xml
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Driver.xml
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.csprojResolveAssemblyReference.cache
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.csproj.CoreCompileInputs.cache
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.exe
+C:\Users\Jack\source\repos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.pdb
+C:\Users\jprirm\Documents\Capstone\Demos\DatabaseConnectionDemo\DatabaseConnectionDemo\bin\Debug\DatabaseConnectionDemo.exe.config
+C:\Users\jprirm\Documents\Capstone\Demos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.exe
+C:\Users\jprirm\Documents\Capstone\Demos\DatabaseConnectionDemo\DatabaseConnectionDemo\obj\Debug\DatabaseConnectionDemo.pdb

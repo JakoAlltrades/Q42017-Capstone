@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CapstoneModel", "CapstoneModel\CapstoneModel.modelproj", "{B584AC21-5CB0-4301-8D5E-0F9BCE740BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneModelLib", "CapstoneModelLib\CapstoneModelLib.csproj", "{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B584AC21-5CB0-4301-8D5E-0F9BCE740BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B584AC21-5CB0-4301-8D5E-0F9BCE740BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B584AC21-5CB0-4301-8D5E-0F9BCE740BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B584AC21-5CB0-4301-8D5E-0F9BCE740BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

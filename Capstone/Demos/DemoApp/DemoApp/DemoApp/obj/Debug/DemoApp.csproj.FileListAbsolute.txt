@@ -1,0 +1,14 @@
+C:\Users\Jack\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.dll
+C:\Users\Jack\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.pdb
+C:\Users\Jack\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.DemoApp.apk
+C:\Users\Jack\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.DemoApp-Signed.apk
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.csproj.CoreCompileInputs.cache
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.dll
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\DemoApp.pdb
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\android\bin\DemoApp.DemoApp.apk
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\res\layout\main.xml
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\res\values\strings.xml
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\R.cs.flag
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\uploadflags.txt
+C:\Users\Jack\source\repos\DemoApp\DemoApp\bin\Debug\DemoApp.dll.mdb
+C:\Users\Jack\source\repos\DemoApp\DemoApp\obj\Debug\android\assets\DemoApp.dll.mdb
