@@ -88,6 +88,11 @@ namespace PersonalShopperApplication
             SetContentView(Resource.Layout.CreateAccount2);
         }
 
+        [Export("FinishCreation")]
+        private void FinishCreation(View view)
+        {
+            SetContentView(Resource.Layout.Home);
+        }
 
         #endregion
     }

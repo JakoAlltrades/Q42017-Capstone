@@ -44,41 +44,47 @@ namespace PersonalShopperApplication
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f04000e
-			public const int Password = 2130968590;
-			
-			// aapt resource value: 0x7f04000b
-			public const int States = 2130968587;
+			// aapt resource value: 0x7f040010
+			public const int Password = 2130968592;
 			
 			// aapt resource value: 0x7f04000d
-			public const int Username = 2130968589;
+			public const int States = 2130968589;
+			
+			// aapt resource value: 0x7f04000f
+			public const int Username = 2130968591;
 			
 			// aapt resource value: 0x7f040009
 			public const int button1 = 2130968585;
 			
-			// aapt resource value: 0x7f040011
-			public const int button2 = 2130968593;
-			
-			// aapt resource value: 0x7f040002
-			public const int editText1 = 2130968578;
-			
-			// aapt resource value: 0x7f040003
-			public const int editText2 = 2130968579;
-			
-			// aapt resource value: 0x7f040004
-			public const int editText3 = 2130968580;
-			
-			// aapt resource value: 0x7f040005
-			public const int editText4 = 2130968581;
+			// aapt resource value: 0x7f040013
+			public const int button2 = 2130968595;
 			
 			// aapt resource value: 0x7f040006
-			public const int editText5 = 2130968582;
+			public const int creConPass = 2130968582;
+			
+			// aapt resource value: 0x7f040002
+			public const int creFirstName = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int creLastName = 2130968579;
+			
+			// aapt resource value: 0x7f040005
+			public const int crePassword = 2130968581;
+			
+			// aapt resource value: 0x7f040004
+			public const int creUsername = 2130968580;
 			
 			// aapt resource value: 0x7f04000a
-			public const int editText6 = 2130968586;
+			public const int editText1 = 2130968586;
+			
+			// aapt resource value: 0x7f04000b
+			public const int editText2 = 2130968587;
 			
 			// aapt resource value: 0x7f04000c
-			public const int editText7 = 2130968588;
+			public const int editText6 = 2130968588;
+			
+			// aapt resource value: 0x7f04000e
+			public const int editText7 = 2130968590;
 			
 			// aapt resource value: 0x7f040007
 			public const int linearLayout1 = 2130968583;
@@ -89,11 +95,11 @@ namespace PersonalShopperApplication
 			// aapt resource value: 0x7f040008
 			public const int space2 = 2130968584;
 			
-			// aapt resource value: 0x7f04000f
-			public const int space3 = 2130968591;
+			// aapt resource value: 0x7f040011
+			public const int space3 = 2130968593;
 			
-			// aapt resource value: 0x7f040010
-			public const int space4 = 2130968592;
+			// aapt resource value: 0x7f040012
+			public const int space4 = 2130968594;
 			
 			// aapt resource value: 0x7f040000
 			public const int textView1 = 2130968576;

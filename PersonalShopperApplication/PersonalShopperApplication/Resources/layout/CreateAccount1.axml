@@ -17,7 +17,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/creFirstName"
         android:hint="First Name..."
         android:tag="fNames" />
     <Space
@@ -27,7 +27,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/creLastName"
         android:hint="Last Name..."
         android:tag="lName" />
     <Space
@@ -37,7 +37,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/creUsername"
         android:hint="Username..." />
     <Space
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/crePassword"
         android:hint="Password..." />
     <Space
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5"
+        android:id="@+id/creConPass"
         android:hint="Confrim Password..." />
     <Space
         android:layout_width="match_parent"
