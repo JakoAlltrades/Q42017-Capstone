@@ -23,27 +23,41 @@ public class Customer : User
 
 	public virtual void CreateOrder()
 	{
-		throw new System.NotImplementedException();
+        /*
+         *  Creates a new order and adds it to the database for the user
+         */
+        
 	}
 
 	public virtual bool PlaceOrder(Order order)
 	{
-		throw new System.NotImplementedException();
-	}
+        /*
+         *  Returns wheather the order selected has been placed. Return false for now
+         */
+        return false;
+    }
 
-	public virtual void VerifyOrder()
+    public virtual void VerifyOrder()
 	{
-		throw new System.NotImplementedException();
-	}
+        /*
+         *  Method to verify if the order has been succesfully verified
+         */
+    }
 
-	public virtual bool becomeAShopper()
+    public virtual bool becomeAShopper()
 	{
-		throw new System.NotImplementedException();
+        /*
+         *  adds the customer to the Shopper database and makes them a shopper
+         */
+        throw new System.NotImplementedException();
 	}
 
 	public virtual void RateShopper(Order order)
 	{
-		throw new System.NotImplementedException();
+        /*
+         *  Allows the customer to leave a rating for a shopper on an order
+         */
+        throw new System.NotImplementedException();
 	}
 
 }

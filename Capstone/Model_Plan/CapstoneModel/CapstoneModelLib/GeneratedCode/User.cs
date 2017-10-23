@@ -59,6 +59,7 @@ public class User
 
 	public virtual bool Login(string enteredPass)
 	{
+        //would connect to the UserActionDBClass and allow them to login this method
 		throw new System.NotImplementedException();
 	}
 
