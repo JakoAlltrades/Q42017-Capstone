@@ -98,6 +98,9 @@ namespace PersonalShopperApplication
 			// aapt resource value: 0x7f040008
 			public const int linearLayout1 = 2130968584;
 			
+			// aapt resource value: 0x7f04001b
+			public const int listView1 = 2130968603;
+			
 			// aapt resource value: 0x7f040015
 			public const int orderedItems = 2130968597;
 			

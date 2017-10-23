@@ -53,7 +53,8 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapstoneModelLib">
+    <Reference Include="CapstoneModelLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll</HintPath>
     </Reference>
     <Reference Include="Google.Apis, Version=1.29.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">

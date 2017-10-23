@@ -29,6 +29,7 @@ public final class R {
         public static final int creZip=0x7f04000d;
         public static final int isShopper=0x7f040002;
         public static final int linearLayout1=0x7f040008;
+        public static final int listView1=0x7f04001b;
         public static final int orderedItems=0x7f040015;
         public static final int space1=0x7f040001;
         public static final int space2=0x7f040009;
