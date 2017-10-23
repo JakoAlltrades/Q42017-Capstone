@@ -15,6 +15,8 @@ public final class R {
         public static final int Username=0x7f040010;
         public static final int button1=0x7f04000a;
         public static final int button2=0x7f040014;
+        public static final int button3=0x7f040016;
+        public static final int button4=0x7f04001a;
         public static final int creApt=0x7f04000f;
         public static final int creCity=0x7f04000c;
         public static final int creConPass=0x7f040007;
@@ -27,11 +29,15 @@ public final class R {
         public static final int creZip=0x7f04000d;
         public static final int isShopper=0x7f040002;
         public static final int linearLayout1=0x7f040008;
+        public static final int orderedItems=0x7f040015;
         public static final int space1=0x7f040001;
         public static final int space2=0x7f040009;
         public static final int space3=0x7f040012;
         public static final int space4=0x7f040013;
+        public static final int space5=0x7f040019;
         public static final int textView1=0x7f040000;
+        public static final int textView2=0x7f040017;
+        public static final int textView3=0x7f040018;
     }
     public static final class layout {
         public static final int becomeashopper=0x7f020000;

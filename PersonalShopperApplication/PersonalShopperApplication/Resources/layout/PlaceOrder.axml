@@ -3,5 +3,88 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <TextView
+        android:text="Place Order"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space1" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/orderedItems" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Add Item"
+            android:layout_width="158.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+        <Space
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space2" />
+        <Button
+            android:text="Remove Item"
+            android:layout_width="158.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space3" />
+    <Button
+        android:text="Change Delivery Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginLeft="85dp" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space3" />
+    <Button
+        android:text="Enter Store Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_marginLeft="100dp" />
+    <TextView
+        android:text="Estimated Cost:: [Estimated Cost]"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space4" />
+    <TextView
+        android:text="Estimated Delivery: [DeliveryEst] Minutes"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space5" />
+    <Button
+        android:text="Confirm Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_marginLeft="120dp" />
 </LinearLayout>

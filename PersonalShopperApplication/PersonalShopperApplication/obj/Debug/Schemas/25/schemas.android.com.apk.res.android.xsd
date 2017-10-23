@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>10/23/2017 9:44:11 AM</xs:documentation>
+    <xs:documentation>10/23/2017 3:59:22 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16888,6 +16888,8 @@
             <xs:enumeration value="@+id/checkedTextView1" />
             <xs:enumeration value="@id/button1" />
             <xs:enumeration value="@id/button2" />
+            <xs:enumeration value="@id/button3" />
+            <xs:enumeration value="@id/button4" />
             <xs:enumeration value="@id/creApt" />
             <xs:enumeration value="@id/creCity" />
             <xs:enumeration value="@id/creConPass" />
@@ -16900,12 +16902,16 @@
             <xs:enumeration value="@id/creZip" />
             <xs:enumeration value="@id/isShopper" />
             <xs:enumeration value="@id/linearLayout1" />
+            <xs:enumeration value="@id/orderedItems" />
             <xs:enumeration value="@id/Password" />
             <xs:enumeration value="@id/space1" />
             <xs:enumeration value="@id/space2" />
             <xs:enumeration value="@id/space3" />
             <xs:enumeration value="@id/space4" />
+            <xs:enumeration value="@id/space5" />
             <xs:enumeration value="@id/textView1" />
+            <xs:enumeration value="@id/textView2" />
+            <xs:enumeration value="@id/textView3" />
             <xs:enumeration value="@id/Username" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
