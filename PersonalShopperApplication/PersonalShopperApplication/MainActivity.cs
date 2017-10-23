@@ -67,7 +67,7 @@ namespace PersonalShopperApplication
         [Export("BecShopper")]
         public void BecShopper(View view)
         {
-            //SetContentView(Resource.Layout.Home);
+            SetContentView(Resource.Layout.BecomeAShopper);
         }
 
         [Export("prevDeliv")]
