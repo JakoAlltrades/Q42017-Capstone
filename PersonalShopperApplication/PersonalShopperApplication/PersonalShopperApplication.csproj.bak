@@ -70,9 +70,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Toast, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AndroidToast.1.0.0.2\lib\Toast.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -89,6 +86,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\CreateAccount2.axml" />
     <AndroidResource Include="Resources\layout\Home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\BecomeAShopper.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
