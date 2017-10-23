@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "PersonalShopperApplication.dll" comes first in this list. */
 		"PersonalShopperApplication.dll",
+		"CapstoneModelLib.dll",
 		"Google.Apis.Core.dll",
 		"Google.Apis.dll",
 		"Newtonsoft.Json.dll",

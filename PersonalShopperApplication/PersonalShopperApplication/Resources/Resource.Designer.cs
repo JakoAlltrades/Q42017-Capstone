@@ -47,9 +47,6 @@ namespace PersonalShopperApplication
 			// aapt resource value: 0x7f040010
 			public const int Password = 2130968592;
 			
-			// aapt resource value: 0x7f04000d
-			public const int States = 2130968589;
-			
 			// aapt resource value: 0x7f04000f
 			public const int Username = 2130968591;
 			
@@ -58,6 +55,12 @@ namespace PersonalShopperApplication
 			
 			// aapt resource value: 0x7f040013
 			public const int button2 = 2130968595;
+			
+			// aapt resource value: 0x7f04000e
+			public const int creApt = 2130968590;
+			
+			// aapt resource value: 0x7f04000b
+			public const int creCity = 2130968587;
 			
 			// aapt resource value: 0x7f040006
 			public const int creConPass = 2130968582;
@@ -71,20 +74,17 @@ namespace PersonalShopperApplication
 			// aapt resource value: 0x7f040005
 			public const int crePassword = 2130968581;
 			
+			// aapt resource value: 0x7f04000d
+			public const int creStates = 2130968589;
+			
+			// aapt resource value: 0x7f04000a
+			public const int creStreetAdd = 2130968586;
+			
 			// aapt resource value: 0x7f040004
 			public const int creUsername = 2130968580;
 			
-			// aapt resource value: 0x7f04000a
-			public const int editText1 = 2130968586;
-			
-			// aapt resource value: 0x7f04000b
-			public const int editText2 = 2130968587;
-			
 			// aapt resource value: 0x7f04000c
-			public const int editText6 = 2130968588;
-			
-			// aapt resource value: 0x7f04000e
-			public const int editText7 = 2130968590;
+			public const int creZip = 2130968588;
 			
 			// aapt resource value: 0x7f040007
 			public const int linearLayout1 = 2130968583;
@@ -118,16 +118,19 @@ namespace PersonalShopperApplication
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int CreateAccount1 = 2130837504;
+			public const int BecomeAShopper = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int CreateAccount2 = 2130837505;
+			public const int CreateAccount1 = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Home = 2130837506;
+			public const int CreateAccount2 = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int Main = 2130837507;
+			public const int Home = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int Main = 2130837508;
 			
 			static Layout()
 			{

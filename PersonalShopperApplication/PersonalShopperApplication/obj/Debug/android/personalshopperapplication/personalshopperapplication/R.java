@@ -12,19 +12,19 @@ public final class R {
     }
     public static final class id {
         public static final int Password=0x7f040010;
-        public static final int States=0x7f04000d;
         public static final int Username=0x7f04000f;
         public static final int button1=0x7f040009;
         public static final int button2=0x7f040013;
+        public static final int creApt=0x7f04000e;
+        public static final int creCity=0x7f04000b;
         public static final int creConPass=0x7f040006;
         public static final int creFirstName=0x7f040002;
         public static final int creLastName=0x7f040003;
         public static final int crePassword=0x7f040005;
+        public static final int creStates=0x7f04000d;
+        public static final int creStreetAdd=0x7f04000a;
         public static final int creUsername=0x7f040004;
-        public static final int editText1=0x7f04000a;
-        public static final int editText2=0x7f04000b;
-        public static final int editText6=0x7f04000c;
-        public static final int editText7=0x7f04000e;
+        public static final int creZip=0x7f04000c;
         public static final int linearLayout1=0x7f040007;
         public static final int space1=0x7f040001;
         public static final int space2=0x7f040008;
@@ -33,10 +33,11 @@ public final class R {
         public static final int textView1=0x7f040000;
     }
     public static final class layout {
-        public static final int createaccount1=0x7f020000;
-        public static final int createaccount2=0x7f020001;
-        public static final int home=0x7f020002;
-        public static final int main=0x7f020003;
+        public static final int becomeashopper=0x7f020000;
+        public static final int createaccount1=0x7f020001;
+        public static final int createaccount2=0x7f020002;
+        public static final int home=0x7f020003;
+        public static final int main=0x7f020004;
     }
     public static final class string {
         public static final int app_name=0x7f030000;

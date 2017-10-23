@@ -1,4 +1,5 @@
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\PersonalShopperApplication.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\CapstoneModelLib.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\Google.Apis.Core.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\Google.Apis.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\Newtonsoft.Json.dll
@@ -30,6 +31,7 @@ C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\Person
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Threading.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.IO.FileSystem.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Text.Encoding.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Runtime.Numerics.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Numerics.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\System.Xml.XmlDocument.dll

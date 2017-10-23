@@ -17,7 +17,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/creStreetAdd"
         android:hint="Street Address..."
         android:tag="Street" />
     <Space
@@ -27,7 +27,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/creCity"
         android:hint="City..."
         android:tag="City" />
     <Space
@@ -38,7 +38,7 @@
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText6"
+        android:id="@+id/creZip"
         android:hint="Zipcode..." />
     <Space
         android:layout_width="match_parent"
@@ -47,12 +47,12 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/States" />
+        android:id="@+id/creStates" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText7"
+        android:id="@+id/creApt"
         android:hint="Apartment number..." />
     <Space
         android:layout_width="match_parent"

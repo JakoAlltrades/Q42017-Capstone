@@ -20,5 +20,6 @@ C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\Person
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\values\strings.xml
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\R.cs.flag
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\uploadflags.txt
-C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.dll.mdb
-C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\PersonalShopperApplication.dll.mdb
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.pdb
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll.mdb
