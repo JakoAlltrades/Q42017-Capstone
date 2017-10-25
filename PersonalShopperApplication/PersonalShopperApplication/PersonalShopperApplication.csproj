@@ -16,8 +16,8 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -35,6 +35,9 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -50,7 +53,8 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapstoneModelLib">
+    <Reference Include="CapstoneModelLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll</HintPath>
     </Reference>
     <Reference Include="Google.Apis, Version=1.29.2.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
@@ -91,6 +95,7 @@
     <AndroidResource Include="Resources\layout\BecomeAShopper.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+<<<<<<< HEAD
     <AndroidResource Include="Resources\layout\PlaceOrder.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -106,6 +111,13 @@
     <AndroidResource Include="Resources\layout\Checkout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+=======
+    <AndroidResource Include="Resources\layout\Checkout.axml" />
+    <AndroidResource Include="Resources\layout\PlaceOrder.axml" />
+    <AndroidResource Include="Resources\layout\PreviousDeliveries.axml" />
+    <AndroidResource Include="Resources\layout\PreviousOrders.axml" />
+    <AndroidResource Include="Resources\layout\Settings.axml" />
+>>>>>>> f982937328b6bf5e139f1d7042373f8caba3fe99
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

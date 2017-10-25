@@ -12,3 +12,15 @@ C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.pdb
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\CapstoneModelLib.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\CapstoneModelLib.pdb
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Bson.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Bson.xml
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.xml
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.csprojResolveAssemblyReference.cache
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.pdb

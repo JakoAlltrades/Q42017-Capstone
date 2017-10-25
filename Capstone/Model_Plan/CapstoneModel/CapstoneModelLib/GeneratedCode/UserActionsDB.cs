@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 public class UserActionsDB : BaseDB
@@ -16,8 +17,57 @@ public class UserActionsDB : BaseDB
 		get;
 		set;
 	}
+    private byte[] CreateSalt(int size)
+    {
+        //Generate a cryptographic random number.
+        RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
+        byte[] buff = new byte[size];
+        rng.GetBytes(buff);
 
-	public virtual User SignIn(String userName, string Password)
+        // Return a Base64 string representation of the random number.
+        return buff;
+    }
+
+    public virtual byte[] SaltAndHashPassword(string password)
+    {
+        byte[] plainText = Encoding.ASCII.GetBytes(password);
+        HashAlgorithm algorithm = new SHA256Managed();
+        byte[] salt = CreateSalt(256);
+        byte[] plainTextWithSaltBytes =
+          new byte[password.Length + salt.Length];
+
+        for (int i = 0; i < plainText.Length; i++)
+        {
+            plainTextWithSaltBytes[i] = plainText[i];
+        }
+        for (int i = 0; i < salt.Length; i++)
+        {
+            plainTextWithSaltBytes[plainText.Length + i] = salt[i];
+        }
+
+        return algorithm.ComputeHash(plainTextWithSaltBytes);
+    }
+
+    public bool CompareByteArrays(byte[] passHash, string entered)
+    {
+        byte[] enteredPass = Encoding.ASCII.GetBytes(entered);
+        if (enteredPass.Length != passHash.Length)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < passHash.Length; i++)
+        {
+            if (passHash[i] != enteredPass[i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public virtual User SignIn(String userName, string Password)
 	{
 		throw new System.NotImplementedException();
 	}

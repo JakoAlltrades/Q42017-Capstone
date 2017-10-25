@@ -74,32 +74,45 @@ public class Order
 
 	public virtual void FoundItem(OrderItem item)
 	{
-		//throw new System.NotImplementedException();
+        /*
+         *Make sure to add the acutal price to the item or that it has the acutal price attached already 
+         * 
+         */
+        foundItems.Add(item);
 	}
 
 	public virtual void MoveItemToMissing(OrderItem item)
 	{
-		throw new System.NotImplementedException();
+        missingItems.Add(item);
 	}
 
 	public virtual void FoundMissingItem(OrderItem item)
 	{
-		throw new System.NotImplementedException();
+        missingItems.Remove(item);
+        foundItems.Add(item);
 	}
 
 	public virtual void GetToStore()
 	{
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
+        //figure out how to get android location within this method
 	}
 
 	public virtual void DeliverOrder()
 	{
-		throw new System.NotImplementedException();
+		//throw new System.NotImplementedException();
+        //Again a google maps function and figure out location within the library
 	}
 
 	public virtual Double EstimateCost()
 	{
-		throw new System.NotImplementedException();
+        double EstimatedCost = 0;
+		//throw new System.NotImplementedException();
+        foreach(OrderItem i in placedOrder)
+        {
+            EstimatedCost += i.maxPrice;
+        }
+        return EstimatedCost;
 	}
 
 }
