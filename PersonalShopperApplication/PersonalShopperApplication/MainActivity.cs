@@ -55,13 +55,13 @@ namespace PersonalShopperApplication
         [Export("PlaceOrder")]
         public void PlaceOrder(View view)
         {
-            //SetContentView(Resource.Layout.Home);
+            SetContentView(Resource.Layout.PlaceOrder);
         }
 
         [Export("PrevOrders")]
         public void PrevOrders(View view)
         {
-            //SetContentView(Resource.Layout.Home);
+            SetContentView(Resource.Layout.PreviousOrders);
         }
 
         [Export("BecShopper")]
@@ -73,7 +73,7 @@ namespace PersonalShopperApplication
         [Export("prevDeliv")]
         public void prevDeliv(View view)
         {
-            //SetContentView(Resource.Layout.Home);
+            SetContentView(Resource.Layout.PreviousDeliveries);
         }
 
         [Export("SignOut")]
@@ -102,14 +102,14 @@ namespace PersonalShopperApplication
              * then set variables to a global tempUser which will be cleared once the account is created
              * also store the hashPassword
              */
-            if (pass1.Equals(pass2))
+            if (pass1.Equals(pass2) && !String.IsNullOrEmpty(fname) && !String.IsNullOrEmpty(lname) && !String.IsNullOrEmpty(uname) && !String.IsNullOrEmpty(pass1) && !String.IsNullOrEmpty(pass2))
             {
                 tempUser = new User(/*get id from database class*/0, uname, pass1, fname, lname);
                 SetContentView(Resource.Layout.CreateAccount2);
             }
             else
             {
-
+                //return toast with details
             }
             
         }
