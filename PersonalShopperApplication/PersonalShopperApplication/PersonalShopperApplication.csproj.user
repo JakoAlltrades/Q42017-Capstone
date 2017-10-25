@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
     <ProjectView>ShowAllFiles</ProjectView>
-    <SelectedDevice>API21</SelectedDevice>
-    <DefaultDevice>API21</DefaultDevice>
+    <SelectedDevice>API24Demo</SelectedDevice>
+    <DefaultDevice>API24Demo</DefaultDevice>
   </PropertyGroup>
 </Project>
