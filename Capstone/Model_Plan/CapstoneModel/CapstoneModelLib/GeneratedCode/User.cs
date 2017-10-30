@@ -12,7 +12,7 @@ using System.Text;
 
 public class User
 {
-    public User(int ID, string userName, string passHash, string fName, string lName)
+    public User(int ID, string userName, byte[] passHash, string fName, string lName)
     {
         userID = ID;
         Username = userName;
@@ -33,7 +33,7 @@ public class User
 		set;
 	}
 
-	private string passHash
+	private byte[] passHash
 	{
 		get;
 		set;

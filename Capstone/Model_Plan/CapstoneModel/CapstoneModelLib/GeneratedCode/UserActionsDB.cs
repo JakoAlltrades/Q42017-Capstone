@@ -4,6 +4,8 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,11 @@ using System.Text;
 
 public class UserActionsDB : BaseDB
 {
+    public UserActionsDB(string dbConnectionName)
+    {
+        dbAddress = dbConnectionName;
+        Connect();
+    }
 	private User curUser
 	{
 		get;
@@ -23,8 +30,6 @@ public class UserActionsDB : BaseDB
         RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
         byte[] buff = new byte[size];
         rng.GetBytes(buff);
-
-        // Return a Base64 string representation of the random number.
         return buff;
     }
 
@@ -32,7 +37,7 @@ public class UserActionsDB : BaseDB
     {
         byte[] plainText = Encoding.ASCII.GetBytes(password);
         HashAlgorithm algorithm = new SHA256Managed();
-        byte[] salt = CreateSalt(256);
+        byte[] salt = CreateSalt(128);
         byte[] plainTextWithSaltBytes =
           new byte[password.Length + salt.Length];
 
@@ -67,10 +72,37 @@ public class UserActionsDB : BaseDB
         return true;
     }
 
-    public virtual User SignIn(String userName, string Password)
+    public virtual async System.Threading.Tasks.Task<User> SignIn(String userName, string Password)
 	{
-		throw new System.NotImplementedException();
-	}
+        User user = null;
+        var database = client.GetDatabase("personalshopperdb");
+        var collection = database.GetCollection<BsonDocument>("users");
+        using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+        {
+            while (await cursor.MoveNextAsync())
+            {
+                IEnumerable<BsonDocument> batch = cursor.Current;
+                foreach (BsonDocument document in batch)
+                {
+                    /*if (document.Contains(userName)) {
+                        string[] data = document.ToString().Split(',');
+                        foreach (string d in data)
+                        {
+                            if (d.Contains("passhash"))
+                            {
+                                d.Replace("\"passhash\" : [", "");
+                                d.Replace("]", "");
+                                byte[] passHash;
+                                CompareByteArrays()
+                            }
+                        }
+                    }*/
+                    //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
+                }
+            }
+        }
+        return user;
+    }
 
 	public virtual bool CreateUser(User  user)
 	{
