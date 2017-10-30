@@ -93,5 +93,3 @@ D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApp
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\2f4d086a.proguard.stamp
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\proguard\ea5c07c40.txt
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\ea5c07c4.proguard.stamp
-C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.dll
-C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.pdb

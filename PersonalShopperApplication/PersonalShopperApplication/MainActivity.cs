@@ -13,6 +13,7 @@ namespace PersonalShopperApplication
     public class MainActivity : Activity
     {
         private User tempUser;
+        private BaseDB db;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -22,7 +23,7 @@ namespace PersonalShopperApplication
         }
 
         #region SignIn
-        UserActionsDB UADB = new UserActionsDB();
+        UserActionsDB UADB = new UserActionsDB("mongodb://192.168.1.200/27017");
         [Export("SignIn")]
         public void SignIn(View view)
         {
@@ -30,18 +31,18 @@ namespace PersonalShopperApplication
             string un = userName.Text;
             EditText password = (EditText)FindViewById(Resource.Id.Password);
             string pass = password.Text;
-            //User curUser = UADB.SignIn(un, pass);
-            //if (curUser != null)
-            //{
+            User curUser = UADB.SignIn(un, pass).Result;
+            if (curUser != null)
+            {
                 SetContentView(Resource.Layout.Home);
-            //}
-            /*else
+            }
+            else
             {
                 //Toast.Toast toast = new Toast.Toast();
                 //toast.Message = "Incorrect Username or Password!";
                 //toast.DurationToast = Toast.Toast.ToastDuration.Medium;
                 //toast.Show();
-            }*/
+            }
         }
 
         [Export("CreateAccount")]
@@ -55,13 +56,13 @@ namespace PersonalShopperApplication
         [Export("PlaceOrder")]
         public void PlaceOrder(View view)
         {
-            SetContentView(Resource.Layout.PlaceOrder);
+            //SetContentView(Resource.Layout.Home);
         }
 
         [Export("PrevOrders")]
         public void PrevOrders(View view)
         {
-            SetContentView(Resource.Layout.PreviousOrders);
+            //SetContentView(Resource.Layout.Home);
         }
 
         [Export("BecShopper")]
@@ -73,7 +74,7 @@ namespace PersonalShopperApplication
         [Export("prevDeliv")]
         public void prevDeliv(View view)
         {
-            SetContentView(Resource.Layout.PreviousDeliveries);
+            //SetContentView(Resource.Layout.Home);
         }
 
         [Export("SignOut")]
@@ -102,14 +103,15 @@ namespace PersonalShopperApplication
              * then set variables to a global tempUser which will be cleared once the account is created
              * also store the hashPassword
              */
-            if (pass1.Equals(pass2) && !String.IsNullOrEmpty(fname) && !String.IsNullOrEmpty(lname) && !String.IsNullOrEmpty(uname) && !String.IsNullOrEmpty(pass1) && !String.IsNullOrEmpty(pass2))
+            if (pass1.Equals(pass2))
             {
-                tempUser = new User(/*get id from database class*/0, uname, pass1, fname, lname);
+                byte[] passhash = UADB.SaltAndHashPassword(pass1);
+                tempUser = new User(2, uname, passhash, fname, lname, null);
                 SetContentView(Resource.Layout.CreateAccount2);
             }
             else
             {
-                //return toast with details
+
             }
             
         }
@@ -122,7 +124,7 @@ namespace PersonalShopperApplication
             EditText cty = (EditText)FindViewById(Resource.Id.creCity);
             string city = cty.Text;
             EditText zip = (EditText)FindViewById(Resource.Id.creZip);
-            string zipcode = zip.Text;
+            string zipcodest = zip.Text;
             Spinner st = (Spinner)FindViewById(Resource.Id.creStates);
             string state = st.Selected.ToString();
             //toast to make sure state is correct
@@ -132,13 +134,20 @@ namespace PersonalShopperApplication
              * Add the new information to the database and add the user as a shopper 
              * Also make sure that none of the data is empty
              */
-             if(!String.IsNullOrEmpty(streetAddress) && !String.IsNullOrEmpty(city) && !String.IsNullOrEmpty(zipcode) && !String.IsNullOrEmpty(state) && !String.IsNullOrEmpty(apartment))
+            if (!String.IsNullOrEmpty(streetAddress) && !String.IsNullOrEmpty(city) && !String.IsNullOrEmpty(zipcodest) && !String.IsNullOrEmpty(state))
             {
-                /*
-                 * Change the customer class to take a user as a constructor
-                 */
-                //Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash)
-                SetContentView(Resource.Layout.Home);
+                int apart;
+                Int32.TryParse(apartment, out apart);
+                int? apartme = apart;
+                int zipcode;
+                if (Int32.TryParse(zipcodest, out zipcode)) {
+                    Address address = new Address(streetAddress, city, state, zipcode, apartme);
+                    /*
+                     * Change the customer class to take a user as a constructor
+                     */
+                    Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
+                    SetContentView(Resource.Layout.Home);
+                }
             }
             
         }
