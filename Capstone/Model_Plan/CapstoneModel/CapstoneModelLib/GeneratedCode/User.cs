@@ -5,6 +5,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 using CapstoneModelLib.GeneratedCode;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +13,14 @@ using System.Text;
 
 public class User
 {
-    public User(int ID, string userName, byte[] passHash, string fName, string lName)
+    public User(int ID, string userName, byte[] passHash, string fName, string lName, Address address)
     {
         userID = ID;
         Username = userName;
         this.passHash = passHash;
         this.fName = fName;
         this.lName = lName;
+        streetAddress = address;
     }
 
 	public string Username
@@ -27,28 +29,28 @@ public class User
 		set;
 	}
 
-	private Address streetAddress
+	public Address streetAddress
 	{
 		get;
-		set;
+		private set;
 	}
 
-	private byte[] passHash
+	public byte[] passHash
 	{
 		get;
-		set;
+		private set;
 	}
 
-	private string fName
+	public string fName
 	{
 		get;
-		set;
+		private set;
 	}
 
-	private string lName
+	public string lName
 	{
 		get;
-		set;
+		private set;
 	}
 
 	public virtual int userID
@@ -63,5 +65,19 @@ public class User
 		throw new System.NotImplementedException();
 	}
 
+    public virtual BsonDocument GetBson()
+    {
+        BsonDocument bson = new BsonDocument
+        {
+            {"userID", BsonValue.Create(userID) },
+            {"fName", BsonValue.Create(fName) },
+            {"lName", BsonValue.Create(lName) },
+            {"username", BsonValue.Create(Username) },
+            {"passhash", passHash },
+            {"address", streetAddress.ToBson() }
+        };
+
+        return bson;
+    }
 }
 

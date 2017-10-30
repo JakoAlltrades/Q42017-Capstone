@@ -12,7 +12,7 @@ using CapstoneModelLib.GeneratedCode;
 
 public class Shopper : Customer
 {
-    public Shopper(int ID, string userName, string passHash, string fName, string lName) : base(ID, userName, passHash, fName, lName)
+    public Shopper(int ID, string userName, byte[] passHash, string fName, string lName, Address address) : base(ID, userName, passHash, fName, lName, address)
     {
     }
 

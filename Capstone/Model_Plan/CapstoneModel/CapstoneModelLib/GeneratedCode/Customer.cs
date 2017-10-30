@@ -4,6 +4,7 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using CapstoneModelLib.GeneratedCode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ using System.Text;
 
 public class Customer : User
 {
-    public Customer(int ID, string userName, string passHash, string fName, string lName) : base(ID, userName, passHash, fName, lName)
+    public Customer(int ID, string userName, byte[] passHash, string fName, string lName, Address address) : base(ID, userName, passHash, fName, lName, address)
     {
     }
 

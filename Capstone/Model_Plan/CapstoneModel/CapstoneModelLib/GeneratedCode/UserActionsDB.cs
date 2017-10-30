@@ -106,7 +106,11 @@ public class UserActionsDB : BaseDB
 
 	public virtual bool CreateUser(User  user)
 	{
-		throw new System.NotImplementedException();
+        bool userCreated = false;
+        var database = client.GetDatabase("personalshopperdb");
+        var collection = database.GetCollection<BsonDocument>("users");
+        collection.InsertOneAsync(user.GetBson());
+        return userCreated;
 	}
 
 	public virtual bool EditUser(User user)
