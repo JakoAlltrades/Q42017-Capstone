@@ -12,6 +12,7 @@ namespace PersonalShopperApplication
     [Activity(Label = "PersonalShopperApplication", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        //ssl secure https pulls
         private User tempUser;
         private BaseDB db;
         protected override void OnCreate(Bundle savedInstanceState)
