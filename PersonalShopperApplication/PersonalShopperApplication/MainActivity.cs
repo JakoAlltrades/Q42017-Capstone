@@ -143,10 +143,8 @@ namespace PersonalShopperApplication
                 int zipcode;
                 if (Int32.TryParse(zipcodest, out zipcode)) {
                     Address address = new Address(streetAddress, city, state, zipcode, apartme);
-                    /*
-                     * Change the customer class to take a user as a constructor
-                     */
                     Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
+                    UADB.client.GetDatabase("");
                     SetContentView(Resource.Layout.Home);
                 }
             }

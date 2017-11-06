@@ -1600,6 +1600,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "CapstoneModelLib/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/CapstoneModelLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CapstoneModelLib.dll": {}
+        }
       }
     }
   },
@@ -5610,10 +5619,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "CapstoneModelLib/1.0.0": {
+      "type": "project",
+      "path": "../CapstoneModelLib/CapstoneModelLib.csproj",
+      "msbuildProject": "../CapstoneModelLib/CapstoneModelLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "CapstoneModelLib >= 1.0.0",
       "MSTest.TestAdapter >= 1.1.18",
       "MSTest.TestFramework >= 1.1.18",
       "Microsoft.NET.Test.Sdk >= 15.3.0-preview-20170628-02",
@@ -5652,7 +5667,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jack\\Documents\\GitHub\\Q42017-Capstone\\Capstone\\Model_Plan\\CapstoneModel\\CapstoneModelLib\\CapstoneModelLib.csproj": {
+              "projectPath": "C:\\Users\\Jack\\Documents\\GitHub\\Q42017-Capstone\\Capstone\\Model_Plan\\CapstoneModel\\CapstoneModelLib\\CapstoneModelLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
