@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>11/2/2017 5:06:23 PM</xs:documentation>
+    <xs:documentation>11/6/2017 12:11:32 AM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -18302,6 +18302,8 @@
             <xs:enumeration value="@id/line3" />
             <xs:enumeration value="@id/linearLayout1" />
             <xs:enumeration value="@id/listView1" />
+            <xs:enumeration value="@id/map" />
+            <xs:enumeration value="@id/mapcontainer" />
             <xs:enumeration value="@id/media_actions" />
             <xs:enumeration value="@id/notification_background" />
             <xs:enumeration value="@id/notification_main_column" />
