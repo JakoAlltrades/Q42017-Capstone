@@ -15,6 +15,62 @@ namespace PersonalShopperApplication
         //ssl secure https pulls
         private User tempUser;
         private BaseDB db;
+
+        private string[] statesList ={"AK",
+                      "AL",
+                      "AR",
+                      "AS",
+                      "AZ",
+                      "CA",
+                      "CO",
+                      "CT",
+                      "DC",
+                      "DE",
+                      "FL",
+                      "GA",
+                      "GU",
+                      "HI",
+                      "IA",
+                      "ID",
+                      "IL",
+                      "IN",
+                      "KS",
+                      "KY",
+                      "LA",
+                      "MA",
+                      "MD",
+                      "ME",
+                      "MI",
+                      "MN",
+                      "MO",
+                      "MS",
+                      "MT",
+                      "NC",
+                      "ND",
+                      "NE",
+                      "NH",
+                      "NJ",
+                      "NM",
+                      "NV",
+                      "NY",
+                      "OH",
+                      "OK",
+                      "OR",
+                      "PA",
+                      "PR",
+                      "RI",
+                      "SC",
+                      "SD",
+                      "TN",
+                      "TX",
+                      "UT",
+                      "VA",
+                      "VI",
+                      "VT",
+                      "WA",
+                      "WI",
+                      "WV",
+                      "WY" };
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -108,7 +164,16 @@ namespace PersonalShopperApplication
             {
                 byte[] passhash = UADB.SaltAndHashPassword(pass1);
                 tempUser = new User(2, uname, passhash, fname, lname, null);
+                Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
+                ArrayAdapter statesArray = new ArrayAdapter<String>(this, Resource.Layout.CreateAccount2);
+                statesArray.Add("Select State");
+                for (int j = 0; j < statesList.Length; j++)
+                {
+                    statesArray.Add(statesList[j]);
+                }
+                states.Adapter = statesArray;
                 SetContentView(Resource.Layout.CreateAccount2);
+                
             }
             else
             {
@@ -143,8 +208,10 @@ namespace PersonalShopperApplication
                 int zipcode;
                 if (Int32.TryParse(zipcodest, out zipcode)) {
                     Address address = new Address(streetAddress, city, state, zipcode, apartme);
+                    /*
+                     * Change the customer class to take a user as a constructor
+                     */
                     Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
-                    UADB.client.GetDatabase("");
                     SetContentView(Resource.Layout.Home);
                 }
             }
