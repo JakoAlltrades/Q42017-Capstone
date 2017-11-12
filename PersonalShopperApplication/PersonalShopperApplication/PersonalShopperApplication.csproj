@@ -144,6 +144,12 @@
     <AndroidResource Include="Resources\layout\PreviousDeliveries.axml" />
     <AndroidResource Include="Resources\layout\PreviousOrders.axml" />
     <AndroidResource Include="Resources\layout\Settings.axml" />
+    <AndroidResource Include="Resources\layout\AddOrderItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SetStoreAddress.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

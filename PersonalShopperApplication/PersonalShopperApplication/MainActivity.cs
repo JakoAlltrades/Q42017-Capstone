@@ -164,6 +164,7 @@ namespace PersonalShopperApplication
             {
                 byte[] passhash = UADB.SaltAndHashPassword(pass1);
                 tempUser = new User(2, uname, passhash, fname, lname, null);
+                SetContentView(Resource.Layout.CreateAccount2);
                 Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
                 ArrayAdapter statesArray = new ArrayAdapter<String>(this, Resource.Layout.CreateAccount2);
                 statesArray.Add("Select State");
@@ -172,7 +173,7 @@ namespace PersonalShopperApplication
                     statesArray.Add(statesList[j]);
                 }
                 states.Adapter = statesArray;
-                SetContentView(Resource.Layout.CreateAccount2);
+                
                 
             }
             else

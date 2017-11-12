@@ -11,11 +11,12 @@ using System.Text;
 
 public class OrderItem
 {
-    public OrderItem(string name, double maxPrice, double actualPrice)
+    public OrderItem(string name, double maxPrice, double actualPrice, int amount)
     {
         this.name = name;
         this.maxPrice = maxPrice;
         this.actualPrice = actualPrice;
+        this.amount = amount;
     }
 
 	public virtual string name
@@ -35,6 +36,12 @@ public class OrderItem
 		get;
 		set;
 	}
+
+    public virtual int amount
+    {
+        get;
+        set;
+    }
 
 	public virtual void NotifyCustomer()
 	{
