@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>11/12/2017 4:18:46 PM</xs:documentation>
+    <xs:documentation>11/13/2017 8:51:34 AM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -92,9 +92,9 @@
       <xs:element ref="android.support.v4.view.PagerTitleStrip" />
       <xs:element ref="android.support.v4.view.PagerTabStrip" />
       <xs:element ref="android.support.v4.app.FragmentTabHost" />
-      <xs:element ref="com.google.android.gms.common.SignInButton" />
       <xs:element ref="com.google.android.gms.maps.StreetViewPanoramaView" />
       <xs:element ref="com.google.android.gms.maps.MapView" />
+      <xs:element ref="com.google.android.gms.common.SignInButton" />
       <xs:element ref="include" />
     </xs:choice>
   </xs:group>
@@ -1516,20 +1516,6 @@
       <xs:extension base="TabHost" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="com.google.android.gms.common.SignInButton">
-    <xs:complexContent mixed="false">
-      <xs:extension base="FrameLayout">
-        <xs:attribute ref="app:buttonSize" />
-        <xs:attribute ref="app:colorScheme" />
-        <xs:attribute ref="app:scopeUris" />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="com.google.android.gms.maps.StreetViewPanoramaView" type="com.google.android.gms.maps.StreetViewPanoramaView">
     <xs:annotation>
       <xs:documentation>Runtime Type: Android.Gms.Maps.StreetViewPanoramaView</xs:documentation>
@@ -1548,6 +1534,20 @@
   <xs:complexType name="com.google.android.gms.maps.MapView">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.google.android.gms.common.SignInButton">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout">
+        <xs:attribute ref="app:buttonSize" />
+        <xs:attribute ref="app:colorScheme" />
+        <xs:attribute ref="app:scopeUris" />
+      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="include" type="include">

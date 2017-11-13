@@ -56,7 +56,7 @@
   <ItemGroup>
     <Reference Include="CapstoneModelLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll</HintPath>
+      <HintPath>C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll</HintPath>
     </Reference>
     <Reference Include="Google.Apis, Version=1.30.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Apis.1.30.0\lib\netstandard1.3\Google.Apis.dll</HintPath>
@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Maps.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -140,7 +141,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Checkout.axml" />
-    <AndroidResource Include="Resources\layout\PlaceOrder.axml" />
+    <AndroidResource Include="Resources\layout\PlaceOrder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\PreviousDeliveries.axml" />
     <AndroidResource Include="Resources\layout\PreviousOrders.axml" />
     <AndroidResource Include="Resources\layout\Settings.axml" />
@@ -148,6 +151,11 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\SetStoreAddress.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\BaseMaps.axml" />
+    <AndroidResource Include="Resources\layout\ReceiveOrder.axml" />
+    <AndroidResource Include="Resources\layout\EditOrderItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

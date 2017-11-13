@@ -9,7 +9,7 @@
         android:text="Welcome, [Username]!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
+        android:id="@+id/homeWelcome"
         android:textAlignment="center"
         android:textSize="24dp" />
     <Space
@@ -55,7 +55,7 @@
         android:onClick="prevDeliv" />
     <Space
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:id="@+id/space1" />
     <Button
         android:text="Sign Out"

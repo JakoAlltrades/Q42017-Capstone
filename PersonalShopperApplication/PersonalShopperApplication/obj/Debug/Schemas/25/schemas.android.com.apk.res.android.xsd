@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>11/12/2017 4:18:46 PM</xs:documentation>
+    <xs:documentation>11/13/2017 8:51:34 AM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -19613,6 +19613,9 @@
             <xs:enumeration value="@id/action0" />
             <xs:enumeration value="@id/actions" />
             <xs:enumeration value="@id/AddItem" />
+            <xs:enumeration value="@id/AddItemAmmount" />
+            <xs:enumeration value="@id/AddItemMaxPrice" />
+            <xs:enumeration value="@id/AddItemName" />
             <xs:enumeration value="@id/button1" />
             <xs:enumeration value="@id/button2" />
             <xs:enumeration value="@id/button3" />
@@ -19629,10 +19632,13 @@
             <xs:enumeration value="@id/creStreetAdd" />
             <xs:enumeration value="@id/creUsername" />
             <xs:enumeration value="@id/creZip" />
-            <xs:enumeration value="@id/editText1" />
-            <xs:enumeration value="@id/editText2" />
-            <xs:enumeration value="@id/editText3" />
+            <xs:enumeration value="@id/EditItem" />
+            <xs:enumeration value="@id/EditItemAmmount" />
+            <xs:enumeration value="@id/EditItemMaxPrice" />
+            <xs:enumeration value="@id/EditItemName" />
             <xs:enumeration value="@id/end_padder" />
+            <xs:enumeration value="@id/EstimatedCost" />
+            <xs:enumeration value="@id/homeWelcome" />
             <xs:enumeration value="@id/icon" />
             <xs:enumeration value="@id/icon_group" />
             <xs:enumeration value="@id/info" />
@@ -19641,6 +19647,8 @@
             <xs:enumeration value="@id/line3" />
             <xs:enumeration value="@id/linearLayout1" />
             <xs:enumeration value="@id/listView1" />
+            <xs:enumeration value="@id/map" />
+            <xs:enumeration value="@id/mapcontainer" />
             <xs:enumeration value="@id/media_actions" />
             <xs:enumeration value="@id/notification_background" />
             <xs:enumeration value="@id/notification_main_column" />

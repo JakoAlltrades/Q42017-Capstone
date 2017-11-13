@@ -20,7 +20,6 @@ C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\Person
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\values\strings.xml
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\R.cs.flag
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\uploadflags.txt
-C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.pdb
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll.mdb
 C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.csprojResolveAssemblyReference.cache
@@ -94,3 +93,68 @@ D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApp
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.dll.mdb
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\CapstoneModelLib.dll.mdb
 D:\Capstone Folder\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\PersonalShopperApplication.dll.mdb
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.dll.config
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.pdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.PersonalShopperApplication.apk
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.PersonalShopperApplication-Signed.apk
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Google.Apis.Core.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Google.Apis.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Bson.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Driver.Core.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Driver.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Newtonsoft.Json.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Annotations.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Compat.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Fragment.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Xamarin.GooglePlayServices.Tasks.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.pdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\CapstoneModelLib.dll.mdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Google.Apis.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Google.Apis.Core.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Bson.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Driver.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\MongoDB.Driver.Core.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\Newtonsoft.Json.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.csprojResolveAssemblyReference.cache
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.csproj.CoreCompileInputs.cache
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.dll
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\PersonalShopperApplication.pdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\bin\PersonalShopperApplication.PersonalShopperApplication.apk
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\createaccount1.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\createaccount2.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\home.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\becomeashopper.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\checkout.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\placeorder.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\previousdeliveries.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\previousorders.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\settings.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\addorderitem.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\setstoreaddress.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\basemaps.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\receiveorder.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\main.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\values\strings.xml
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\R.cs.flag
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\uploadflags.txt
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\bin\Debug\PersonalShopperApplication.dll.mdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\CapstoneModelLib.dll.mdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\android\assets\PersonalShopperApplication.dll.mdb
+D:\My Documents\PersonalShopperApplication\PersonalShopperApplication\obj\Debug\res\layout\editorderitem.xml

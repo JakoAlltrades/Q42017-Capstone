@@ -20,6 +20,12 @@ public class MainActivity
 			"n_SignOut:(Landroid/view/View;)V:__export__\n" +
 			"n_CreateAccountNext:(Landroid/view/View;)V:__export__\n" +
 			"n_FinishCreation:(Landroid/view/View;)V:__export__\n" +
+			"n_AddItemPage:(Landroid/view/View;)V:__export__\n" +
+			"n_AddItemToOrder:(Landroid/view/View;)V:__export__\n" +
+			"n_EditItemToOrder:(Landroid/view/View;)V:__export__\n" +
+			"n_RemoveItem:(Landroid/view/View;)V:__export__\n" +
+			"n_SetStoreAddress:(Landroid/view/View;)V:__export__\n" +
+			"n_FinishStoreAddress:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("PersonalShopperApplication.MainActivity, PersonalShopperApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
 	}
@@ -111,6 +117,54 @@ public class MainActivity
 	}
 
 	private native void n_FinishCreation (android.view.View p0);
+
+
+	public void AddItemPage (android.view.View p0)
+	{
+		n_AddItemPage (p0);
+	}
+
+	private native void n_AddItemPage (android.view.View p0);
+
+
+	public void AddItemToOrder (android.view.View p0)
+	{
+		n_AddItemToOrder (p0);
+	}
+
+	private native void n_AddItemToOrder (android.view.View p0);
+
+
+	public void EditItemToOrder (android.view.View p0)
+	{
+		n_EditItemToOrder (p0);
+	}
+
+	private native void n_EditItemToOrder (android.view.View p0);
+
+
+	public void RemoveItem (android.view.View p0)
+	{
+		n_RemoveItem (p0);
+	}
+
+	private native void n_RemoveItem (android.view.View p0);
+
+
+	public void SetStoreAddress (android.view.View p0)
+	{
+		n_SetStoreAddress (p0);
+	}
+
+	private native void n_SetStoreAddress (android.view.View p0);
+
+
+	public void FinishStoreAddress (android.view.View p0)
+	{
+		n_FinishStoreAddress (p0);
+	}
+
+	private native void n_FinishStoreAddress (android.view.View p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

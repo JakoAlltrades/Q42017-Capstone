@@ -1,0 +1,4 @@
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\LibraryTest\obj\Debug\netcoreapp2.0\LibraryTest.csprojResolveAssemblyReference.cache
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\LibraryTest\obj\Debug\netcoreapp2.0\LibraryTest.csproj.CoreCompileInputs.cache
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\LibraryTest\obj\Debug\netcoreapp2.0\LibraryTest.AssemblyInfoInputs.cache
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\LibraryTest\obj\Debug\netcoreapp2.0\LibraryTest.AssemblyInfo.cs

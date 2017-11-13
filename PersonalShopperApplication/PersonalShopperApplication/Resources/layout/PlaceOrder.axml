@@ -30,7 +30,8 @@
             android:text="Add Item"
             android:layout_width="158.0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button1" />
+            android:id="@+id/button1"
+            android:onClick="AddItemPage" />
         <Space
             android:layout_width="68dp"
             android:layout_height="match_parent"
@@ -39,18 +40,13 @@
             android:text="Remove Item"
             android:layout_width="158.0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button1" />
+            android:id="@+id/button1"
+            android:onClick="RemoveItem" />
     </LinearLayout>
     <Space
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:id="@+id/space3" />
-    <Button
-        android:text="Change Delivery Address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginLeft="85dp" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="25dp"
@@ -60,31 +56,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
-        android:layout_marginLeft="100dp" />
+        android:layout_marginLeft="100dp"
+        android:onClick="SetStoreAddress" />
     <TextView
         android:text="Estimated Cost:: [Estimated Cost]"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/EstimatedCost" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:id="@+id/space4" />
-    <TextView
-        android:text="Estimated Delivery: [DeliveryEst] Minutes"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:id="@+id/space5" />
     <Button
         android:text="Confirm Order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
-        android:layout_marginLeft="120dp" />
+        android:layout_marginLeft="120dp"
+        android:onClick="ConfirmOrder" />
 </LinearLayout>
