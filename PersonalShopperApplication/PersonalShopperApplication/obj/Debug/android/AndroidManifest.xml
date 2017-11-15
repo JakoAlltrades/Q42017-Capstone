@@ -30,7 +30,7 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="Maps" android:name="md595f08ed601a8a209deb413969594ca50.Maps" />
+    <activity android:label="MapActivity" android:name="md595f08ed601a8a209deb413969594ca50.MapActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PersonalShopperApplication.PersonalShopperApplication.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
@@ -39,6 +39,7 @@
         <category android:name="mono.android.intent.category.SEPPUKU.PersonalShopperApplication.PersonalShopperApplication" />
       </intent-filter>
     </receiver>
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
     <meta-data android:name="android.support.VERSION" android:value="26.0.2" />
     <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
   </application>

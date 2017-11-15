@@ -6,6 +6,8 @@ using Java.Interop;
 using CapstoneModelLib.GeneratedCode;
 using System;
 using System.Collections.Generic;
+using Android.Content;
+using PersonalShopperApplication.Resources.layout;
 //using Toast;
 
 namespace PersonalShopperApplication
@@ -24,12 +26,17 @@ namespace PersonalShopperApplication
         private double orderTotal;
         public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
         public Address storeAddress;
+        public Order order;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            //SetContentView(Resource.Layout.Main);
+            var geoUri = Android.Net.Uri.Parse("geo:42.37,-71.12");
+            var mapIntent = new Intent(Intent.ActionView, geoUri);
+            Intent i = new Intent(this, typeof(MapActivity));
+            this.StartActivity(i);
         }
 
 
@@ -252,7 +259,7 @@ namespace PersonalShopperApplication
                         }
                         else
                         {
-                            curOrder.RemoveAt(e.Position);
+                            editItemPos = e.Position;
                             order = new List<string>();
                             for (int j = 0; j < curOrder.Count; j++)
                             {
@@ -326,7 +333,6 @@ namespace PersonalShopperApplication
                         }
                         else
                         {
-                            curOrder.RemoveAt(e.Position);
                             order = new List<string>();
                             orderTotal = 0;
                             for (int j = 0; j < curOrder.Count; j++)
@@ -367,6 +373,12 @@ namespace PersonalShopperApplication
 
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             states.Adapter = adapter;
+        }
+
+        [Export("ConfirmOrder")]
+        public void ConfrimOrder(View view)
+        {
+
         }
 
         [Export("FinishStoreAddress")]
