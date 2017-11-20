@@ -8,11 +8,19 @@ using CapstoneModelLib.GeneratedCode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 public class Order
 {
-	public virtual List<OrderItem> placedOrder
+    public Order()
+    {
+        placedOrder = new List<OrderItem>();
+        _id = DateTime.Now.ToString();
+    }
+public string _id { get; set; }
+
+    public virtual List<OrderItem> placedOrder
 	{
 		get;
 		set;
@@ -72,7 +80,9 @@ public class Order
 		set;
 	}
 
-	public virtual void FoundItem(OrderItem item)
+   
+
+public virtual void FoundItem(OrderItem item)
 	{
         /*
          *Make sure to add the acutal price to the item or that it has the acutal price attached already 

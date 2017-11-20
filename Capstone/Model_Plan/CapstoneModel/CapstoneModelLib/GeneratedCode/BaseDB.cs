@@ -38,9 +38,13 @@ public class BaseDB
         //var connectionString = "mongodb://192.168.1.200:27017";
         //var client = new MongoClient(new MongoUrl("mongodb://127.0.0.1:27017"));
         client = new MongoClient(new MongoUrl(dbAddress));
-        /*var databases = client.ListDatabases();
+        var databases = client.ListDatabases();
         var state = client.Cluster.Description.State;
-        Console.Write("State: " + state.ToString());
+        if(state.ToString() != "Connected")
+        {
+            throw new Exception("Failed to connect to database");
+        }
+        /*Console.Write("State: " + state.ToString());
         var database = client.GetDatabase("personalshopperdb");
         //database.CreateCollection("users");
         var collection = database.GetCollection<BsonDocument>("users");
