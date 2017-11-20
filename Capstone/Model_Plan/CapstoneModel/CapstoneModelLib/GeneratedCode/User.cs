@@ -20,67 +20,46 @@ public class User
         this.passHash = passHash;
         this.fName = fName;
         this.lName = lName;
-        streetAddress = address;
+        Address = address;
         _id = DateTime.Now.ToString();
     }
 
-    private string _id { get; set; }
+    public string _id { get; set; }
 
-	public string Username
-	{
-		get;
-		set;
-	}
-
-	public Address streetAddress
-	{
-		get;
-		private set;
-	}
-
-	public byte[] passHash
-	{
-		get;
-		private set;
-	}
-
-	public string fName
-	{
-		get;
-		private set;
-	}
-
-	public string lName
-	{
-		get;
-		private set;
-	}
-
-	public virtual int userID
-	{
-		get;
-		set;
-	}
-
-	public virtual bool Login(string enteredPass)
-	{
-        //would connect to the UserActionDBClass and allow them to login this method
-		throw new System.NotImplementedException();
-	}
-
-    public virtual BsonDocument GetBson()
+    public string Username
     {
-        BsonDocument bson = new BsonDocument
-        {
-            {"userID", BsonValue.Create(userID) },
-            {"fName", BsonValue.Create(fName) },
-            {"lName", BsonValue.Create(lName) },
-            {"username", BsonValue.Create(Username) },
-            {"passhash", passHash },
-            {"address", streetAddress.ToBson() }
-        };
+        get;
+        set;
+    }
 
-        return bson;
+    public Address Address
+    {
+        get;
+        private set;
+    }
+
+    public byte[] passHash
+    {
+        get;
+        private set;
+    }
+
+    public string fName
+    {
+        get;
+        private set;
+    }
+
+    public string lName
+    {
+        get;
+        private set;
+    }
+
+    public virtual int userID
+    {
+        get;
+        set;
     }
 }
 

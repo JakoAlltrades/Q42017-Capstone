@@ -7,8 +7,6 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "CapstoneModel", "CapstoneMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneModelLib", "CapstoneModelLib\CapstoneModelLib.csproj", "{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryTest", "LibraryTest\LibraryTest.csproj", "{9808EE4D-260F-4335-906C-AB0B85C0019E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseTester", "DatabaseTester\DatabaseTester.csproj", "{8C7CA2BF-0B3B-41F6-9CA9-27766BCECAA0}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F79D72C4-CEE6-4C3B-B7A0-6AFDF0BE9C40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9808EE4D-260F-4335-906C-AB0B85C0019E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9808EE4D-260F-4335-906C-AB0B85C0019E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9808EE4D-260F-4335-906C-AB0B85C0019E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9808EE4D-260F-4335-906C-AB0B85C0019E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C7CA2BF-0B3B-41F6-9CA9-27766BCECAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C7CA2BF-0B3B-41F6-9CA9-27766BCECAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C7CA2BF-0B3B-41F6-9CA9-27766BCECAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU

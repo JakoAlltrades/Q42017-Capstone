@@ -1,5 +1,4 @@
 C:\Users\jprirm\Documents\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.csprojResolveAssemblyReference.cache
-C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.csprojResolveAssemblyReference.cache
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.csproj.CoreCompileInputs.cache
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\CapstoneModelLib.dll
 C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\CapstoneModelLib.pdb

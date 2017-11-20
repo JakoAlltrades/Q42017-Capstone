@@ -1,0 +1,16 @@
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\DatabaseTester.exe.config
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\DatabaseTester.exe
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\DatabaseTester.pdb
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Bson.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Driver.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Bson.xml
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Driver.xml
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\obj\Debug\DatabaseTester.csprojResolveAssemblyReference.cache
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\obj\Debug\DatabaseTester.csproj.CoreCompileInputs.cache
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\obj\Debug\DatabaseTester.exe
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\obj\Debug\DatabaseTester.pdb
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\CapstoneModelLib.dll
+C:\Users\Jack\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\DatabaseTester\bin\Debug\CapstoneModelLib.pdb

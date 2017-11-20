@@ -136,13 +136,18 @@ public class UserActionsDB : BaseDB
 	public virtual bool CreateUser(User  user)
 	{
         bool userCreated = false;
-        if ((CheckIfUsernameUsedAsync(user.Username).Result))
+        if (!(CheckIfUsernameUsedAsync(user.Username).Result))
         {
             var database = client.GetDatabase("personalshopperdb");
             var collection = database.GetCollection<BsonDocument>("users");
-            BsonDocumentWriter documentWriter = new BsonDocumentWriter(new BsonDocument());
-            BsonSerializer.Serialize<User>(documentWriter, user);
-            collection.InsertOneAsync(user.GetBson());
+            BsonDocument doc = new BsonDocument();
+            BsonDocumentWriter documentWriter = new BsonDocumentWriter(doc); 
+            BsonSerializer.Serialize(documentWriter,typeof(User), user);
+            if (doc != null)
+            {
+                collection.InsertOneAsync(doc);
+                //figure out Linq for making sure doc was added to the collection
+            }
         }
         return userCreated;
 	}
