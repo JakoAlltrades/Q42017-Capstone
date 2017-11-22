@@ -14,12 +14,15 @@ public class Shopper : Customer
 {
     public Shopper(int ID, string userName, byte[] passHash, string fName, string lName, Address address) : base(ID, userName, passHash, fName, lName, address)
     {
+        shopperID = ID;
     }
 
-    private int shopperID
+    public string _id { get; set; } = DateTime.Now.ToString();
+
+    public int shopperID
 	{
 		get;
-		set;
+		private set;
 	}
 
 	public virtual double rating
@@ -47,12 +50,6 @@ public class Shopper : Customer
 	}
 
 	public virtual bool inStandBy
-	{
-		get;
-		set;
-	}
-
-	private List<Order> deliveredOrders
 	{
 		get;
 		set;

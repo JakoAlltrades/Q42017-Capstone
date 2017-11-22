@@ -16,13 +16,9 @@ public class Customer : User
     {
     }
 
-    public virtual List<Order> previousOrders
-	{
-		get;
-		set;
-	}
+    public string _id { get; set; } = DateTime.Now.ToString();
 
-	public virtual void CreateOrder()
+    public virtual void CreateOrder()
 	{
         /*
          *  Creates a new order and adds it to the database for the user
@@ -49,14 +45,6 @@ public class Customer : User
 	{
         /*
          *  adds the customer to the Shopper database and makes them a shopper
-         */
-        throw new System.NotImplementedException();
-	}
-
-	public virtual void RateShopper(Order order)
-	{
-        /*
-         *  Allows the customer to leave a rating for a shopper on an order
          */
         throw new System.NotImplementedException();
 	}

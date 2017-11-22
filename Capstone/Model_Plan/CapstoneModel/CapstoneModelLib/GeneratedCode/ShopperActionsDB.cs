@@ -11,14 +11,20 @@ using System.Text;
 
 public class ShopperActionsDB : BaseDB
 {
-	public virtual void GetCompletedOrders()
+    public ShopperActionsDB(string dbAddress) : base(dbAddress)
+    {
+    }
+
+    public virtual void GetCompletedOrders()
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public virtual void ReciverOrder()
+	public virtual void ReciverOrder(Order order)
 	{
-		throw new System.NotImplementedException();
+		/*
+         * This method takes an order off of the curPlacedOrders table
+         */
 	}
 
 }

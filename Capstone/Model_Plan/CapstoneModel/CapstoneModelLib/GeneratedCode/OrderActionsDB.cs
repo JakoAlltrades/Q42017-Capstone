@@ -11,7 +11,11 @@ using System.Text;
 
 public class OrderActionsDB : BaseDB
 {
-	public virtual List<Order> curOrders
+    public OrderActionsDB(string dbAddress) : base(dbAddress)
+    {
+    }
+
+    public virtual List<Order> curOrders
 	{
 		get;
 		set;

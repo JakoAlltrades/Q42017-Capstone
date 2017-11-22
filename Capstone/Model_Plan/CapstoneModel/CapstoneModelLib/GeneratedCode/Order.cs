@@ -16,15 +16,17 @@ public class Order
     public Order()
     {
         placedOrder = new List<OrderItem>();
-        _id = DateTime.Now.ToString();
     }
-public string _id { get; set; }
+
+    public string _id { get; set; } = DateTime.Now.ToString();
 
     public virtual List<OrderItem> placedOrder
 	{
 		get;
 		set;
 	}
+
+    public int rating { get; set; }
 
 	public virtual int customerID
 	{
@@ -80,16 +82,19 @@ public string _id { get; set; }
 		set;
 	}
 
-   
 
-public virtual void FoundItem(OrderItem item)
-	{
+
+    public virtual void FoundItem(OrderItem item)
+    {
         /*
          *Make sure to add the acutal price to the item or that it has the acutal price attached already 
          * 
          */
-        foundItems.Add(item);
-	}
+        if (item.actualPrice != 0.0)
+        {
+            foundItems.Add(item);
+        }
+    }
 
 	public virtual void MoveItemToMissing(OrderItem item)
 	{
@@ -125,5 +130,14 @@ public virtual void FoundItem(OrderItem item)
         return EstimatedCost;
 	}
 
+    public Double CalculateActualCost()
+    {
+        double actualTotal = 0;
+        foreach(OrderItem item in foundItems)
+        {
+            actualTotal += item.actualPrice;
+        }
+        return actualTotal;
+    }
 }
 

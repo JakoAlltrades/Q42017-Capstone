@@ -8,6 +8,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using MongoDB.Driver.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,10 @@ public class UserActionsDB : BaseDB
         0,92,1,89,217,227,110,5,144,132,249,242,67,19,144,107,
         116,54,192,217,5,20,40,33,76,97,254,108,181,160
     };
+
+    public UserActionsDB(string dbAddress) : base(dbAddress)
+    {
+    }
 
     public async System.Threading.Tasks.Task<int> GetCurUserIDAsync()
     {
@@ -52,11 +57,6 @@ public class UserActionsDB : BaseDB
         return curUserID;
     }
 
-    public UserActionsDB(string dbConnectionName)
-    {
-        dbAddress = dbConnectionName;
-        Connect();
-    }
 	private User curUser
 	{
 		get;
@@ -101,6 +101,7 @@ public class UserActionsDB : BaseDB
                         if(ConfirmPassword(Password, temp.passHash))
                         {
                             user = temp;
+                            curUser = user;
                         }
                     }
                 }
@@ -139,22 +140,63 @@ public class UserActionsDB : BaseDB
         if (!(CheckIfUsernameUsedAsync(user.Username).Result))
         {
             var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("users");
+            var collection = database.GetCollection<User>("users");
             BsonDocument doc = new BsonDocument();
             BsonDocumentWriter documentWriter = new BsonDocumentWriter(doc); 
             BsonSerializer.Serialize(documentWriter,typeof(User), user);
-            if (doc != null)
+            if (!doc.IsBsonNull)
             {
-                collection.InsertOneAsync(doc);
-                //figure out Linq for making sure doc was added to the collection
+                collection.InsertOneAsync(user);
+                //check if new User/customer was inserted via linq
+                User pulledUser =collection.AsQueryable<User>().Where(x => x.userID == user.userID).Select(x => x).First();
+                //User pulledUser = BsonSerializer.Deserialize<User>(pulledDoc);
+                if (pulledUser.userID == user.userID)
+                {
+                    userCreated = true;
+                    curUser = user;
+                }
+                
             }
         }
         return userCreated;
 	}
 
-	public virtual bool EditUser(User user)
+	public virtual async System.Threading.Tasks.Task<bool> EditUserAsync(User user)
 	{
-		throw new System.NotImplementedException();
+        bool userUpdated = false;
+        if(user.userID == curUser.userID)
+        {
+            var database = client.GetDatabase("personalshopperdb");
+            var collection = database.GetCollection<BsonDocument>("users");
+            BsonDocument bsonUser = new BsonDocument();
+            BsonDocumentWriter documentWriter = new BsonDocumentWriter(bsonUser);
+            BsonSerializer.Serialize(documentWriter, typeof(User), user);
+            if (!bsonUser.IsBsonNull)
+            {
+                using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+                {
+                    while (await cursor.MoveNextAsync())
+                    {
+                        IEnumerable<BsonDocument> batch = cursor.Current;
+                        foreach (BsonDocument document in batch)
+                        {
+                            User temp = BsonSerializer.Deserialize<User>(document);
+                            if (temp.userID == curUser.userID)
+                            {
+                                collection.UpdateOne<BsonDocument>(x => x == document, bsonUser);
+                                userUpdated = true;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        else
+        {
+            throw new Exception("MAJOR ERROR: the userID has changed between Editing the user and the current signed in user");
+        }
+        return userUpdated;
 	}
 
 }

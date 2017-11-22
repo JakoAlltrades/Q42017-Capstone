@@ -13,6 +13,12 @@ using System.Text;
 
 public class BaseDB 
 {
+    public BaseDB(string dbAddress)
+    {
+        this.dbAddress = dbAddress;
+        Connect();
+    }
+
 	public string dbAddress
 	{
 		get;

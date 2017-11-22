@@ -21,10 +21,9 @@ public class User
         this.fName = fName;
         this.lName = lName;
         Address = address;
-        _id = DateTime.Now.ToString();
     }
 
-    public string _id { get; set; }
+    public string _id { get; set; } = DateTime.Now.ToString();
 
     public string Username
     {

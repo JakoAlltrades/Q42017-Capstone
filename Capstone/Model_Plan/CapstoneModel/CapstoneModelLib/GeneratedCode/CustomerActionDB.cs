@@ -4,42 +4,92 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using MongoDB.Bson;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class CustomerActionDB : ShopperActionsDB
+public class CustomerActionDB : BaseDB
 {
-	private User curUser
+    public CustomerActionDB(string dbAddress, User curUser) : base(dbAddress)
+    {
+        this.curUser = curUser;
+    }
+
+    private User curUser
 	{
 		get;
 		set;
 	}
 
-	public virtual List<Order> GetPrevoisOrders()
+	public virtual async System.Threading.Tasks.Task<List<Order>> GetPrevoisOrdersAsync()
 	{
-		throw new System.NotImplementedException();
-	}
+        List<Order> ordersPlacedByCustomerID = new List<Order>();
+        var database = client.GetDatabase("personalshopperdb");
+        var collection = database.GetCollection<BsonDocument>("orders");
+        using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+        {
+            while (await cursor.MoveNextAsync())
+            {
+                IEnumerable<BsonDocument> batch = cursor.Current;
+                foreach (BsonDocument document in batch)
+                {
+                    Order temp = BsonSerializer.Deserialize<Order>(document);
+                    if(temp.customerID == curUser.userID)
+                    {
+                        ordersPlacedByCustomerID.Add(temp);
+                    }
+                }
+            }
+        }
+        return ordersPlacedByCustomerID;
+    }
 
 	public virtual bool PlaceOrder(Order order)
 	{
-		throw new System.NotImplementedException();
-	}
+        bool orderPlaced = false;
+        var database = client.GetDatabase("personalshopperdb");
+        var collection = database.GetCollection<BsonDocument>("curPlacedOrders");
+        BsonDocument bsonOrder = new BsonDocument();
+        BsonDocumentWriter writer = new BsonDocumentWriter(bsonOrder);
+        BsonSerializer.Serialize<Order>(writer, order);
+        if(!bsonOrder.IsBsonNull)
+        {
+            collection.InsertOneAsync(bsonOrder);
+            //check if new order was inserted via linq
+        }
+        return orderPlaced;
+    }
 
 	public virtual bool BecomeShopper()
 	{
-		throw new System.NotImplementedException();
-	}
+        bool hasBecomeAShopper = false;
+        var database = client.GetDatabase("personalshopperdb");
+        var collection = database.GetCollection<Shopper>("shoppers");
+        Shopper shopper = new Shopper(curUser.userID, curUser.Username, curUser.passHash, curUser.fName, curUser.lName, curUser.Address);
+        BsonDocument bsonShopper = new BsonDocument();
+        BsonDocumentWriter writer = new BsonDocumentWriter(bsonShopper);
+        BsonSerializer.Serialize<Shopper>(writer, shopper);
+        if (!bsonShopper.IsBsonNull)
+        {
+            collection.InsertOneAsync(shopper);
+            Shopper pulledShopper = collection.AsQueryable<Shopper>().Where(x => x.shopperID == shopper.shopperID).First();
+            if (pulledShopper.shopperID == shopper.shopperID)
+            {
+                hasBecomeAShopper = true;
+            }
+        }
+        return hasBecomeAShopper;
+    }
 
-	public virtual void RateShopper(Order order)
+	public virtual bool VerifyOrder(Order order)
 	{
-		throw new System.NotImplementedException();
-	}
-
-	public virtual void VerifyOrder(Order order)
-	{
-		throw new System.NotImplementedException();
+        //Make sure that the order has been placed
+        throw new Exception();
 	}
 
 }
