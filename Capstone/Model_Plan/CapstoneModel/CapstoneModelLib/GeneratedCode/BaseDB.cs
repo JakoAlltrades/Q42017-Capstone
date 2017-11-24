@@ -39,12 +39,13 @@ public class BaseDB
 
     public MongoClient client { get; private set; }
 
-	public virtual void Connect()
+	public virtual async void Connect()
 	{
         //var connectionString = "mongodb://192.168.1.200:27017";
         //var client = new MongoClient(new MongoUrl("mongodb://127.0.0.1:27017"));
         client = new MongoClient(new MongoUrl(dbAddress));
-        var databases = client.ListDatabases();
+        client.Settings.ConnectTimeout = new TimeSpan(0, 1, 30);
+        client.ListDatabases();
         var state = client.Cluster.Description.State;
         if(state.ToString() != "Connected")
         {

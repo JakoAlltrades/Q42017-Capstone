@@ -27,3 +27,4 @@ C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneMod
 C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.dll
 C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\obj\Debug\CapstoneModelLib.pdb
+C:\Users\jprirm\Documents\GitHub\Q42017-Capstone\Capstone\Model_Plan\CapstoneModel\CapstoneModelLib\bin\Debug\System.Net.NameResolution.dll
