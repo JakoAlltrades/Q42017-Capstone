@@ -25,7 +25,7 @@ public class MainActivity
 			"n_EditItemToOrder:(Landroid/view/View;)V:__export__\n" +
 			"n_RemoveItem:(Landroid/view/View;)V:__export__\n" +
 			"n_SetStoreAddress:(Landroid/view/View;)V:__export__\n" +
-			"n_ConfrimOrder:(Landroid/view/View;)V:__export__\n" +
+			"n_ConfrimOrderAsync:(Landroid/view/View;)V:__export__\n" +
 			"n_FinishStoreAddress:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("PersonalShopperApp.MainActivity, PersonalShopperApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
@@ -162,10 +162,10 @@ public class MainActivity
 
 	public void ConfirmOrder (android.view.View p0)
 	{
-		n_ConfrimOrder (p0);
+		n_ConfrimOrderAsync (p0);
 	}
 
-	private native void n_ConfrimOrder (android.view.View p0);
+	private native void n_ConfrimOrderAsync (android.view.View p0);
 
 
 	public void FinishStoreAddress (android.view.View p0)

@@ -13,6 +13,7 @@ using Android.OS;
 using Android.Gms.Maps.Model;
 using Android;
 using Java.Interop;
+using CapstoneModelLib.GeneratedCode;
 
 namespace PersonalShopperApp.Activities
 {
@@ -25,10 +26,21 @@ namespace PersonalShopperApp.Activities
         private MapFragment _mapFragment;
         private Marker _polarBearMarker;
         private GroundOverlay _polarBearOverlay;
+        CameraPosition cameraPosition;
         [Export("OnMapReady")]
         public void OnMapReady(GoogleMap map)
         {
             _map = map;
+            if (_map != null)
+            {
+                _map.MapType = GoogleMap.MapTypeNormal;
+                _map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(cameraPosition));
+            }
+        }
+
+        private void getLatLongFromAddress(Address address)
+        {
+            
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -36,7 +48,7 @@ namespace PersonalShopperApp.Activities
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.BaseMaps);
             // Create your application here
-            MapFragment _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
+            _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
             if (_mapFragment == null)
             {
                 GoogleMapOptions mapOptions = new GoogleMapOptions()
@@ -57,7 +69,7 @@ namespace PersonalShopperApp.Activities
             builder.Zoom(18);
             builder.Bearing(155);
             builder.Tilt(65);
-            CameraPosition cameraPosition = builder.Build();
+            cameraPosition = builder.Build();
 
 
             if (_map == null)

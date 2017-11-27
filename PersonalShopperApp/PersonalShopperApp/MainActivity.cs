@@ -8,6 +8,10 @@ using System.Collections.Generic;
 using Android.Content;
 using CapstoneModelLib.GeneratedCode;
 using PersonalShopperApp.Activities;
+using System.Net;
+using PayPal.Forms;
+using PayPal.Forms.Abstractions;
+using PayPal.Forms.Abstractions.Enum;
 //using Toast;
 
 namespace PersonalShopperApp
@@ -15,8 +19,8 @@ namespace PersonalShopperApp
     [Activity(Label = "PersonalShopperApp", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        //ssl secure https pulls
-        private User tempUser;
+
+        private User tempUser = new User(1, "jpriem",;
         private BaseDB db;
         private string creState;
         private string storeState;
@@ -24,7 +28,7 @@ namespace PersonalShopperApp
         private bool removeItemFromOrder = false;
         private int editItemPos;
         private double orderTotal;
-        //public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
+        public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
         public Address storeAddress;
         public Order order;
         UserActionsDB UADB;
@@ -35,6 +39,11 @@ namespace PersonalShopperApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, delv);
+            /*string url = "http:localhost/PersonalShopperApplicationConnector/API/values";
+            var request = HttpWebRequest.Create(url);
+            request.ContentType = "application/json";
+            request.Method = "GET";*/
             /*var geoUri = Android.Net.Uri.Parse("geo:42.37,-71.12");
             var mapIntent = new Intent(Intent.ActionView, geoUri);
             Intent i = new Intent(this, typeof(MapActivity));
@@ -47,12 +56,13 @@ namespace PersonalShopperApp
         [Export("SignIn")]
         public void SignIn(View view)
         {
-            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             EditText userName = (EditText)FindViewById(Resource.Id.Username);
             string un = userName.Text;
             EditText password = (EditText)FindViewById(Resource.Id.Password);
             string pass = password.Text;
-            User curUser = UADB.SignIn(un, pass).Result;
+            User curUser = null;
+            //User curUser = UADB.SignIn(un, pass).Result;
             if (curUser != null)
             {
                 SetContentView(Resource.Layout.Home);
@@ -72,7 +82,7 @@ namespace PersonalShopperApp
         [Export("CreateAccount")]
         public void CreateAccount(View view)
         {
-            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             SetContentView(Resource.Layout.CreateAccount1);
         }
         #endregion
@@ -111,7 +121,7 @@ namespace PersonalShopperApp
 
         #region createAccount
         [Export("CreateAccountNext")]
-        public void CreateAccountNext(View view)
+        public async void CreateAccountNext(View view)
         {
             EditText firstName = (EditText)FindViewById(Resource.Id.creFirstName);
             string fname = firstName.Text;
@@ -123,33 +133,32 @@ namespace PersonalShopperApp
             string pass1 = pass.Text;
             EditText conPass = (EditText)FindViewById(Resource.Id.creConPass);
             string pass2 = conPass.Text;
-            /*
-             * also check if userName is in use  
-             * then set variables to a global tempUser which will be cleared once the account is created
-             * also store the hashPassword
-             */
-            if (pass1.Equals(pass2))
+            if (await UADB.CheckIfUsernameUsedAsync(uname))
             {
-                byte[] passhash = UADB.Hash(pass1);
-                tempUser = new User(2, uname, passhash, fname, lname, null);
-                SetContentView(Resource.Layout.CreateAccount2);
-                Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
-               // Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
+                if (pass1.Equals(pass2))
+                {
+                    byte[] passhash = UADB.Hash(pass1);
+                    tempUser = new User(await UADB.GetCurUserIDAsync(), uname, passhash, fname, lname, null);
+                    SetContentView(Resource.Layout.CreateAccount2);
+                    Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
+                    //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
 
-                states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(creState_ItemSelected);
-                var adapter = ArrayAdapter.CreateFromResource(
+                    states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(creState_ItemSelected);
+                    var adapter = ArrayAdapter.CreateFromResource(
                         this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
 
-                adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                states.Adapter = adapter;
-
-
+                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                    states.Adapter = adapter;
+                }
+                else
+                {
+                    Toast.MakeText(this, "The passwords do not match please reenter them correctly \np1:[" + pass1 + "]\np2:[" + pass2 + "]", ToastLength.Short).Show();
+                }
             }
             else
             {
-
+                Toast.MakeText(this, "The user name is already taken please enter a new one", ToastLength.Short).Show();
             }
-            
         }
 
         [Export("FinishCreation")]
@@ -171,9 +180,13 @@ namespace PersonalShopperApp
              */
             if (!String.IsNullOrEmpty(streetAddress) && !String.IsNullOrEmpty(city) && !String.IsNullOrEmpty(zipcodest) && !String.IsNullOrEmpty(creState))
             {
+                int? apartme = null;
                 int apart;
-                Int32.TryParse(apartment, out apart);
-                int? apartme = apart;
+                if (!String.IsNullOrWhiteSpace(apartment))
+                { 
+                    Int32.TryParse(apartment, out apart);
+                    apartme = apart;
+                }
                 int zipcode;
                 if (Int32.TryParse(zipcodest, out zipcode)) {
                     Address address = new Address(streetAddress, city, creState, zipcode, apartme);
@@ -200,6 +213,8 @@ namespace PersonalShopperApp
         #endregion
 
         #region PlaceOrderLogic
+
+        
 
         [Export("AddItemPage")]
         public void AddItemPage(View view)
@@ -379,11 +394,31 @@ namespace PersonalShopperApp
             states.Adapter = adapter;
         }
 
-        [Export("ConfirmOrder")]
-        public void ConfrimOrder(View view)
+        private async System.Threading.Tasks.Task<PaymentResult> GetPaymentAsync()
         {
-
+            return await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
         }
+
+        [Export("ConfirmOrder")]
+        public async void ConfrimOrderAsync(View view)
+        {
+            PaymentResult result = await GetPaymentAsync();
+            if (result.Status == PayPalStatus.Cancelled)
+            {
+                Toast.MakeText(this, "Cancelled", ToastLength.Short).Show();
+            }
+            else if (result.Status == PayPalStatus.Error)
+            {
+                Toast.MakeText(this, result.ErrorMessage, ToastLength.Short).Show();
+            }
+            else if (result.Status == PayPalStatus.Successful)
+            {
+                Toast.MakeText(this, result.ServerResponse.Response.Id, ToastLength.Short).Show();
+            }
+        }
+
+        
+             
 
         [Export("FinishStoreAddress")]
         public void FinishStoreAddress(View view)

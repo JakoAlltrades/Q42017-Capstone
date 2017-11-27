@@ -3,6 +3,6 @@
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
     <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-    <SelectedDevice>Phone</SelectedDevice>
+    <SelectedDevice>ShopperAppTester</SelectedDevice>
   </PropertyGroup>
 </Project>

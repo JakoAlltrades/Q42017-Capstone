@@ -25,7 +25,7 @@
   <uses-feature android:name="android.hardware.camera" android:required="false" />
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
   <application android:allowBackup="true" android:label="@string/app_name" android:name="android.support.multidex.MultiDexApplication" android:debuggable="true">
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAteLiFs7i4ui1jqnPiDN0PzzG46cFcMK0" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCXOZ2nWcXMLJkovkrRTjPTD-BZVsLhR90" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <activity android:label="PersonalShopperApp" android:name="md534f16c521365d6b4706e64b8489cdfc6.MainActivity">
       <intent-filter>
