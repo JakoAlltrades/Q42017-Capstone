@@ -16,7 +16,7 @@ public class BaseDB
     public BaseDB(string dbAddress)
     {
         this.dbAddress = dbAddress;
-        //Connect(); Comment for now Will swich to mongoDB ASP .NET service for the application
+        Connect(); //Comment for now Will swich to mongoDB ASP .NET service for the application
     }
 
 	public string dbAddress

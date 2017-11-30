@@ -12,7 +12,6 @@ using System.Net;
 using PayPal.Forms;
 using PayPal.Forms.Abstractions;
 using PayPal.Forms.Abstractions.Enum;
-//using Toast;
 
 namespace PersonalShopperApp
 {
@@ -20,8 +19,8 @@ namespace PersonalShopperApp
     public class MainActivity : Activity
     {
 
-        private User tempUser = new User(1, "jpriem",;
-        private BaseDB db;
+        private User tempUser;
+        //private BaseDB db;
         private string creState;
         private string storeState;
         private List<OrderItem> curOrder;
@@ -39,7 +38,7 @@ namespace PersonalShopperApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, delv);
+            //Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, delv);
             /*string url = "http:localhost/PersonalShopperApplicationConnector/API/values";
             var request = HttpWebRequest.Create(url);
             request.ContentType = "application/json";
@@ -56,13 +55,12 @@ namespace PersonalShopperApp
         [Export("SignIn")]
         public void SignIn(View view)
         {
-            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             EditText userName = (EditText)FindViewById(Resource.Id.Username);
             string un = userName.Text;
             EditText password = (EditText)FindViewById(Resource.Id.Password);
             string pass = password.Text;
-            User curUser = null;
-            //User curUser = UADB.SignIn(un, pass).Result;
+            User curUser = UADB.SignIn(un, pass).Result;
             if (curUser != null)
             {
                 SetContentView(Resource.Layout.Home);
@@ -82,7 +80,7 @@ namespace PersonalShopperApp
         [Export("CreateAccount")]
         public void CreateAccount(View view)
         {
-            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             SetContentView(Resource.Layout.CreateAccount1);
         }
         #endregion
