@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="PersonalShopperApp.PersonalShopperApp" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="15" />
 	<!-- Google Maps for Android v2 requires OpenGL ES v2 -->
 	<uses-feature android:glEsVersion="0x00020000" android:required="true" />
 	<!-- We need to be able to download map tiles and access Google Play Services-->
@@ -11,6 +11,8 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<!-- Google Maps for Android v2 needs this permission so that it may check the connection state as it must download data -->
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<!-- Permission to receive remote notifications from Google Play Services -->
 	<!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
 	<uses-permission android:name="personalshopperapp.personalshopperapp.permission.MAPS_RECEIVE" />
@@ -18,6 +20,7 @@
 	<!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<application android:allowBackup="true" android:label="@string/app_name">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCXOZ2nWcXMLJkovkrRTjPTD-BZVsLhR90" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />

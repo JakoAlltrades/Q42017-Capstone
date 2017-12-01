@@ -3,49 +3,39 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
-      android:text="Edit Order Item"
-      android:textAppearance="?android:attr/textAppearanceLarge"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/textView1" />
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:id="@+id/space1" />
-  <EditText
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/EditItemName"
-      android:hint="Name of Item..." />
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:id="@+id/space1" />
-  <EditText
-      android:inputType="numberDecimal"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/EditItemMaxPrice"
-      android:hint="Max Price of Item..." />
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:id="@+id/space1" />
-  <EditText
-      android:inputType="number"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/EditItemAmmount"
-      android:hint="Amount of Item..." />
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:id="@+id/space1" />
-  <Button
-      android:text="Edit Item"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/EditItem"
-      android:onClick="EditItemToOrder" />
+    <TextView
+        android:text="Edit Order Item"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/space1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditItemName"
+        android:hint="Name of Item..." />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/space1" />
+    <EditText
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditItemMaxPrice"
+        android:hint="Max Price of Item..." />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/space1" />
+    <Button
+        android:text="Edit Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditItem"
+        android:onClick="EditItemToOrder" />
 </LinearLayout>

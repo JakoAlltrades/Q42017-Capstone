@@ -13,7 +13,7 @@ using Android.OS;
 using Android.Gms.Maps.Model;
 using Android;
 using Java.Interop;
-using CapstoneModelLib.GeneratedCode;
+using PersonalShopperApp.Models;
 
 namespace PersonalShopperApp.Activities
 {
@@ -21,11 +21,8 @@ namespace PersonalShopperApp.Activities
     public class MapActivity : Activity, IOnMapReadyCallback
     {
         private static readonly LatLng InMaui = new LatLng(20.72110, -156.44776);
-        private string _gotoMauiMarkerId;
         private GoogleMap _map;
         private MapFragment _mapFragment;
-        private Marker _polarBearMarker;
-        private GroundOverlay _polarBearOverlay;
         CameraPosition cameraPosition;
         [Export("OnMapReady")]
         public void OnMapReady(GoogleMap map)

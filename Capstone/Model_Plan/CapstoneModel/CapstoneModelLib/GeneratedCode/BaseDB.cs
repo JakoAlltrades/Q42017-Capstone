@@ -44,7 +44,6 @@ public class BaseDB
         //var connectionString = "mongodb://192.168.1.200:27017";
         //var client = new MongoClient(new MongoUrl("mongodb://127.0.0.1:27017"));
         client = new MongoClient(new MongoUrl(dbAddress));
-        client.Settings.ConnectTimeout = new TimeSpan(0, 1, 30);
         client.ListDatabases();
         var state = client.Cluster.Description.State;
         if(state.ToString() != "Connected")
