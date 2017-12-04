@@ -136,7 +136,7 @@ namespace PersonalShopperApp.Models
             return usernameUsed;
         }
 
-        public virtual bool CreateUser(User user)
+        public virtual async System.Threading.Tasks.Task<bool> CreateUserAsync(User user)
         {
             bool userCreated = false;
             if (!(CheckIfUsernameUsedAsync(user.Username).Result))
@@ -148,7 +148,7 @@ namespace PersonalShopperApp.Models
                 BsonSerializer.Serialize(documentWriter, typeof(User), user);
                 if (!doc.IsBsonNull)
                 {
-                    collection.InsertOneAsync(user);
+                    await collection.InsertOneAsync(user);
                     //check if new User/customer was inserted via linq
                     User pulledUser = collection.AsQueryable<User>().Where(x => x.userID == user.userID).Select(x => x).First();
                     //User pulledUser = BsonSerializer.Deserialize<User>(pulledDoc);

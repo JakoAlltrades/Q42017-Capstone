@@ -107,10 +107,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "PersonalShopperApp.dll" comes first in this list. */
 		"PersonalShopperApp.dll",
-		"CapstoneModelLib.dll",
 		"FormsViewGroup.dll",
-		"Google.Apis.Core.dll",
-		"Google.Apis.dll",
 		"MongoDB.Bson.dll",
 		"MongoDB.Driver.Core.dll",
 		"MongoDB.Driver.dll",
@@ -119,6 +116,8 @@ class MonoPackageManager_Resources {
 		"PayPal.Forms.dll",
 		"Square.OkHttp3.dll",
 		"Square.OkIO.dll",
+		"TK.CustomMap.Android.dll",
+		"TK.CustomMap.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",
@@ -139,17 +138,21 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
 		"Xamarin.Forms.Core.dll",
+		"Xamarin.Forms.Maps.Android.dll",
+		"Xamarin.Forms.Maps.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Basement.dll",
+		"Xamarin.GooglePlayServices.Location.dll",
 		"Xamarin.GooglePlayServices.Maps.dll",
+		"Xamarin.GooglePlayServices.Places.dll",
 		"Xamarin.GooglePlayServices.Tasks.dll",
 		"Xamarin.PayPal.Android.CardIO.dll",
 		"Xamarin.PayPal.Android.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_26";
+	public static final String ApiPackageName = null;
 }

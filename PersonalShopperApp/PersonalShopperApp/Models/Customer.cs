@@ -20,34 +20,6 @@ namespace PersonalShopperApp.Models
         {
         }
 
-        public virtual void CreateOrder()
-        {
-            
-        }
-
-        public virtual bool PlaceOrder(Order order)
-        {
-            /*
-             *  Returns wheather the order selected has been placed. Return false for now
-             */
-            return false;
-        }
-
-        public virtual void VerifyOrder()
-        {
-            /*
-             *  Method to verify if the order has been succesfully verified
-             */
-        }
-
-        public virtual bool becomeAShopper()
-        {
-            /*
-             *  adds the customer to the Shopper database and makes them a shopper
-             */
-            throw new System.NotImplementedException();
-        }
-
     }
 }
 

@@ -18,18 +18,11 @@ namespace PersonalShopperApp.Models
 {
     public class CustomerActionDB : BaseDB
     {
-        public CustomerActionDB(string dbAddress, User curUser) : base(dbAddress)
+        public CustomerActionDB(string dbAddress) : base(dbAddress)
         {
-            this.curUser = curUser;
         }
 
-        private User curUser
-        {
-            get;
-            set;
-        }
-
-        public virtual async System.Threading.Tasks.Task<List<Order>> GetPrevoisOrdersAsync()
+        public virtual async System.Threading.Tasks.Task<List<Order>> GetPrevoisOrdersAsync(Customer customer)
         {
             List<Order> ordersPlacedByCustomerID = new List<Order>();
             var database = client.GetDatabase("personalshopperdb");
@@ -42,7 +35,7 @@ namespace PersonalShopperApp.Models
                     foreach (BsonDocument document in batch)
                     {
                         Order temp = BsonSerializer.Deserialize<Order>(document);
-                        if (temp.customerID == curUser.userID)
+                        if (temp.customerID == customer.userID)
                         {
                             ordersPlacedByCustomerID.Add(temp);
                         }
@@ -68,18 +61,18 @@ namespace PersonalShopperApp.Models
             return orderPlaced;
         }
 
-        public virtual bool BecomeShopper()
+        public virtual async System.Threading.Tasks.Task<bool> BecomeShopperAsync(Customer customer)
         {
             bool hasBecomeAShopper = false;
             var database = client.GetDatabase("personalshopperdb");
             var collection = database.GetCollection<Shopper>("shoppers");
-            Shopper shopper = new Shopper(curUser.userID, curUser.Username, curUser.passHash, curUser.fName, curUser.lName, curUser.Address);
+            Shopper shopper = customer as Shopper;
             BsonDocument bsonShopper = new BsonDocument();
             BsonDocumentWriter writer = new BsonDocumentWriter(bsonShopper);
             BsonSerializer.Serialize<Shopper>(writer, shopper);
             if (!bsonShopper.IsBsonNull)
             {
-                collection.InsertOneAsync(shopper);
+                await collection.InsertOneAsync(shopper);
                 Shopper pulledShopper = collection.AsQueryable<Shopper>().Where(x => x.shopperID == shopper.shopperID).First();
                 if (pulledShopper.shopperID == shopper.shopperID)
                 {

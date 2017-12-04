@@ -13,6 +13,7 @@ using PayPal.Forms.Abstractions;
 using PayPal.Forms.Abstractions.Enum;
 using MongoDB.Bson.Serialization;
 using PersonalShopperApp.Models;
+using Newtonsoft.Json;
 
 namespace PersonalShopperApp
 {
@@ -24,7 +25,9 @@ namespace PersonalShopperApp
         private string creState;
         public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
         public Address storeAddress;
-        
+        User curUser;
+
+
         UserActionsDB UADB;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -33,6 +36,12 @@ namespace PersonalShopperApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            bool isConnected = UADB.Connect();
+            if(!isConnected)
+            {
+                throw new Exception("Failed To connect to DB");
+            }
             //Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, delv);
             /*string url = "http:localhost/PersonalShopperApplicationConnector/API/values";
             var request = HttpWebRequest.Create(url);
@@ -50,33 +59,28 @@ namespace PersonalShopperApp
         [Export("SignIn")]
         public void SignIn(View view)
         {
-            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+           
             EditText userName = (EditText)FindViewById(Resource.Id.Username);
             string un = userName.Text;
             EditText password = (EditText)FindViewById(Resource.Id.Password);
             string pass = password.Text;
-            //User curUser = UADB.SignIn(un, pass).Result;
-            //if (curUser != null)
-            //{
+            curUser = UADB.SignIn(un, pass).Result;
+            if (curUser != null)
+            {
                 Intent home = new Intent(this, typeof(HomeActivity));
-                home.PutExtra("curUser", curUser);
-                
+                string userJson = JsonConvert.SerializeObject(curUser);
+                home.PutExtra("curUser", userJson);
                 this.StartActivity(home);
-            //}
-            //else
-            //{
-                //Toast.Toast toast = new Toast.Toast();
-                //toast.Message = "Incorrect Username or Password!";
-                //toast.DurationToast = Toast.Toast.ToastDuration.Medium;
-                //toast.Show();
-                //Toast.MakeText(this, "Incorrect Username or Password!", ToastLength.Short).Show();
-            //}
+            }
+            else
+            {
+                Toast.MakeText(this, "Incorrect Username or Password!", ToastLength.Short).Show();
+            }
         }
 
         [Export("CreateAccount")]
         public void CreateAccount(View view)
         {
-            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             SetContentView(Resource.Layout.CreateAccount1);
         }
         #endregion
@@ -105,7 +109,7 @@ namespace PersonalShopperApp
                     Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
                     //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
 
-                    states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(creState_ItemSelected);
+                    states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(CreState_ItemSelected);
                     var adapter = ArrayAdapter.CreateFromResource(
                         this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
 
@@ -157,7 +161,8 @@ namespace PersonalShopperApp
                      */
                     Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
                     Intent home = new Intent(this, typeof(HomeActivity));
-                    home.PutExtra("curCustomer", newCustomer);
+                    string customerJson = JsonConvert.SerializeObject(newCustomer);
+                    home.PutExtra("curCustomer", customerJson);
                     TextView tv = FindViewById(Resource.Id.homeWelcome) as TextView;
                     tv.SetText("Welcome, " + newCustomer.Username.ToString() + "!", TextView.BufferType.Normal);
                     this.StartActivity(home);
@@ -166,13 +171,13 @@ namespace PersonalShopperApp
             
         }
 
-        private void creState_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void CreState_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
 
-            string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
+            //string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
             creState = spinner.GetItemAtPosition(e.Position).ToString();
-            Toast.MakeText(this, toast, ToastLength.Long).Show();
+            //Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
         #endregion
     }

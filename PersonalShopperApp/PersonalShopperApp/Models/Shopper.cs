@@ -38,12 +38,6 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        private Coordinate radiusCenter
-        {
-            get;
-            set;
-        }
-
         public virtual bool isAvailable
         {
             get;

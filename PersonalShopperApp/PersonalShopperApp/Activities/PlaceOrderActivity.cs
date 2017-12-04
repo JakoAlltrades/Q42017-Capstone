@@ -15,6 +15,7 @@ using PayPal.Forms.Abstractions;
 using PayPal.Forms.Abstractions.Enum;
 using PayPal.Forms;
 using Xamarin.Forms.Maps;
+using Xamarin.PayPal.Android;
 
 namespace PersonalShopperApp.Activities
 {
@@ -206,7 +207,7 @@ namespace PersonalShopperApp.Activities
         {
             SetContentView(Resource.Layout.SetStoreAddress);
             Spinner states = (Spinner)FindViewById(Resource.Id.storeStates);
-            states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(storeState_ItemSelected);
+            states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(StoreState_ItemSelected);
             var adapter = ArrayAdapter.CreateFromResource(
                     this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
 
@@ -214,29 +215,15 @@ namespace PersonalShopperApp.Activities
             states.Adapter = adapter;
         }
 
-        private async System.Threading.Tasks.Task<PaymentResult> GetPaymentAsync()
-        {
-            return await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
-        }
-
         [Export("ConfirmOrder")]
         public async void ConfrimOrderAsync(View view)
         {
-            Position delvPos = await curOrder.GetDeliveryPositionAsync();
-            Position storePos = await curOrder.GetStorePositionAsync();
-            /*PaymentResult result = await GetPaymentAsync();
-            if (result.Status == PayPalStatus.Cancelled)
-            {
-                Toast.MakeText(this, "Cancelled", ToastLength.Short).Show();
-            }
-            else if (result.Status == PayPalStatus.Error)
-            {
-                Toast.MakeText(this, result.ErrorMessage, ToastLength.Short).Show();
-            }
-            else if (result.Status == PayPalStatus.Successful)
-            {
-                Toast.MakeText(this, result.ServerResponse.Response.Id, ToastLength.Short).Show();
-            }*/
+            //Position delvPos = await curOrder.GetDeliveryPositionAsync();
+            //Position storePos = await curOrder.GetStorePositionAsync();
+            //PaymentResult result = await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
+            Models.PayPalManager ppm = new Models.PayPalManager(this);
+            await ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id);
+            
         }
 
 
@@ -287,13 +274,13 @@ namespace PersonalShopperApp.Activities
             }
         }
 
-        private void storeState_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void StoreState_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             Spinner spinner = (Spinner)sender;
 
-            string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
+            //string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
             storeState = spinner.GetItemAtPosition(e.Position).ToString();
-            Toast.MakeText(this, toast, ToastLength.Long).Show();
+            //Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
         #endregion
     }

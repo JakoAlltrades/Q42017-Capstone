@@ -15,7 +15,7 @@ using Android.Runtime;
 
 namespace PersonalShopperApp.Models
 {
-    public class User: IParcelable
+    public class User
     {
         public User(int ID, string userName, byte[] passHash, string fName, string lName, Address address)
         {
@@ -65,17 +65,7 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        public int DescribeContents()
-        {
-            throw new NotImplementedException();
-        }
-
         
-
-        public void WriteToParcel(Parcel dest, [GeneratedEnum] ParcelableWriteFlags flags)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 }
