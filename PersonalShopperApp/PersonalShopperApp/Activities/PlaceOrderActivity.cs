@@ -95,6 +95,7 @@ namespace PersonalShopperApp.Activities
                             Toast.MakeText(this, "Item Selected: " + e.Position, ToastLength.Short).Show();
                             SetContentView(Resource.Layout.EditOrderItem);
                             OrderItem item = curOrder.placedOrder[e.Position];
+                            curOrder.placedOrder.Remove(item);
                             EditText iName = (EditText)FindViewById(Resource.Id.EditItemName);
                             EditText iPrice = (EditText)FindViewById(Resource.Id.EditItemMaxPrice);
                             iName.Text = item.name;
@@ -140,7 +141,6 @@ namespace PersonalShopperApp.Activities
             {
                 SetContentView(Resource.Layout.PlaceOrder);
                 OrderItem oi = new OrderItem(itemName, price, 0.0);
-                curOrder.placedOrder.RemoveAt(editItemPos);
                 curOrder.placedOrder.Add(oi);
                 ListView orderItems = FindViewById(Resource.Id.orderedItems) as ListView;
                 List<String> order = new List<string>();
@@ -167,6 +167,7 @@ namespace PersonalShopperApp.Activities
                             Toast.MakeText(this, "Item Selected: " + e.Position, ToastLength.Short).Show();
                             SetContentView(Resource.Layout.EditOrderItem);
                             OrderItem item = curOrder.placedOrder[e.Position];
+                            curOrder.placedOrder.Remove(item);
                             EditText iName = (EditText)FindViewById(Resource.Id.EditItemName);
                             EditText iPrice = (EditText)FindViewById(Resource.Id.EditItemMaxPrice);
                             iName.Text = item.name;
@@ -222,7 +223,7 @@ namespace PersonalShopperApp.Activities
             //Position storePos = await curOrder.GetStorePositionAsync();
             //PaymentResult result = await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
             Models.PayPalManager ppm = new Models.PayPalManager(this);
-            await ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id);
+            ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id));
             
         }
 

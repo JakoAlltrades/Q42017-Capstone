@@ -21,14 +21,14 @@ namespace PersonalShopperApp
     public class MainActivity : Activity
     {
 
-        private User tempUser;
         private string creState;
         public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
         public Address storeAddress;
-        User curUser;
+
+        private User tempUser;
 
 
-        UserActionsDB UADB;
+        //UserActionsDB UADB;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,12 +36,13 @@ namespace PersonalShopperApp
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
-            bool isConnected = UADB.Connect();
-            if(!isConnected)
-            {
-                throw new Exception("Failed To connect to DB");
-            }
+            tempUser = new User(1, "Jpriem", new byte[24], "John", "Priem", delv);
+            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            //bool isConnected = UADB.Connect();
+            //if(!isconnected)
+            //{
+            //    throw new exception("failed to connect to db");
+            //}
             //Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, delv);
             /*string url = "http:localhost/PersonalShopperApplicationConnector/API/values";
             var request = HttpWebRequest.Create(url);
@@ -64,18 +65,18 @@ namespace PersonalShopperApp
             string un = userName.Text;
             EditText password = (EditText)FindViewById(Resource.Id.Password);
             string pass = password.Text;
-            curUser = UADB.SignIn(un, pass).Result;
-            if (curUser != null)
-            {
-                Intent home = new Intent(this, typeof(HomeActivity));
-                string userJson = JsonConvert.SerializeObject(curUser);
-                home.PutExtra("curUser", userJson);
-                this.StartActivity(home);
-            }
-            else
-            {
-                Toast.MakeText(this, "Incorrect Username or Password!", ToastLength.Short).Show();
-            }
+            //curUser = UADB.SignIn(un, pass).Result;
+            //if (curUser != null)
+            //{
+            Intent home = new Intent(this, typeof(HomeActivity));
+            string userJson = JsonConvert.SerializeObject(tempUser);
+            home.PutExtra("curUser", userJson);
+            this.StartActivity(home);
+            //}
+            //else
+            //{
+            //    Toast.MakeText(this, "Incorrect Username or Password!", ToastLength.Short).Show();
+            //}
         }
 
         [Export("CreateAccount")]
@@ -99,32 +100,32 @@ namespace PersonalShopperApp
             string pass1 = pass.Text;
             EditText conPass = (EditText)FindViewById(Resource.Id.creConPass);
             string pass2 = conPass.Text;
-            if (await UADB.CheckIfUsernameUsedAsync(uname))
-            {
-                if (pass1.Equals(pass2))
-                {
-                    byte[] passhash = UADB.Hash(pass1);
-                    tempUser = new User(await UADB.GetCurUserIDAsync(), uname, passhash, fname, lname, null);
-                    SetContentView(Resource.Layout.CreateAccount2);
-                    Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
-                    //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
+        //    if (await UADB.CheckIfUsernameUsedAsync(uname))
+        //    {
+        //        if (pass1.Equals(pass2))
+        //        {
+        //            byte[] passhash = UADB.Hash(pass1);
+        //            tempUser = new User(await UADB.GetCurUserIDAsync(), uname, passhash, fname, lname, null);
+        //            SetContentView(Resource.Layout.CreateAccount2);
+        //            Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
+        //            //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
 
-                    states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(CreState_ItemSelected);
-                    var adapter = ArrayAdapter.CreateFromResource(
-                        this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
+        //            states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(CreState_ItemSelected);
+        //            var adapter = ArrayAdapter.CreateFromResource(
+        //                this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
 
-                    adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                    states.Adapter = adapter;
-                }
-                else
-                {
-                    Toast.MakeText(this, "The passwords do not match please reenter them correctly \np1:[" + pass1 + "]\np2:[" + pass2 + "]", ToastLength.Short).Show();
-                }
-            }
-            else
-            {
-                Toast.MakeText(this, "The user name is already taken please enter a new one", ToastLength.Short).Show();
-            }
+        //            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+        //            states.Adapter = adapter;
+        //        }
+        //        else
+        //        {
+        //            Toast.MakeText(this, "The passwords do not match please reenter them correctly \np1:[" + pass1 + "]\np2:[" + pass2 + "]", ToastLength.Short).Show();
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Toast.MakeText(this, "The user name is already taken please enter a new one", ToastLength.Short).Show();
+        //    }
         }
 
         [Export("FinishCreation")]
@@ -156,9 +157,6 @@ namespace PersonalShopperApp
                 int zipcode;
                 if (Int32.TryParse(zipcodest, out zipcode)) {
                     Address address = new Address(streetAddress, city, creState, zipcode, apartme);
-                    /*
-                     * Change the customer class to take a user as a constructor
-                     */
                     Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
                     Intent home = new Intent(this, typeof(HomeActivity));
                     string customerJson = JsonConvert.SerializeObject(newCustomer);

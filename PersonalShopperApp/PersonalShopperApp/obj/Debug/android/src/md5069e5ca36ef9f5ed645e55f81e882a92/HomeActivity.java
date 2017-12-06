@@ -61,7 +61,7 @@ public class HomeActivity
 	private native void n_BecShopper (android.view.View p0);
 
 
-	public void prevDeliv (android.view.View p0)
+	public void PrevDeliv (android.view.View p0)
 	{
 		n_PrevDeliv (p0);
 	}

@@ -104,15 +104,3 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\X
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\dc663e480.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\dc663e48.proguard.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\0757626b0.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\0757626b.proguard.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\2f4d086a0.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\2f4d086a.proguard.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\ea5c07c40.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\ea5c07c4.proguard.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\effb23710.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\effb2371.proguard.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\proguard\d6da8fe40.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\d6da8fe4.proguard.stamp

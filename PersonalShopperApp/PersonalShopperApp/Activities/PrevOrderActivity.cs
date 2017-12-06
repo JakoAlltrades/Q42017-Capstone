@@ -18,7 +18,7 @@ namespace PersonalShopperApp.Activities
     public class PrevOrderActivity : Activity
     {
         private Customer curCustomer;
-        private CustomerActionDB CADB;
+        private CustomerActionsDB CADB;
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -28,7 +28,7 @@ namespace PersonalShopperApp.Activities
             if (Intent.HasExtra("customerDB"))
             {
                 var databaseSerialized = Intent.GetStringExtra("customerDB");
-                CADB = JsonConvert.DeserializeObject<CustomerActionDB>(databaseSerialized);
+                CADB = JsonConvert.DeserializeObject<CustomerActionsDB>(databaseSerialized);
             }
             if (Intent.HasExtra("curCustomer"))
             {

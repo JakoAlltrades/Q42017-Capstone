@@ -112,7 +112,6 @@ class MonoPackageManager_Resources {
 		"MongoDB.Driver.Core.dll",
 		"MongoDB.Driver.dll",
 		"Newtonsoft.Json.dll",
-		"PayPal.Forms.Abstractions.dll",
 		"PayPal.Forms.dll",
 		"Square.OkHttp3.dll",
 		"Square.OkIO.dll",
@@ -154,5 +153,5 @@ class MonoPackageManager_Resources {
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = null;
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_26";
 }

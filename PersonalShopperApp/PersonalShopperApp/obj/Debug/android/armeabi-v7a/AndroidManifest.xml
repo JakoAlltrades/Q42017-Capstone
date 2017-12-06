@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="PersonalShopperApp.PersonalShopperApp" android:versionCode="131073" android:versionName="1.0" android:installLocation="auto">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
+  <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <!-- We need to be able to download map tiles and access Google Play Services-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- Allow the application to access Google web-based services. -->
+  <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+  <!-- Google Maps for Android v2 will cache map tiles on external storage -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!-- Google Maps for Android v2 needs this permission so that it may check the connection state as it must download data -->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!-- Permission to receive remote notifications from Google Play Services -->
+  <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
+  <uses-permission android:name="personalshopperapp.personalshopperapp.permission.MAPS_RECEIVE" />
+  <permission android:name="personalshopperapp.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
+  <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+  <uses-feature android:name="android.hardware.camera" android:required="false" />
+  <application android:allowBackup="true" android:label="@string/app_name" android:debuggable="true" android:name="android.support.multidex.MultiDexApplication">
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCXOZ2nWcXMLJkovkrRTjPTD-BZVsLhR90" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:label="PersonalShopperApp" android:name="md534f16c521365d6b4706e64b8489cdfc6.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="HomeActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.HomeActivity" />
+    <activity android:label="MapActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.MapActivity" />
+    <activity android:label="PlaceOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PlaceOrderActivity" />
+    <activity android:label="PrevDeliveriesActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PrevDeliveriesActivity" />
+    <activity android:label="PrevOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PrevOrderActivity" />
+    <activity android:label="RecieveOrdersActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.RecieveOrdersActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PersonalShopperApp.PersonalShopperApp.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.PersonalShopperApp.PersonalShopperApp" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.arch.lifecycle.VERSION" android:value="27.0.0-SNAPSHOT" />
+    <meta-data android:name="android.support.VERSION" android:value="26.1.0" />
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+    <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+    <service android:name="com.paypal.android.sdk.payments.PayPalService" android:exported="false" />
+    <activity android:name="io.card.payment.CardIOActivity" android:configChanges="keyboardHidden|orientation" />
+    <activity android:name="io.card.payment.DataEntryActivity" />
+  </application>
+</manifest>

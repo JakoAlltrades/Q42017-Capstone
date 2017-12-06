@@ -4,7 +4,6 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\M
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.Core.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Newtonsoft.Json.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PayPal.Forms.Abstractions.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PayPal.Forms.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Square.OkHttp3.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Square.OkIO.dll
@@ -49,9 +48,11 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\M
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Mono.Android.Export.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Core.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.IO.Compression.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Net.Http.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Xml.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\mscorlib.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.ComponentModel.Composition.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Runtime.InteropServices.RuntimeInformation.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Security.SecureString.dll
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Numerics.dll
