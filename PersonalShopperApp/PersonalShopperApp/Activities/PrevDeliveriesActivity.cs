@@ -18,6 +18,7 @@ namespace PersonalShopperApp.Activities
     public class PrevDeliveriesActivity : Activity
     {
         ShopperActionsDB SADB;
+        Shopper curShopper;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,15 +30,15 @@ namespace PersonalShopperApp.Activities
                 var databaseSerialized = Intent.GetStringExtra("customerDB");
                 SADB = JsonConvert.DeserializeObject<ShopperActionsDB>(databaseSerialized);
             }
-            if (Intent.HasExtra("curCustomer"))
+            if (Intent.HasExtra("curShopper"))
             {
-                var customerSerialized = Intent.GetStringExtra("curCustomer");
-                curCustomer = JsonConvert.DeserializeObject<Customer>(customerSerialized);
+                var customerSerialized = Intent.GetStringExtra("curShopper");
+                curShopper = JsonConvert.DeserializeObject<Shopper>(customerSerialized);
             }
 
             ListView prevOrders = FindViewById<ListView>(Resource.Id.prevOrdersList);
 
-            List<Order> pastOrders = await CADB.GetPrevoisOrdersAsync(curCustomer);
+            List<Order> pastOrders = SADB.GetCompletedOrders(curShopper);
             List<string> pastOrderDates = pastOrders.Select(x => x._id).ToList<string>();
             prevOrders.SetAdapter(new ArrayAdapter(this, Android.Resource.Layout.SimpleExpandableListItem1, pastOrderDates));
 
