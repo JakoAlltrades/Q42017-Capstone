@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
     <TextView
         android:text="Become a Shopper"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -17,7 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/isShopper"
-        android:text="Become Shopper:: " />
+        android:text="Become Shopper:: "
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -26,5 +29,8 @@
         android:text="Recieve Orders"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/RecieveOrders" />
+        android:id="@+id/RecieveOrders"
+        android:background="#43C6FF"
+        android:textColor="#22637F"
+        android:onClick="RecieveOrder" />
 </LinearLayout>

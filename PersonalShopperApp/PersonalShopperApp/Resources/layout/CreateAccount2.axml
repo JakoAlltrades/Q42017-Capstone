@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
     <TextView
         android:text="Create Account (Address)"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -19,7 +21,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/creStreetAdd"
         android:hint="Street Address..."
-        android:tag="Street" />
+        android:tag="Street"
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -29,7 +34,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/creCity"
         android:hint="City..."
-        android:tag="City" />
+        android:tag="City"
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -39,7 +47,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/creZip"
-        android:hint="Zipcode..." />
+        android:hint="Zipcode..."
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -47,38 +58,31 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/creStates" />
+        android:id="@+id/creStates"
+        android:background="#43C6FF" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/creApt"
-        android:hint="Apartment number..." />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:id="@+id/space1" />
+        android:hint="Apartment number..."
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="54.5dp"
         android:id="@+id/space1" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <Button
+        android:text="Finish Creation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout1"
-        android:layout_marginBottom="0.0dp">
-        <Space
-            android:layout_width="135dp"
-            android:layout_height="match_parent"
-            android:id="@+id/space2" />
-        <Button
-            android:text="Finish Creation"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/button1"
-            android:onClick="FinishCreation" />
-    </LinearLayout>
+        android:layout_height="50dp"
+        android:id="@+id/button1"
+        android:onClick="FinishCreation"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
 </LinearLayout>

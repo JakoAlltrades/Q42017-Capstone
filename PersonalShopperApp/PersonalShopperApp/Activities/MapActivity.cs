@@ -44,6 +44,7 @@ namespace PersonalShopperApp.Activities
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.BaseMaps);
+            ActionBar.Hide();
             // Create your application here
             _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
             if (_mapFragment == null)
@@ -85,5 +86,11 @@ namespace PersonalShopperApp.Activities
 
         }
 
+        
+        [Export("ArrivedAtStore")]
+        public void ArrivedAtStore(View view)
+        {
+            SetContentView(Resource.Layout.AddOrderItem);
+        }
     }
 }

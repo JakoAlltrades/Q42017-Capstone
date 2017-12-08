@@ -205,12 +205,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\DeliverOrderActivity.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\MapActivity.cs" />
     <Compile Include="Activities\PlaceOrderActivity.cs" />
     <Compile Include="Activities\PrevDeliveriesActivity.cs" />
     <Compile Include="Activities\PrevOrderActivity.cs" />
     <Compile Include="Activities\RecieveOrdersActivity.cs" />
+    <Compile Include="Activities\ShopperFillOrderActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\BaseDB.cs" />
@@ -239,20 +241,39 @@
     </None>
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\AddOrderItem.axml" />
-    <AndroidResource Include="Resources\layout\BaseMaps.axml" />
+    <AndroidResource Include="Resources\layout\BaseMaps.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\BecomeAShopper.axml" />
     <AndroidResource Include="Resources\layout\Checkout.axml" />
-    <AndroidResource Include="Resources\layout\CreateAccount1.axml" />
-    <AndroidResource Include="Resources\layout\CreateAccount2.axml" />
-    <AndroidResource Include="Resources\layout\CustomerConfirmOrder.axml" />
+    <AndroidResource Include="Resources\layout\CreateAccount1.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CreateAccount2.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\EditOrderItem.axml" />
     <AndroidResource Include="Resources\layout\Home.axml" />
-    <AndroidResource Include="Resources\layout\PlaceOrder.axml" />
+    <AndroidResource Include="Resources\layout\PlaceOrder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\PreviousDeliveries.axml" />
     <AndroidResource Include="Resources\layout\PreviousOrders.axml" />
     <AndroidResource Include="Resources\layout\ReceiveOrder.axml" />
     <AndroidResource Include="Resources\layout\SetStoreAddress.axml" />
     <AndroidResource Include="Resources\layout\Settings.axml" />
+    <AndroidResource Include="Resources\layout\ShopperViewOrder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MissingItems.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\FoundItems.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\DeliverOrder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

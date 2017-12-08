@@ -22,8 +22,8 @@ namespace PersonalShopperApp.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Create your application here
+            ActionBar.Hide();
             SetContentView(Resource.Layout.PreviousDeliveries);
             if (Intent.HasExtra("customerDB"))
             {

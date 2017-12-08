@@ -33,9 +33,10 @@ namespace PersonalShopperApp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            base.ActionBar.Hide();
             tempUser = new User(1, "Jpriem", new byte[24], "John", "Priem", delv);
             //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             //bool isConnected = UADB.Connect();

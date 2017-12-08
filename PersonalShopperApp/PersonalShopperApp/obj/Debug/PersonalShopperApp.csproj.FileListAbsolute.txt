@@ -1,109 +1,3 @@
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.config
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp.apk
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp-Signed.apk
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.Abstractions.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkHttp3.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkIO.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Core.Common.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Runtime.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Annotations.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Compat.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.UI.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Design.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Fragment.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Transition.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v4.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.Palette.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.Android.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Base.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Location.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Places.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Tasks.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.CardIO.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.dll
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.pdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\bin\PersonalShopperApp.PersonalShopperApp.apk
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\addorderitem.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\basemaps.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\becomeashopper.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\checkout.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount1.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount2.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\customerconfirmorder.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\editorderitem.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\home.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\placeorder.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousdeliveries.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousorders.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\receiveorder.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\setstoreaddress.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\settings.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\values\strings.xml
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\R.cs.flag
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\uploadflags.txt
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShopperApp.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
@@ -212,3 +106,221 @@ D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShoppe
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.config
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp.apk
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp-Signed.apk
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.Abstractions.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkHttp3.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkIO.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Core.Common.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Annotations.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Compat.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Design.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Fragment.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Transition.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.Palette.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.Android.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Location.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Places.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Tasks.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.CardIO.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.dll
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.pdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\bin\PersonalShopperApp.PersonalShopperApp.apk
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\addorderitem.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\basemaps.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\becomeashopper.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\checkout.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount1.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount2.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\editorderitem.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\home.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\placeorder.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousdeliveries.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousorders.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\receiveorder.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\setstoreaddress.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\settings.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\shoppervieworder.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingitems.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\founditems.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\deliverorder.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\values\strings.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\R.cs.flag
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\uploadflags.txt
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShopperApp.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main1.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.config
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp.apk
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.PersonalShopperApp-Signed.apk
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.Abstractions.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PayPal.Forms.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkHttp3.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Square.OkIO.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Core.Common.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Annotations.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Compat.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.UI.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Design.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Fragment.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Transition.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.Palette.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.Android.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Location.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Maps.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Places.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.GooglePlayServices.Tasks.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.CardIO.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.PayPal.Android.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\FormsViewGroup.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Google.Apis.Core.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Bson.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\MongoDB.Driver.Core.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Newtonsoft.Json.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\TK.CustomMap.Android.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Core.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Maps.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.dll
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.pdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\bin\PersonalShopperApp.PersonalShopperApp.apk
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\addorderitem.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\basemaps.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\becomeashopper.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\checkout.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount1.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\createaccount2.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\editorderitem.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\home.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\placeorder.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousdeliveries.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\previousorders.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\receiveorder.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\setstoreaddress.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\settings.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\shoppervieworder.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingitems.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\founditems.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\deliverorder.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\values\strings.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\R.cs.flag
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\uploadflags.txt
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShopperApp.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb

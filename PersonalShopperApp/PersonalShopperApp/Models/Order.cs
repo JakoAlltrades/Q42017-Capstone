@@ -15,7 +15,7 @@ using Xamarin.Forms.Maps;
 
 namespace PersonalShopperApp.Models
 {
-    public class Order: ISerializable
+    public class Order
     {
         public Order()
         {
@@ -79,9 +79,7 @@ namespace PersonalShopperApp.Models
             get;
             set;
         }
-
-        public IntPtr Handle => throw new NotImplementedException();
-
+        
         public virtual bool FoundItem(OrderItem item)
         {
             bool itemFound = false;
@@ -157,11 +155,6 @@ namespace PersonalShopperApp.Models
                 actualTotal += item.actualPrice;
             }
             return actualTotal;
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
         }
     }
 }

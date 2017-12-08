@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
     <TextView
         android:text="Checkout"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -27,7 +29,8 @@
         android:text="Actual Cost:: [actCost]"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -36,7 +39,8 @@
         android:text="Estimated Cost:: [estCost]"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -45,7 +49,8 @@
         android:text="Difference in Costs:: [actCost] - [estCost]"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -54,5 +59,7 @@
         android:text="Finalize Purchase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/button1"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
 </LinearLayout>

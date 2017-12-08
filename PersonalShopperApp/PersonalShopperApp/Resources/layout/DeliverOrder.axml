@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
+    <TextView
+        android:text="Deliver Order"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Preview Found Items"
+            android:layout_width="158.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:onClick="PreFoundItems"
+            android:background="#43C6FF"
+            android:textColor="#22637F" />
+        <Space
+            android:layout_width="68dp"
+            android:layout_height="match_parent"
+            android:id="@+id/space2" />
+        <Button
+            android:text="Preview Missing Items"
+            android:layout_width="158.0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:onClick="PreMissItems"
+            android:background="#43C6FF"
+            android:textColor="#22637F" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space3" />
+    <TextView
+        android:text="Estimated Cost:: [EstCost]"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space2" />
+    <TextView
+        android:text="Actual Cost:: [ActCost]"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/space2" />
+    <Button
+        android:text="Confirm Delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="ConfirmDelivery"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
+</LinearLayout>

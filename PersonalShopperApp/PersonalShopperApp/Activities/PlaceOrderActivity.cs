@@ -34,8 +34,8 @@ namespace PersonalShopperApp.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.PlaceOrder);
+            ActionBar.Hide();
             // Create your application here
             curOrder = new Order();
             delv.ToString();

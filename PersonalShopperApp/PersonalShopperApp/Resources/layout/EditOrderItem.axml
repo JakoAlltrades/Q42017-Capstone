@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
     <TextView
         android:text="Edit Order Item"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView1" 
+        android:textColor="#22637F"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -17,7 +19,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/EditItemName"
-        android:hint="Name of Item..." />
+        android:hint="Name of Item..." 
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F"/>
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -27,7 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/EditItemMaxPrice"
-        android:hint="Max Price of Item..." />
+        android:hint="Max Price of Item..."
+        android:textColor="#486F7F"
+        android:background="#369FCC"
+        android:textColorHint="#486F7F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -37,5 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/EditItem"
-        android:onClick="EditItemToOrder" />
+        android:onClick="EditItemToOrder"
+        android:background="#43C6FF"
+        android:textColor="#22637F"/>
 </LinearLayout>

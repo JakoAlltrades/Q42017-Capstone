@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:background="#90DDFF">
     <TextView
         android:text="Welcome, [Username]!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/homeWelcome"
         android:textAlignment="center"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -21,7 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:onClick="PlaceOrder" />
+        android:onClick="PlaceOrder"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -31,7 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:onClick="PrevOrders" />
+        android:onClick="PrevOrders"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -41,7 +47,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:onClick="BecShopper" />
+        android:onClick="BecShopper"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -52,7 +60,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/button1"
         android:tag="Shopper"
-        android:onClick="PrevDeliv" />
+        android:onClick="PrevDeliv"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -62,5 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:onClick="SignOut" />
+        android:onClick="SignOut"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
 </LinearLayout>

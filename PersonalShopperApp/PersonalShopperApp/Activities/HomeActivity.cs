@@ -27,9 +27,9 @@ namespace PersonalShopperApp.Activities
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-
             SetContentView(Resource.Layout.Home);
+
+            base.ActionBar.Hide();
             //CADB = new CustomerActionDB("192.168.1.200");
             //SADB = new ShopperActionsDB("192.168.1.200");
             // Create your application here

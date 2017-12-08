@@ -35,12 +35,14 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <activity android:label="DeliverOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.DeliverOrderActivity" />
     <activity android:label="HomeActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.HomeActivity" />
     <activity android:label="MapActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.MapActivity" />
     <activity android:label="PlaceOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PlaceOrderActivity" />
     <activity android:label="PrevDeliveriesActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PrevDeliveriesActivity" />
     <activity android:label="PrevOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.PrevOrderActivity" />
     <activity android:label="RecieveOrdersActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.RecieveOrdersActivity" />
+    <activity android:label="ShopperFillOrderActivity" android:name="md5069e5ca36ef9f5ed645e55f81e882a92.ShopperFillOrderActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="PersonalShopperApp.PersonalShopperApp.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

@@ -22,9 +22,9 @@ namespace PersonalShopperApp.Activities
         protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
             // Create your application here
             SetContentView(Resource.Layout.PreviousOrders);
+            ActionBar.Hide();
             if (Intent.HasExtra("customerDB"))
             {
                 var databaseSerialized = Intent.GetStringExtra("customerDB");
