@@ -25,7 +25,7 @@ namespace PersonalShopperApp.Activities
 
 
         private Order curOrder = new Order();
-        public Address delv = new Address("350 s 1200 e", "Salt Lake City", "UT", 84102, 7);
+        public Address delv = new Address("350 s 600 e", "Salt Lake City", "UT", 84102, 406);
         public Address storeAddress;
         private bool removeItemFromOrder = false;
         private int editItemPos;
@@ -103,8 +103,7 @@ namespace PersonalShopperApp.Activities
                         }
                         else
                         {
-                            editItemPos = e.Position;
-                            curOrder.placedOrder.RemoveAt(editItemPos);
+                            curOrder.placedOrder.RemoveAt(e.Position);
                             order = new List<string>();
                             curOrder.EstimateCost();
                             foreach(OrderItem item in curOrder.placedOrder)
@@ -224,7 +223,7 @@ namespace PersonalShopperApp.Activities
             //PaymentResult result = await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
             Models.PayPalManager ppm = new Models.PayPalManager(this);
             ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id));
-            
+            Finish();
         }
 
 

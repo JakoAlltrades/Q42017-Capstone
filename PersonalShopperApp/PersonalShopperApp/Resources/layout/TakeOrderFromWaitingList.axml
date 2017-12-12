@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
+    <TextView
+        android:text="Take Order from Wait List"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:padding="10dp"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
+    <TextView
+        android:text="Estimated Cost: [estCost]"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/estCost"
+        android:padding="10dp"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
+    <TextView
+        android:text="Store Address: [strAddress]"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/storeAddressView"
+        android:padding="10dp"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
+    <TextView
+        android:text="Delivery Address: [delvAddress]"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delvAddressView"
+        android:padding="10dp"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
+    <Button
+        android:text="Accept Order"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/acceptOrder"
+        android:onClick="AcceptOrder"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/space1" />
+    <Button
+        android:text="Decline Order"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/DeclineOrder"
+        android:onClick="DeclineOrder"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
+</LinearLayout>

@@ -38,11 +38,13 @@ namespace PersonalShopperApp.Activities
                 var userSerialized = Intent.GetStringExtra("curUser");
                 curUser = JsonConvert.DeserializeObject<User>(userSerialized);
                 curCustomer = curUser as Customer;
+                curShopper = curUser as Shopper;
             }
             if(Intent.HasExtra("curCustomer"))
             {
                 var customerSerialized = Intent.GetStringExtra("curCustomer");
                 curCustomer = JsonConvert.DeserializeObject<Customer>(customerSerialized);
+                curUser = curCustomer as User;
             }
             if(Intent.HasExtra("curShopper"))
             {
@@ -117,6 +119,19 @@ namespace PersonalShopperApp.Activities
             this.StartActivity(signIn);
             Finish();
         }
+
+        [Export("RecieveOrder")]
+        public void RecieveOrder(View view)
+        {
+            Intent recieveOrders = new Intent(this, typeof(RecieveOrdersActivity));
+
+            string shopperJson = JsonConvert.SerializeObject(curShopper);
+            recieveOrders.PutExtra("curShopper", shopperJson);
+            //string shopperDB = JsonConvert.SerializeObject(SADB);
+            //recieveOrders.PutExtra("shopperDB", shopperDB);
+            this.StartActivity(recieveOrders);
+        }
+        
         #endregion
     }
 }

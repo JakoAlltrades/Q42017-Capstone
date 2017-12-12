@@ -176,7 +176,6 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Pl
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
@@ -205,6 +204,8 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\shopp
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingitems.xml
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\founditems.xml
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\deliverorder.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\takeorderfromwaitinglist.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main.xml
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\values\strings.xml
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\R.cs.flag
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\uploadflags.txt
@@ -214,7 +215,19 @@ D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\P
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main1.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\assignpricetoitem.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\viewmissing.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\viewfound.xml
+D:\My Documents\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingtofounditem.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.config
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.pdb
@@ -285,14 +298,6 @@ D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Pla
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
-D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.dll
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.pdb
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\bin\PersonalShopperApp.PersonalShopperApp.apk
@@ -314,6 +319,11 @@ D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\shoppe
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingitems.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\founditems.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\deliverorder.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\takeorderfromwaitinglist.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\assignpricetoitem.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\viewmissing.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\viewfound.xml
+D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\missingtofounditem.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\layout\main.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\res\values\strings.xml
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\R.cs.flag

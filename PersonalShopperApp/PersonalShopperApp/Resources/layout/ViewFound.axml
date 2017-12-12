@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90DDFF">
+    <TextView
+        android:text="Found Ordered Items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textColor="#22637F"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/space2" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/foundItemsList"
+        android:background="#43C6FF" />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/space2" />
+    <Button
+        android:text="Go back to order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backToOrder"
+        android:onClick="BackToOrder"
+        android:background="#43C6FF"
+        android:textColor="#22637F" />
+</LinearLayout>

@@ -37,7 +37,7 @@ namespace PersonalShopperApp
             SetContentView(Resource.Layout.Main);
 
             base.ActionBar.Hide();
-            tempUser = new User(1, "Jpriem", new byte[24], "John", "Priem", delv);
+            tempUser = new User(2, "Tpriem", new byte[24], "Tom", "Priem", delv);
             //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
             //bool isConnected = UADB.Connect();
             //if(!isconnected)
@@ -49,10 +49,9 @@ namespace PersonalShopperApp
             var request = HttpWebRequest.Create(url);
             request.ContentType = "application/json";
             request.Method = "GET";*/
-            /*var geoUri = Android.Net.Uri.Parse("geo:42.37,-71.12");
-            var mapIntent = new Intent(Intent.ActionView, geoUri);
-            Intent i = new Intent(this, typeof(MapActivity));
-            this.StartActivity(i);*/
+            
+            //Intent i = new Intent(this, typeof(MapActivity));
+            //this.StartActivity(i);
         }
 
 
@@ -103,25 +102,24 @@ namespace PersonalShopperApp
             string pass2 = conPass.Text;
         //    if (await UADB.CheckIfUsernameUsedAsync(uname))
         //    {
-        //        if (pass1.Equals(pass2))
-        //        {
+        if (pass1.Equals(pass2))
+        {
         //            byte[] passhash = UADB.Hash(pass1);
         //            tempUser = new User(await UADB.GetCurUserIDAsync(), uname, passhash, fname, lname, null);
-        //            SetContentView(Resource.Layout.CreateAccount2);
-        //            Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
-        //            //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
+            SetContentView(Resource.Layout.CreateAccount2);
+            Spinner states = (Spinner)FindViewById(Resource.Id.creStates);
 
-        //            states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(CreState_ItemSelected);
-        //            var adapter = ArrayAdapter.CreateFromResource(
-        //                this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
+            states.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(CreState_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(
+            this, Resource.Array.states_array, Android.Resource.Layout.SimpleSpinnerItem);
 
-        //            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-        //            states.Adapter = adapter;
-        //        }
-        //        else
-        //        {
-        //            Toast.MakeText(this, "The passwords do not match please reenter them correctly \np1:[" + pass1 + "]\np2:[" + pass2 + "]", ToastLength.Short).Show();
-        //        }
+                adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                states.Adapter = adapter;
+        }
+        else
+        {
+            Toast.MakeText(this, "The passwords do not match please reenter them correctly \np1:[" + pass1 + "]\np2:[" + pass2 + "]", ToastLength.Short).Show();
+        }
         //    }
         //    else
         //    {
@@ -174,9 +172,9 @@ namespace PersonalShopperApp
         {
             Spinner spinner = (Spinner)sender;
 
-            //string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
+            string toast = string.Format("The state is {0}", spinner.GetItemAtPosition(e.Position));
             creState = spinner.GetItemAtPosition(e.Position).ToString();
-            //Toast.MakeText(this, toast, ToastLength.Long).Show();
+            Toast.MakeText(this, toast, ToastLength.Long).Show();
         }
         #endregion
     }

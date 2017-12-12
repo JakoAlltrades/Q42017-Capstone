@@ -59,7 +59,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/creStates"
-        android:background="#43C6FF" />
+        android:background="#43C6FF"
+        />
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"

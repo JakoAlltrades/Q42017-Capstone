@@ -253,7 +253,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EditOrderItem.axml" />
-    <AndroidResource Include="Resources\layout\Home.axml" />
+    <AndroidResource Include="Resources\layout\Home.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\PlaceOrder.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -272,6 +274,21 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\DeliverOrder.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TakeOrderFromWaitingList.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AssignPriceToItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ViewMissing.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ViewFound.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MissingToFoundItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -20,6 +20,14 @@ namespace PersonalShopperApp.Models
         public Order()
         {
             placedOrder = new List<OrderItem>();
+            if(foundItems == null)
+            {
+                foundItems = new List<OrderItem>();
+            }
+            if (missingItems == null)
+            {
+                missingItems = new List<OrderItem>();
+            }
         }
 
         public string _id { get; set; } = DateTime.Now.ToString();
@@ -56,17 +64,17 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        private List<OrderItem> foundItems
+        public List<OrderItem> foundItems
         {
             get;
-            set;
-        } = new List<OrderItem>();
+            private set;
+        }
 
-        private List<OrderItem> missingItems
+        public List<OrderItem> missingItems
         {
             get;
-            set;
-        } = new List<OrderItem>();
+            private set;
+        }
 
         public virtual int orderID
         {
@@ -86,6 +94,7 @@ namespace PersonalShopperApp.Models
             if (item.actualPrice != 0.0)
             {
                 foundItems.Add(item);
+                placedOrder.Remove(item);
                 itemFound = true;
             }
             return itemFound;
@@ -94,6 +103,7 @@ namespace PersonalShopperApp.Models
         public virtual void MoveItemToMissing(OrderItem item)
         {
             missingItems.Add(item);
+            placedOrder.Remove(item);
         }
 
         public virtual void FoundMissingItem(OrderItem item)

@@ -14,6 +14,7 @@ using Android.Gms.Maps.Model;
 using Android;
 using Java.Interop;
 using PersonalShopperApp.Models;
+using Newtonsoft.Json;
 
 namespace PersonalShopperApp.Activities
 {
@@ -24,6 +25,7 @@ namespace PersonalShopperApp.Activities
         private GoogleMap _map;
         private MapFragment _mapFragment;
         CameraPosition cameraPosition;
+        Order curOrder;
         [Export("OnMapReady")]
         public void OnMapReady(GoogleMap map)
         {
@@ -35,16 +37,17 @@ namespace PersonalShopperApp.Activities
             }
         }
 
-        private void getLatLongFromAddress(Address address)
-        {
-            
-        }
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             SetContentView(Resource.Layout.BaseMaps);
             ActionBar.Hide();
+            if (Intent.HasExtra("curOrder"))
+            {
+                var customerSerialized = Intent.GetStringExtra("curOrder");
+                curOrder = JsonConvert.DeserializeObject<Order>(customerSerialized);
+            }
             // Create your application here
             _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
             if (_mapFragment == null)
@@ -90,7 +93,19 @@ namespace PersonalShopperApp.Activities
         [Export("ArrivedAtStore")]
         public void ArrivedAtStore(View view)
         {
-            SetContentView(Resource.Layout.AddOrderItem);
+            Intent atStore = new Intent(this, typeof(ShopperFillOrderActivity));
+            string orderJson = JsonConvert.SerializeObject(curOrder);
+            atStore.PutExtra("curOrder", orderJson);
+            StartActivity(atStore);
+        }
+
+        [Export("ArrivedAtDelivery")]
+        public void ArrivedAtDelivery(View view)
+        {
+            Intent atDelv = new Intent(this, typeof(DeliverOrderActivity));
+            string orderJson = JsonConvert.SerializeObject(curOrder);
+            atDelv.PutExtra("curOrder", orderJson);
+            StartActivity(atDelv);
         }
     }
 }
