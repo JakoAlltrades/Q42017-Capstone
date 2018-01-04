@@ -5,7 +5,7 @@ public class MapRenderer
 	extends md5b60ffeb829f638581ab2bb9b1a7f4f3f.ViewRenderer_2
 	implements
 		mono.android.IGCUserPeer,
-		com.google.android.gms.maps.GoogleMap.OnCameraChangeListener,
+		com.google.android.gms.maps.GoogleMap.OnCameraMoveListener,
 		com.google.android.gms.maps.OnMapReadyCallback
 {
 /** @hide */
@@ -13,7 +13,7 @@ public class MapRenderer
 	static {
 		__md_methods = 
 			"n_onLayout:(ZIIII)V:GetOnLayout_ZIIIIHandler\n" +
-			"n_onCameraChange:(Lcom/google/android/gms/maps/model/CameraPosition;)V:GetOnCameraChange_Lcom_google_android_gms_maps_model_CameraPosition_Handler:Android.Gms.Maps.GoogleMap/IOnCameraChangeListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
+			"n_onCameraMove:()V:GetOnCameraMoveHandler:Android.Gms.Maps.GoogleMap/IOnCameraMoveListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Maps.Android.MapRenderer, Xamarin.Forms.Maps.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null", MapRenderer.class, __md_methods);
@@ -52,12 +52,12 @@ public class MapRenderer
 	private native void n_onLayout (boolean p0, int p1, int p2, int p3, int p4);
 
 
-	public void onCameraChange (com.google.android.gms.maps.model.CameraPosition p0)
+	public void onCameraMove ()
 	{
-		n_onCameraChange (p0);
+		n_onCameraMove ();
 	}
 
-	private native void n_onCameraChange (com.google.android.gms.maps.model.CameraPosition p0);
+	private native void n_onCameraMove ();
 
 
 	public void onMapReady (com.google.android.gms.maps.GoogleMap p0)

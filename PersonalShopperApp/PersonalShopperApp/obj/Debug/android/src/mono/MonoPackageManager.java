@@ -115,8 +115,6 @@ class MonoPackageManager_Resources {
 		"PayPal.Forms.dll",
 		"Square.OkHttp3.dll",
 		"Square.OkIO.dll",
-		"TK.CustomMap.Android.dll",
-		"TK.CustomMap.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

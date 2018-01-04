@@ -23,9 +23,9 @@ namespace PersonalShopperApp.Models
             locationmanager = lm;
             Location l = locationmanager.GetLastKnownLocation(LocationManager.GpsProvider);
             Position curPosition = new Position(l.Latitude, l.Longitude);
-            TK.CustomMap.TKCustomMap kCustomMap = new TK.CustomMap.TKCustomMap(new MapSpan(curPosition, 20, 20));
+            //TK.CustomMap.TKCustomMap kCustomMap = new TK.CustomMap.TKCustomMap(new MapSpan(curPosition, 20, 20));
 
-            kCustomMap.MoveToRegion(MapSpan.FromCenterAndRadius(curPosition, Distance.FromMiles(1.0)));
+            //kCustomMap.MoveToRegion(MapSpan.FromCenterAndRadius(curPosition, Distance.FromMiles(1.0)));
         }
     }
 }

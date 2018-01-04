@@ -10,7 +10,6 @@ using PersonalShopperApp.Activities;
 using System.Net;
 using PayPal.Forms;
 using PayPal.Forms.Abstractions;
-using PayPal.Forms.Abstractions.Enum;
 using MongoDB.Bson.Serialization;
 using PersonalShopperApp.Models;
 using Newtonsoft.Json;
@@ -28,7 +27,7 @@ namespace PersonalShopperApp
         private User tempUser;
 
 
-        //UserActionsDB UADB;
+        UserActionsDB UADB;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,8 +37,8 @@ namespace PersonalShopperApp
 
             base.ActionBar.Hide();
             tempUser = new User(2, "Tpriem", new byte[24], "Tom", "Priem", delv);
-            //UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
-            //bool isConnected = UADB.Connect();
+            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            bool isConnected = UADB.Connect();
             //if(!isconnected)
             //{
             //    throw new exception("failed to connect to db");

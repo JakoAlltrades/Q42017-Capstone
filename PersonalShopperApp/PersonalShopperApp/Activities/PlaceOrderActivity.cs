@@ -12,7 +12,6 @@ using Android.Widget;
 using Java.Interop;
 using PersonalShopperApp.Models;
 using PayPal.Forms.Abstractions;
-using PayPal.Forms.Abstractions.Enum;
 using PayPal.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.PayPal.Android;
