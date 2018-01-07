@@ -15,117 +15,117 @@ namespace PersonalShopperApp.Models
 {
     public class ShopperActionsDB : BaseDB
     {
-        public ShopperActionsDB(string dbAddress) : base(dbAddress)
+        public ShopperActionsDB() : base()
         {
         }
         
         public async System.Threading.Tasks.Task<Boolean> CheckIfUserIsShopper(User user)
         {
             bool isShopper = false;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("shoppers");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
-            {
-                while (await cursor.MoveNextAsync())
-                {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    for (int j = 0; j < batch.Count() && !isShopper; j++)
-                    {
-                        Shopper temp = BsonSerializer.Deserialize<Shopper>(batch.ElementAt<BsonDocument>(j));
-                        //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
-                        if (temp.userID == user.userID)
-                        {
-                            isShopper = true;
-                        }
-                    }
-                }
-            }
+            //var database = client.GetDatabase("personalshopperdb");
+            //var collection = database.GetCollection<BsonDocument>("shoppers");
+            //using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            //{
+            //    while (await cursor.MoveNextAsync())
+            //    {
+            //        IEnumerable<BsonDocument> batch = cursor.Current;
+            //        for (int j = 0; j < batch.Count() && !isShopper; j++)
+            //        {
+            //            Shopper temp = BsonSerializer.Deserialize<Shopper>(batch.ElementAt<BsonDocument>(j));
+            //            //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
+            //            if (temp.userID == user.userID)
+            //            {
+            //                isShopper = true;
+            //            }
+            //        }
+            //    }
+            //}
             return isShopper;
         }
 
         public async System.Threading.Tasks.Task<Shopper> GetShopperFromUser(User user)
         {
             Shopper shopper = null;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("shoppers");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
-            {
-                while (await cursor.MoveNextAsync())
-                {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    for(int j =0; j < batch.Count() && shopper == null;j++ )
-                    {
-                        Shopper temp = BsonSerializer.Deserialize<Shopper>(batch.ElementAt<BsonDocument>(j));
-                        //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
-                        if (temp.userID >= user.userID)
-                        {
-                            shopper = temp;
-                        }
-                    }
-                }
-            }
+            //var database = client.GetDatabase("personalshopperdb");
+            //var collection = database.GetCollection<BsonDocument>("shoppers");
+            //using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            //{
+            //    while (await cursor.MoveNextAsync())
+            //    {
+            //        IEnumerable<BsonDocument> batch = cursor.Current;
+            //        for(int j =0; j < batch.Count() && shopper == null;j++ )
+            //        {
+            //            Shopper temp = BsonSerializer.Deserialize<Shopper>(batch.ElementAt<BsonDocument>(j));
+            //            //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
+            //            if (temp.userID >= user.userID)
+            //            {
+            //                shopper = temp;
+            //            }
+            //        }
+            //    }
+            //}
             return shopper;
         }
 
         public virtual async System.Threading.Tasks.Task<List<Order>> GetPlacedOrders()
         {
             List<Order> placedOrders = null;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("curPlacedOrders");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
-            {
-                while (await cursor.MoveNextAsync())
-                {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    foreach (BsonDocument document in batch)
-                    {
-                        Order temp = BsonSerializer.Deserialize<Order>(document);
-                        if (placedOrders == null)
-                        {
-                            placedOrders = new List<Order>();
-                        }
-                        placedOrders.Add(temp); 
-                    }
-                }
-            }
+            //var database = client.GetDatabase("personalshopperdb");
+            //var collection = database.GetCollection<BsonDocument>("curPlacedOrders");
+            //using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            //{
+            //    while (await cursor.MoveNextAsync())
+            //    {
+            //        IEnumerable<BsonDocument> batch = cursor.Current;
+            //        foreach (BsonDocument document in batch)
+            //        {
+            //            Order temp = BsonSerializer.Deserialize<Order>(document);
+            //            if (placedOrders == null)
+            //            {
+            //                placedOrders = new List<Order>();
+            //            }
+            //            placedOrders.Add(temp); 
+            //        }
+            //    }
+            //}
             return placedOrders;
         }
 
         public virtual List<Order> GetCompletedOrders(Shopper curShopper)
         {
             List<Order> completedOrders = null;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<Order>("completedOrders");
-            var pulledOrders = collection.AsQueryable<Order>().Where(x => x.shopperID == curShopper.userID).Select(x => x).AsEnumerable<Order>();
-            if(pulledOrders != null)
-            {
-                completedOrders = pulledOrders.ToList<Order>();
-            }
+            //var database = client.GetDatabase("personalshopperdb");
+            //var collection = database.GetCollection<Order>("completedOrders");
+            //var pulledOrders = collection.AsQueryable<Order>().Where(x => x.shopperID == curShopper.userID).Select(x => x).AsEnumerable<Order>();
+            //if(pulledOrders != null)
+            //{
+            //    completedOrders = pulledOrders.ToList<Order>();
+            //}
             return completedOrders;
         }
 
         public virtual async System.Threading.Tasks.Task<bool> TakeOrder(Order order)
         {
             bool orderTaken = false;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("curPlacedOrders");
+            //var database = client.GetDatabase("personalshopperdb");
+            //var collection = database.GetCollection<BsonDocument>("curPlacedOrders");
             
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
-            {
-                while (await cursor.MoveNextAsync())
-                {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    foreach (BsonDocument document in batch)
-                    {
-                        Order temp = BsonSerializer.Deserialize<Order>(document);
-                        if(temp.orderID == order.orderID)
-                        {
-                            await collection.DeleteOneAsync(x => x == document);
-                            orderTaken = true;
-                        }
-                    }
-                }
-            }
+            //using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            //{
+            //    while (await cursor.MoveNextAsync())
+            //    {
+            //        IEnumerable<BsonDocument> batch = cursor.Current;
+            //        foreach (BsonDocument document in batch)
+            //        {
+            //            Order temp = BsonSerializer.Deserialize<Order>(document);
+            //            if(temp.orderID == order.orderID)
+            //            {
+            //                await collection.DeleteOneAsync(x => x == document);
+            //                orderTaken = true;
+            //            }
+            //        }
+            //    }
+            //}
             return orderTaken;
         }
 

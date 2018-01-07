@@ -37,8 +37,9 @@ namespace PersonalShopperApp
 
             base.ActionBar.Hide();
             tempUser = new User(2, "Tpriem", new byte[24], "Tom", "Priem", delv);
-            UADB = new UserActionsDB("mongodb://192.168.1.200:27017");
+            UADB = new UserActionsDB();
             bool isConnected = UADB.Connect();
+            int curid = UADB.GetCurUserIDAsync();
             //if(!isconnected)
             //{
             //    throw new exception("failed to connect to db");

@@ -11,6 +11,8 @@ using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -19,7 +21,7 @@ namespace PersonalShopperApp.Models
 {
     public class UserActionsDB : BaseDB
     {
-        private int curUserID = 1;
+        private int curUserID;
         private byte[] passwordSalt =
         {
             90,152,15,166,227,113,149,89,123,90,28,129,147,99,79,214,
@@ -32,31 +34,58 @@ namespace PersonalShopperApp.Models
             116,54,192,217,5,20,40,33,76,97,254,108,181,160
         };
 
-        public UserActionsDB(string dbAddress) : base(dbAddress)
+        public UserActionsDB() : base()
         {
         }
 
-        public async System.Threading.Tasks.Task<int> GetCurUserIDAsync()
+        public int GetCurUserIDAsync()
         {
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("users");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            List<int> IDs = new List<int>();
+            int curID = 0;
+            try
             {
-                while (await cursor.MoveNextAsync())
+                connection.Open();
+                ConnectionState state = connection.State;
+                if (state == ConnectionState.Open)
                 {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    foreach (BsonDocument document in batch)
+                    if (connection.State == ConnectionState.Open)
                     {
-                        User temp = BsonSerializer.Deserialize<User>(document);
-                        //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
-                        if (temp.userID >= curUserID)
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append("SELECT userID ");
+                        sb.Append("FROM dbo.Users ");
+                        String sql = sb.ToString();
+
+                            using (SqlCommand command = new SqlCommand(sql, connection))
+                            {
+                                using (SqlDataReader reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        IDs.Add(reader.GetInt32(0));
+                                    }
+                                }
+                            }
+                        }
+                        else
                         {
-                            curUserID = temp.userID + 1;
+                            //error
+                        }
+                        
+                        for (int j = 0; j < IDs.Count; j++)
+                        {
+                            if (curID <= IDs.ElementAt(j))
+                            {
+                                curID = IDs.ElementAt(j) + 1;
+                            }
                         }
                     }
-                }
             }
-            return curUserID;
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            
+            return curID;
         }
 
         private User curUser
@@ -84,30 +113,42 @@ namespace PersonalShopperApp.Models
             return storedHash.SequenceEqual(passwordHash);
         }
 
-        public virtual async System.Threading.Tasks.Task<User> SignIn(String userName, string Password)
+        public virtual User SignIn(String userName, string Password)
         {
             User user = null;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("users");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            if (connection.State == ConnectionState.Open)
             {
-                while (await cursor.MoveNextAsync())
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT * ");
+                sb.Append("FROM dbo.Users ");
+                sb.Append("Where userName='" + userName + "'");
+                String sql = sb.ToString();
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    foreach (BsonDocument document in batch)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        User temp = BsonSerializer.Deserialize<User>(document);
-                        //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
-                        if (String.Equals(userName, temp.Username, StringComparison.CurrentCultureIgnoreCase))
+                        while (reader.Read())
                         {
-                            if (ConfirmPassword(Password, temp.passHash))
+                            int zipCode, apt;
+                            int? aptNum;
+                            Int32.TryParse(reader.GetString(8), out zipCode);
+                            if(!Int32.TryParse(reader.GetString(9), out apt))
                             {
-                                user = temp;
-                                curUser = user;
+                                aptNum = null;
                             }
+                            else
+                            {
+                                aptNum = apt;
+                            }
+                            user = new User(reader.GetInt32(0), reader.GetString(1), reader.GetSqlBytes(2).Value, reader.GetString(3), reader.GetString(4), new Address(reader.GetString(5), reader.GetString(6), reader.GetString(7), zipCode, aptNum));
                         }
                     }
                 }
+            }
+            else
+            {
+                //error
             }
             return user;
         }
@@ -115,23 +156,29 @@ namespace PersonalShopperApp.Models
         public async System.Threading.Tasks.Task<bool> CheckIfUsernameUsedAsync(string newUsername)
         {
             bool usernameUsed = false;
-            var database = client.GetDatabase("personalshopperdb");
-            var collection = database.GetCollection<BsonDocument>("users");
-            using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            List<string> userNames = new List<string>();
+            if (connection.State == ConnectionState.Open)
             {
-                while (await cursor.MoveNextAsync())
+                StringBuilder sb = new StringBuilder();
+                sb.Append("SELECT userName ");
+                sb.Append("FROM dbo.Users ");
+                sb.Append("Where userName='" + newUsername+"'");
+                String sql = sb.ToString();
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    IEnumerable<BsonDocument> batch = cursor.Current;
-                    foreach (BsonDocument document in batch)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        User temp = BsonSerializer.Deserialize<User>(document);
-                        //[ :]+((?=\[)\[[^]]*\]|(?=\{)\{[^\}]*\}|\"[^"]*\") regex for bson/json
-                        if (String.Equals(newUsername, temp.Username, StringComparison.CurrentCultureIgnoreCase))
+                        if (!reader.Read())
                         {
                             usernameUsed = true;
                         }
                     }
                 }
+            }
+            else
+            {
+                //error
             }
             return usernameUsed;
         }
@@ -141,24 +188,24 @@ namespace PersonalShopperApp.Models
             bool userCreated = false;
             if (!(CheckIfUsernameUsedAsync(user.Username).Result))
             {
-                var database = client.GetDatabase("personalshopperdb");
-                var collection = database.GetCollection<User>("users");
-                BsonDocument doc = new BsonDocument();
-                BsonDocumentWriter documentWriter = new BsonDocumentWriter(doc);
-                BsonSerializer.Serialize(documentWriter, typeof(User), user);
-                if (!doc.IsBsonNull)
-                {
-                    await collection.InsertOneAsync(user);
-                    //check if new User/customer was inserted via linq
-                    User pulledUser = collection.AsQueryable<User>().Where(x => x.userID == user.userID).Select(x => x).First();
-                    //User pulledUser = BsonSerializer.Deserialize<User>(pulledDoc);
-                    if (pulledUser.userID == user.userID)
-                    {
-                        userCreated = true;
-                        curUser = user;
-                    }
+            //    var database = client.GetDatabase("personalshopperdb");
+            //    var collection = database.GetCollection<User>("users");
+            //    BsonDocument doc = new BsonDocument();
+            //    BsonDocumentWriter documentWriter = new BsonDocumentWriter(doc);
+            //    BsonSerializer.Serialize(documentWriter, typeof(User), user);
+            //    if (!doc.IsBsonNull)
+            //    {
+            //        await collection.InsertOneAsync(user);
+            //        //check if new User/customer was inserted via linq
+            //        User pulledUser = collection.AsQueryable<User>().Where(x => x.userID == user.userID).Select(x => x).First();
+            //        //User pulledUser = BsonSerializer.Deserialize<User>(pulledDoc);
+            //        if (pulledUser.userID == user.userID)
+            //        {
+            //            userCreated = true;
+            //            curUser = user;
+            //        }
 
-                }
+            //    }
             }
             return userCreated;
         }
@@ -168,31 +215,31 @@ namespace PersonalShopperApp.Models
             bool userUpdated = false;
             if (user.userID == curUser.userID)
             {
-                var database = client.GetDatabase("personalshopperdb");
-                var collection = database.GetCollection<BsonDocument>("users");
-                BsonDocument bsonUser = new BsonDocument();
-                BsonDocumentWriter documentWriter = new BsonDocumentWriter(bsonUser);
-                BsonSerializer.Serialize(documentWriter, typeof(User), user);
-                if (!bsonUser.IsBsonNull)
-                {
-                    using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
-                    {
-                        while (await cursor.MoveNextAsync())
-                        {
-                            IEnumerable<BsonDocument> batch = cursor.Current;
-                            foreach (BsonDocument document in batch)
-                            {
-                                User temp = BsonSerializer.Deserialize<User>(document);
-                                if (temp.userID == curUser.userID)
-                                {
-                                    collection.UpdateOne<BsonDocument>(x => x == document, bsonUser);
-                                    userUpdated = true;
-                                }
-                            }
-                        }
-                    }
+            //    var database = client.GetDatabase("personalshopperdb");
+            //    var collection = database.GetCollection<BsonDocument>("users");
+            //    BsonDocument bsonUser = new BsonDocument();
+            //    BsonDocumentWriter documentWriter = new BsonDocumentWriter(bsonUser);
+            //    BsonSerializer.Serialize(documentWriter, typeof(User), user);
+            //    if (!bsonUser.IsBsonNull)
+            //    {
+            //        using (IAsyncCursor<BsonDocument> cursor = await collection.FindAsync(new BsonDocument()))
+            //        {
+            //            while (await cursor.MoveNextAsync())
+            //            {
+            //                IEnumerable<BsonDocument> batch = cursor.Current;
+            //                foreach (BsonDocument document in batch)
+            //                {
+            //                    User temp = BsonSerializer.Deserialize<User>(document);
+            //                    if (temp.userID == curUser.userID)
+            //                    {
+            //                        collection.UpdateOne<BsonDocument>(x => x == document, bsonUser);
+            //                        userUpdated = true;
+            //                    }
+            //                }
+            //            }
+            //        }
 
-                }
+            //    }
             }
             else
             {

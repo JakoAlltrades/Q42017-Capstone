@@ -1,8 +1,5 @@
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShopperApp.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\FormsViewGroup.dll
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Bson.dll
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.Core.dll
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Newtonsoft.Json.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PayPal.Forms.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Square.OkHttp3.dll

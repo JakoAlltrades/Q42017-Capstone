@@ -13,7 +13,7 @@ namespace PersonalShopperApp.Models
 {
     public class OrderActionsDB : BaseDB
     {
-        public OrderActionsDB(string dbAddress) : base(dbAddress)
+        public OrderActionsDB() : base()
         {
         }
 
