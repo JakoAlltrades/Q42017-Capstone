@@ -108,6 +108,9 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "PersonalShopperApp.dll" comes first in this list. */
 		"PersonalShopperApp.dll",
 		"FormsViewGroup.dll",
+		"MongoDB.Bson.dll",
+		"MongoDB.Driver.Core.dll",
+		"MongoDB.Driver.dll",
 		"Newtonsoft.Json.dll",
 		"PayPal.Forms.dll",
 		"Square.OkHttp3.dll",
