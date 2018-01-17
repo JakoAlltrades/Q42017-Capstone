@@ -8,6 +8,7 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,10 +17,14 @@ namespace PersonalShopperApp.Models
 {
     public class BaseDB
     {
-        public BaseDB(string dbAddress)
+        public BaseDB()
         {
-            this.dbAddress = dbAddress;
-            var cb = new SqlConnectionStringBuilder();
+            cb = new SqlConnectionStringBuilder();
+            cb.DataSource = "shopltft.database.windows.net";
+            cb.UserID = "JPriem";
+            cb.Password = "TeaganRory12!";
+            cb.InitialCatalog = "CapstoneDB";
+            connection = new SqlConnection(cb.ConnectionString);
             //Comment for now Will swich to mongoDB ASP .NET service for the application
         }
 
@@ -41,13 +46,14 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        public MongoClient client { get; private set; }
+        public SqlConnection connection { get; private set; }
+        public SqlConnectionStringBuilder cb { get; private set; }
 
         public bool Connect()
         {
             //var connectionString = "mongodb://192.168.1.200:27017";
             //var client = new MongoClient(new MongoUrl("mongodb://127.0.0.1:27017"));
-            //bool isConnected = false;
+            bool isConnected = false;
             //client = new MongoClient(new MongoUrl(dbAddress));
             //client.ListDatabases();
             //var state = client.Cluster.Description.State;
@@ -60,32 +66,13 @@ namespace PersonalShopperApp.Models
             try
             {
                 //Source = shopltft.database.windows.net; Initial Catalog = CapstoneDB; Persist Security Info = True; User ID = JPriem; Password = ***********
-                var cb = new SqlConnectionStringBuilder();
-                cb.DataSource = "shopltft.database.windows.net";
-                cb.UserID = "JPriem";
-                cb.Password = "TeaganRory12!";
-                cb.InitialCatalog = "CapstoneDB";
-
-                using (SqlConnection connection = new SqlConnection(cb.ConnectionString))
+                using (connection)
                 {
-                    Console.WriteLine("\nQuery data example:");
-                    Console.WriteLine("=========================================\n");
-
                     connection.Open();
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT * ");
-                    sb.Append("FROM dbo.Users ");
-                    String sql = sb.ToString();
-
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    ConnectionState state = connection.State;
+                    if(state == ConnectionState.Open)
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Console.WriteLine(reader.GetInt32(0));
-                            }
-                        }
+                        isConnected = true;
                     }
                 }
             }
@@ -93,10 +80,9 @@ namespace PersonalShopperApp.Models
             {
                 Console.WriteLine(e.ToString());
             }
-            Console.ReadLine();
-            return true;
+            return isConnected;
         }
-
+        
     }
 
 }
