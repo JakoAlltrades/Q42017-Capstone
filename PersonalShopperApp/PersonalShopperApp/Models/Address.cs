@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonalShopperApp.Models
 {
+    [Serializable]
     public class Address
     {
         public string StreetAddress { get; set; }

@@ -19,24 +19,22 @@ namespace PersonalShopperApp.Models
     {
         public Order()
         {
-            placedOrder = new List<OrderItem>();
-            if(foundItems == null)
-            {
-                foundItems = new List<OrderItem>();
-            }
-            if (missingItems == null)
-            {
-                missingItems = new List<OrderItem>();
-            }
+            Lists = new OrderLists();
+        }
+
+        public Order(int orderID, int customerID, int? shopperID, Address deliveryAddress, Address storeAddress, OrderLists lists)
+        {
+            this.orderID = orderID;
+            this.customerID = customerID;
+            this.shopperID = shopperID;
+            this.deliveryAddress = deliveryAddress;
+            this.storeAddress = storeAddress;
+            this.Lists = lists;
         }
 
         public string _id { get; set; } = DateTime.Now.ToString();
 
-        public List<OrderItem> placedOrder
-        {
-            get;
-            private set;
-        }
+       
 
         public int rating { get; set; }
 
@@ -46,7 +44,7 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        public virtual int shopperID
+        public virtual int? shopperID
         {
             get;
             set;
@@ -64,17 +62,13 @@ namespace PersonalShopperApp.Models
             set;
         }
 
-        public List<OrderItem> foundItems
-        {
-            get;
-            private set;
-        }
-
-        public List<OrderItem> missingItems
-        {
-            get;
-            private set;
-        }
+        /*
+         * Change these items to be a serialize orderLists
+         * 
+         * */
+        #region badLists
+        public OrderLists Lists { get; set; }
+        #endregion
 
         public virtual int orderID
         {
@@ -93,8 +87,8 @@ namespace PersonalShopperApp.Models
             bool itemFound = false;
             if (item.actualPrice != 0.0)
             {
-                foundItems.Add(item);
-                placedOrder.Remove(item);
+                Lists.foundItems.Add(item);
+                Lists.placedOrder.Remove(item);
                 itemFound = true;
             }
             return itemFound;
@@ -102,14 +96,14 @@ namespace PersonalShopperApp.Models
 
         public virtual void MoveItemToMissing(OrderItem item)
         {
-            missingItems.Add(item);
-            placedOrder.Remove(item);
+            Lists.missingItems.Add(item);
+            Lists.placedOrder.Remove(item);
         }
 
         public virtual void FoundMissingItem(OrderItem item)
         {
-            missingItems.Remove(item);
-            foundItems.Add(item);
+            Lists.missingItems.Remove(item);
+            Lists.foundItems.Add(item);
         }
 
         public virtual async System.Threading.Tasks.Task<Position> GetStorePositionAsync()
@@ -150,7 +144,7 @@ namespace PersonalShopperApp.Models
         {
             double EstimatedCost = 0;
             //throw new System.NotImplementedException();
-            foreach (OrderItem i in placedOrder)
+            foreach (OrderItem i in Lists.placedOrder)
             {
                 EstimatedCost += i.maxPrice;
             }
@@ -160,7 +154,7 @@ namespace PersonalShopperApp.Models
         public Double CalculateActualCost()
         {
             double actualTotal = 0;
-            foreach (OrderItem item in foundItems)
+            foreach (OrderItem item in Lists.foundItems)
             {
                 actualTotal += item.actualPrice;
             }

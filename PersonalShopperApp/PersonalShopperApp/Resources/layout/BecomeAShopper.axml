@@ -15,11 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/space1" />
-    <Switch
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/isShopper"
-        android:text="Become Shopper:: "
+        android:layout_height="40dp"
+        android:id="@+id/becomeShopper"
+        android:text="Become Shopper"
+        android:background="#43C6FF"
         android:textColor="#22637F" />
     <Space
         android:layout_width="match_parent"
@@ -31,6 +32,7 @@
         android:layout_height="40dp"
         android:id="@+id/RecieveOrders"
         android:background="#43C6FF"
-        android:textColor="#22637F"
-        android:onClick="RecieveOrder" />
+        android:textColor="#22637F" 
+        android:onClick="RecieveOrder"        
+/>
 </LinearLayout>

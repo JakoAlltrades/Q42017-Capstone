@@ -15,6 +15,11 @@ using PayPal.Forms.Abstractions;
 using PayPal.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.PayPal.Android;
+using System.Net.Http;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace PersonalShopperApp.Activities
 {
@@ -29,17 +34,28 @@ namespace PersonalShopperApp.Activities
         private bool removeItemFromOrder = false;
         private int editItemPos;
         private string storeState;
+        private Customer curCustomer;
+        private User curUser;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.PlaceOrder);
+            if (Intent.HasExtra("curCustomer"))
+            {
+                var customerSerialized = Intent.GetStringExtra("curCustomer");
+                curCustomer = JsonConvert.DeserializeObject<Customer>(customerSerialized);
+                curUser = curCustomer as User;
+            }
             ActionBar.Hide();
             // Create your application here
             curOrder = new Order();
+            curOrder.deliveryAddress = curUser.Address;
+            curOrder.customerID = curUser.userID;
             delv.ToString();
-            curOrder.deliveryAddress = delv;
-            
+            //curOrder.deliveryAddress;
+            Button confirmOrder = FindViewById<Button>(Resource.Id.confirmOrder);
+            confirmOrder.Click += ConfrimOrderAsync;
         }
 
        
@@ -63,13 +79,15 @@ namespace PersonalShopperApp.Activities
             if (!String.IsNullOrEmpty(itemName) && Double.TryParse(itemPriceString, out price))
             {
                 SetContentView(Resource.Layout.PlaceOrder);
+                Button confirmOrder = FindViewById<Button>(Resource.Id.confirmOrder);
+                confirmOrder.Click += ConfrimOrderAsync;
                 OrderItem oi = new OrderItem(itemName, price, 0.0);
-                curOrder.placedOrder.Add(oi);
+                curOrder.Lists.placedOrder.Add(oi);
                 ListView orderItems = FindViewById(Resource.Id.orderedItems) as ListView;
                 List<String> order = new List<string>();
-                for (int j = 0; j < curOrder.placedOrder.Count; j++)
+                for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
                 {
-                    order.Add(curOrder.placedOrder[j].name);
+                    order.Add(curOrder.Lists.placedOrder[j].name);
                     
                 }
                 if (orderItems != null)
@@ -93,8 +111,8 @@ namespace PersonalShopperApp.Activities
                         {
                             Toast.MakeText(this, "Item Selected: " + e.Position, ToastLength.Short).Show();
                             SetContentView(Resource.Layout.EditOrderItem);
-                            OrderItem item = curOrder.placedOrder[e.Position];
-                            curOrder.placedOrder.Remove(item);
+                            OrderItem item = curOrder.Lists.placedOrder[e.Position];
+                            curOrder.Lists.placedOrder.Remove(item);
                             EditText iName = (EditText)FindViewById(Resource.Id.EditItemName);
                             EditText iPrice = (EditText)FindViewById(Resource.Id.EditItemMaxPrice);
                             iName.Text = item.name;
@@ -102,10 +120,10 @@ namespace PersonalShopperApp.Activities
                         }
                         else
                         {
-                            curOrder.placedOrder.RemoveAt(e.Position);
+                            curOrder.Lists.placedOrder.RemoveAt(e.Position);
                             order = new List<string>();
                             curOrder.EstimateCost();
-                            foreach(OrderItem item in curOrder.placedOrder)
+                            foreach(OrderItem item in curOrder.Lists.placedOrder)
                             {
                                 order.Add(item.name);
                             }
@@ -138,13 +156,15 @@ namespace PersonalShopperApp.Activities
             if (!String.IsNullOrEmpty(itemName) && Double.TryParse(itemPriceString, out price))
             {
                 SetContentView(Resource.Layout.PlaceOrder);
+                Button confirmOrder = FindViewById<Button>(Resource.Id.confirmOrder);
+                confirmOrder.Click += ConfrimOrderAsync;
                 OrderItem oi = new OrderItem(itemName, price, 0.0);
-                curOrder.placedOrder.Add(oi);
+                curOrder.Lists.placedOrder.Add(oi);
                 ListView orderItems = FindViewById(Resource.Id.orderedItems) as ListView;
                 List<String> order = new List<string>();
-                for (int j = 0; j < curOrder.placedOrder.Count; j++)
+                for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
                 {
-                    order.Add(curOrder.placedOrder[j].name);
+                    order.Add(curOrder.Lists.placedOrder[j].name);
                 }
                 if (orderItems != null)
                 {
@@ -164,8 +184,8 @@ namespace PersonalShopperApp.Activities
                         {
                             Toast.MakeText(this, "Item Selected: " + e.Position, ToastLength.Short).Show();
                             SetContentView(Resource.Layout.EditOrderItem);
-                            OrderItem item = curOrder.placedOrder[e.Position];
-                            curOrder.placedOrder.Remove(item);
+                            OrderItem item = curOrder.Lists.placedOrder[e.Position];
+                            curOrder.Lists.placedOrder.Remove(item);
                             EditText iName = (EditText)FindViewById(Resource.Id.EditItemName);
                             EditText iPrice = (EditText)FindViewById(Resource.Id.EditItemMaxPrice);
                             iName.Text = item.name;
@@ -173,11 +193,11 @@ namespace PersonalShopperApp.Activities
                         }
                         else
                         {
-                            curOrder.placedOrder.RemoveAt(e.Position);
+                            curOrder.Lists.placedOrder.RemoveAt(e.Position);
                             order = new List<string>();
-                            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+                            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
                             {
-                                order.Add(curOrder.placedOrder[j].name);
+                                order.Add(curOrder.Lists.placedOrder[j].name);
                             }
                             orderItems.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, order));
                             estimatedCost = FindViewById(Resource.Id.EstimatedCost) as TextView;
@@ -213,16 +233,57 @@ namespace PersonalShopperApp.Activities
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             states.Adapter = adapter;
         }
-
-        [Export("ConfirmOrder")]
-        public async void ConfrimOrderAsync(View view)
+        
+        public async void ConfrimOrderAsync(object sender, EventArgs e)
         {
             //Position delvPos = await curOrder.GetDeliveryPositionAsync();
             //Position storePos = await curOrder.GetStorePositionAsync();
             //PaymentResult result = await CrossPayPalManager.Current.Buy(new PayPalItem("Test Product", new Decimal(.01), "USD"), new Decimal(0));
-            Models.PayPalManager ppm = new Models.PayPalManager(this);
-            ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id));
-            Finish();
+            if (curOrder.storeAddress != null)
+            {
+                byte[] storeAddress = null, deliveryAddress = null, Lists = null;
+                BinaryFormatter bf = new BinaryFormatter();
+                MemoryStream ms = new MemoryStream();
+                try
+                {
+                    /*
+                     * Make sure this is not null
+                     * */
+                    bf.Serialize(ms, curOrder.storeAddress);
+                    storeAddress = ms.ToArray();
+
+                    bf.Serialize(ms, curOrder.deliveryAddress);
+                    deliveryAddress = ms.ToArray();
+
+                    bf.Serialize(ms, curOrder.Lists);
+                    Lists = ms.ToArray();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                decimal estimateCost = Convert.ToDecimal(curOrder.EstimateCost()), actualCost = 0;
+                SQLOrder sOrder = new SQLOrder(curOrder.customerID, null, storeAddress, deliveryAddress, Lists, estimateCost, actualCost);
+                HttpClient client = new HttpClient();
+                string url = "https://azuresqlconnection20180123112406.azurewebsites.net/api/CurOrder/CreateOrder";
+                var uri = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage response;
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(sOrder);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                response = await client.PostAsync(uri, content);
+                if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+                {
+                    Models.PayPalManager ppm = new Models.PayPalManager(this);
+                    ppm.BuySomething(ppm.getThingToBuy(PayPalPayment.PaymentIntentSale, curOrder.EstimateCost(), curOrder._id));
+                    Finish();
+                }
+                else
+                {
+                    var errorMessage1 = response.Content.ReadAsStringAsync().Result;
+                    Toast.MakeText(this, errorMessage1, ToastLength.Long).Show();
+                }
+            }
         }
 
 
@@ -259,12 +320,15 @@ namespace PersonalShopperApp.Activities
                      */
                     //Customer newCustomer = new Customer(tempUser.userID, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
                     storeAddress = address;
+                    curOrder.storeAddress = storeAddress;
                     SetContentView(Resource.Layout.PlaceOrder);
+                    Button confirmOrder = FindViewById<Button>(Resource.Id.confirmOrder);
+                    confirmOrder.Click += ConfrimOrderAsync;
                     ListView orderItems = FindViewById(Resource.Id.orderedItems) as ListView;
                     List<String> order = new List<string>();
-                    for (int j = 0; j < curOrder.placedOrder.Count; j++)
+                    for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
                     {
-                        order.Add(curOrder.placedOrder[j].name);
+                        order.Add(curOrder.Lists.placedOrder[j].name);
                     }
                     orderItems.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, order));
                     TextView estimatedCost = FindViewById(Resource.Id.EstimatedCost) as TextView;

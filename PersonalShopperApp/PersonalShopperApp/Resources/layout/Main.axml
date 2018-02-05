@@ -60,9 +60,8 @@
             android:text="Sign-in"
             android:layout_width="158.0dp"
             android:layout_height="match_parent"
-            android:id="@+id/button1"
+            android:id="@+id/signIn"
             android:textSize="24dp"
-            android:onClick="SignIn"
             android:background="#43C6FF"
             android:textColor="#22637F" />
         <Space

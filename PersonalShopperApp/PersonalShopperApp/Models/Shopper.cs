@@ -15,9 +15,9 @@ namespace PersonalShopperApp.Models
 {
     public class Shopper : Customer
     {
-        public Shopper(int ID, string userName, byte[] passHash, string fName, string lName, Address address) : base(ID, userName, passHash, fName, lName, address)
+        public Shopper(int userID, int shopperID, string userName, byte[] passHash, string fName, string lName, Address address) : base(userID, userName, passHash, fName, lName, address)
         {
-            shopperID = ID;
+            this.shopperID = shopperID;
         }
 
         public int shopperID

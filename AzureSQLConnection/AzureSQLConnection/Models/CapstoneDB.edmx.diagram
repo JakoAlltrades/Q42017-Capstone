@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a27020c62ec94873aa42d551b043c37d" Name="Diagram1">
+        <EntityTypeShape EntityType="CapstoneDBModel.completedOrder" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneDBModel.curPlacedOrder" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneDBModel.Shopper" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="CapstoneDBModel.User" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="CapstoneDBModel.FK__completed__custo__2AD55B43" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneDBModel.FK__completed__shopp__2BC97F7C" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneDBModel.FK__curPlaced__custo__2610A626" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneDBModel.FK__curPlaced__shopp__2704CA5F" ManuallyRouted="false" />
+        <AssociationConnector Association="CapstoneDBModel.FK__Shoppers__userID__02C769E9" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

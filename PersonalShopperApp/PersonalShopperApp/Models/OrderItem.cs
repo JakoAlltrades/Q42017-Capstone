@@ -10,7 +10,8 @@ using System.Linq;
 using System.Text;
 
 namespace PersonalShopperApp.Models
-{
+{ 
+    [Serializable]
     public class OrderItem
     {
         public OrderItem(string name, double maxPrice, double actualPrice)

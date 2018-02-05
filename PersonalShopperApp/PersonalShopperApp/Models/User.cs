@@ -17,9 +17,9 @@ namespace PersonalShopperApp.Models
 {
     public class User
     {
-        public User(int ID, string userName, byte[] passHash, string fName, string lName, Address address)
+        public User(int userID, string userName, byte[] passHash, string fName, string lName, Address address)
         {
-            userID = ID;
+            this.userID = userID;
             Username = userName;
             this.passHash = passHash;
             this.fName = fName;

@@ -12,6 +12,10 @@ using Android.Widget;
 using PersonalShopperApp.Models;
 using Java.Interop;
 using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace PersonalShopperApp.Activities
 {
@@ -19,25 +23,61 @@ namespace PersonalShopperApp.Activities
     public class RecieveOrdersActivity : Activity
     {
         List<Order> curPlacedOrders = new List<Order>();
-        Order example = new Order();
         Shopper curShopper;
+        Order curOrder;
         //ShopperActionsDB SADB;
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected async override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             ActionBar.Hide();
             // Create your application here
             SetContentView(Resource.Layout.ReceiveOrder);
-            example.customerID = 1;
-            example.deliveryAddress = new Address("350 s 600 e", "Salt Lake City", "UT", 84102, 406);
-            example.orderID = 1;
-            example.shopperID = 2;
-            example.storeAddress = new Address("455 s 500 e", "Salt Lake City", "UT", 84102);
-            example.placedOrder.Add(new OrderItem("eggs", 1.99, 0));
-            example.placedOrder.Add(new OrderItem("1 lb. ground beef", 5.99, 0));
-            example.placedOrder.Add(new OrderItem("sausage", 4.99, 0));
-            curPlacedOrders.Add(example);
+            curOrder = null;
+            HttpClient client = new HttpClient();
+            var uri = new Uri(string.Format("https://azuresqlconnection20180123112406.azurewebsites.net/api/Shopper/GatherCurrentOrders"));
+            HttpResponseMessage response;
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            response = await client.GetAsync(uri);
+            var message = response.Content.ReadAsStringAsync().Result.Replace("\\", "");
+            var jsonList = JsonConvert.DeserializeObject<List<SQLOrder>>(message);
+            for(int j = 0; j < jsonList.Count; j++)
+            {
+                BinaryFormatter bf1 = new BinaryFormatter(), bf2 = new BinaryFormatter(), bf3 = new BinaryFormatter();
+                MemoryStream ms1, ms2, ms3;
+                OrderLists lists = null;
+                Address delAddress = null, storeAddress = null;
+                try
+                {
+                    ms1 = new MemoryStream(jsonList.ElementAt(j).deliveryAddress);
+                    delAddress = (Address)bf1.Deserialize(ms1);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                try
+                {
 
+                    ms2 = new MemoryStream(jsonList.ElementAt(j).storeAddress);
+                    storeAddress = (Address)bf2.Deserialize(ms2);
+
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+                try
+                {
+                    ms3 = new MemoryStream(jsonList.ElementAt(j).Lists);
+                    OrderLists listObject = (OrderLists)bf3.Deserialize(ms3);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                curPlacedOrders.Add(new Order(jsonList.ElementAt(j).orderID, jsonList.ElementAt(j).customerID, jsonList.ElementAt(j).shopperID, delAddress, storeAddress, lists));
+            }
             ListView curOrders = FindViewById(Resource.Id.waitingOrders) as ListView;
             List<String> orders = new List<string>();
             for (int j = 0; j < curPlacedOrders.Count; j++)
@@ -61,6 +101,7 @@ namespace PersonalShopperApp.Activities
                 TextView storeView = FindViewById<TextView>(Resource.Id.storeAddressView);
                 TextView delvView = FindViewById<TextView>(Resource.Id.delvAddressView);
                 Order curO = curPlacedOrders.ElementAt(e.Position);
+                curOrder = curO;
                 estCost.Text = "Estimated Cost: " + curO.EstimateCost();
                 storeView.Text = "Store Address: " + curO.storeAddress.ToString();
                 delvView.Text = "Delivery Address: " + curO.deliveryAddress.ToString();
@@ -73,7 +114,7 @@ namespace PersonalShopperApp.Activities
             //var geoUri = Android.Net.Uri.Parse("geo:42.37,-71.12");
             //var mapIntent = new Intent(Intent.ActionView, geoUri);
             Intent directions = new Intent(this, typeof(MapActivity));
-            string orderJson = JsonConvert.SerializeObject(example);
+            string orderJson = JsonConvert.SerializeObject(curOrder);
             directions.PutExtra("curOrder", orderJson);
             StartActivity(directions);
         }
@@ -82,15 +123,8 @@ namespace PersonalShopperApp.Activities
         public void DeclineOrder(View view)
         {
             SetContentView(Resource.Layout.ReceiveOrder);
-            example.customerID = 1;
-            example.deliveryAddress = new Address("350 s 600 e", "Salt Lake City", "UT", 84102, 406);
-            example.orderID = 1;
-            example.shopperID = 2;
-            example.storeAddress = new Address("455 s 500 e", "Salt Lake City", "UT", 84102);
-            example.placedOrder.Add(new OrderItem("eggs", 1.99, 0));
-            example.placedOrder.Add(new OrderItem("1 lb. ground beef", 5.99, 0));
-            example.placedOrder.Add(new OrderItem("sausage", 4.99, 0));
-            curPlacedOrders.Add(example);
+
+            curOrder = null;
 
             ListView curOrders = FindViewById(Resource.Id.waitingOrders) as ListView;
             List<String> orders = new List<string>();
@@ -109,12 +143,12 @@ namespace PersonalShopperApp.Activities
                 {
                     return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
                 }
-
                 SetContentView(Resource.Layout.TakeOrderFromWaitingList);
                 TextView estCost = FindViewById<TextView>(Resource.Id.estCost);
                 TextView storeView = FindViewById<TextView>(Resource.Id.storeAddressView);
                 TextView delvView = FindViewById<TextView>(Resource.Id.delvAddressView);
                 Order curO = curPlacedOrders.ElementAt(e.Position);
+                curOrder = curO;
                 estCost.Text = "Estimated Cost: " + curO.EstimateCost();
                 storeView.Text = "Store Address: " + curO.storeAddress.ToString();
                 delvView.Text = "Delivery Address: " + curO.deliveryAddress.ToString();

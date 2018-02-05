@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CapstoneDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="completedOrders">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customerID" Type="int" Nullable="false" />
+          <Property Name="shopperID" Type="int" Nullable="false" />
+          <Property Name="storeAddress" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="deliveryAddress" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="Lists" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="estimatedCost" Type="smallmoney" Nullable="false" />
+          <Property Name="actualCost" Type="smallmoney" Nullable="false" />
+          <Property Name="orderRating" Type="int" />
+        </EntityType>
+        <EntityType Name="curPlacedOrders">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customerID" Type="int" Nullable="false" />
+          <Property Name="shopperID" Type="int" />
+          <Property Name="storeAddress" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="deliveryAddress" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="Lists" Type="varbinary" MaxLength="8000" Nullable="false" />
+          <Property Name="estimatedCost" Type="smallmoney" Nullable="false" />
+          <Property Name="actualCost" Type="smallmoney" Nullable="false" />
+          <Property Name="orderRating" Type="int" />
+        </EntityType>
+        <EntityType Name="Shoppers">
+          <Key>
+            <PropertyRef Name="shopperID" />
+          </Key>
+          <Property Name="shopperID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="lastName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="passHash" Type="varbinary" MaxLength="8000" />
+          <Property Name="stAddress" Type="varbinary" MaxLength="8000" />
+        </EntityType>
+        <Association Name="FK__completed__custo__2AD55B43">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="completedOrders" Type="Self.completedOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="completedOrders">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__completed__shopp__2BC97F7C">
+          <End Role="Shoppers" Type="Self.Shoppers" Multiplicity="1" />
+          <End Role="completedOrders" Type="Self.completedOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shoppers">
+              <PropertyRef Name="shopperID" />
+            </Principal>
+            <Dependent Role="completedOrders">
+              <PropertyRef Name="shopperID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__curPlaced__custo__2610A626">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="curPlacedOrders" Type="Self.curPlacedOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="curPlacedOrders">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__curPlaced__shopp__2704CA5F">
+          <End Role="Shoppers" Type="Self.Shoppers" Multiplicity="0..1" />
+          <End Role="curPlacedOrders" Type="Self.curPlacedOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shoppers">
+              <PropertyRef Name="shopperID" />
+            </Principal>
+            <Dependent Role="curPlacedOrders">
+              <PropertyRef Name="shopperID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shoppers__userID__02C769E9">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Shoppers" Type="Self.Shoppers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="Shoppers">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CapstoneDBModelStoreContainer">
+          <EntitySet Name="completedOrders" EntityType="Self.completedOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="curPlacedOrders" EntityType="Self.curPlacedOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shoppers" EntityType="Self.Shoppers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__completed__custo__2AD55B43" Association="Self.FK__completed__custo__2AD55B43">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="completedOrders" EntitySet="completedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__completed__shopp__2BC97F7C" Association="Self.FK__completed__shopp__2BC97F7C">
+            <End Role="Shoppers" EntitySet="Shoppers" />
+            <End Role="completedOrders" EntitySet="completedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__curPlaced__custo__2610A626" Association="Self.FK__curPlaced__custo__2610A626">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="curPlacedOrders" EntitySet="curPlacedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__curPlaced__shopp__2704CA5F" Association="Self.FK__curPlaced__shopp__2704CA5F">
+            <End Role="Shoppers" EntitySet="Shoppers" />
+            <End Role="curPlacedOrders" EntitySet="curPlacedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shoppers__userID__02C769E9" Association="Self.FK__Shoppers__userID__02C769E9">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Shoppers" EntitySet="Shoppers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CapstoneDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="completedOrder">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customerID" Type="Int32" Nullable="false" />
+          <Property Name="shopperID" Type="Int32" Nullable="false" />
+          <Property Name="storeAddress" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="deliveryAddress" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="Lists" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="estimatedCost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="actualCost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="orderRating" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK__completed__custo__2AD55B43" FromRole="completedOrders" ToRole="Users" />
+          <NavigationProperty Name="Shopper" Relationship="Self.FK__completed__shopp__2BC97F7C" FromRole="completedOrders" ToRole="Shoppers" />
+        </EntityType>
+        <EntityType Name="curPlacedOrder">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customerID" Type="Int32" Nullable="false" />
+          <Property Name="shopperID" Type="Int32" />
+          <Property Name="storeAddress" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="deliveryAddress" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="Lists" Type="Binary" MaxLength="8000" FixedLength="false" Nullable="false" />
+          <Property Name="estimatedCost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="actualCost" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="orderRating" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="Self.FK__curPlaced__custo__2610A626" FromRole="curPlacedOrders" ToRole="Users" />
+          <NavigationProperty Name="Shopper" Relationship="Self.FK__curPlaced__shopp__2704CA5F" FromRole="curPlacedOrders" ToRole="Shoppers" />
+        </EntityType>
+        <EntityType Name="Shopper">
+          <Key>
+            <PropertyRef Name="shopperID" />
+          </Key>
+          <Property Name="shopperID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="completedOrders" Relationship="Self.FK__completed__shopp__2BC97F7C" FromRole="Shoppers" ToRole="completedOrders" />
+          <NavigationProperty Name="curPlacedOrders" Relationship="Self.FK__curPlaced__shopp__2704CA5F" FromRole="Shoppers" ToRole="curPlacedOrders" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Shoppers__userID__02C769E9" FromRole="Shoppers" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="userName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passHash" Type="Binary" MaxLength="8000" FixedLength="false" />
+          <Property Name="stAddress" Type="Binary" MaxLength="8000" FixedLength="false" />
+          <NavigationProperty Name="completedOrders" Relationship="Self.FK__completed__custo__2AD55B43" FromRole="Users" ToRole="completedOrders" />
+          <NavigationProperty Name="curPlacedOrders" Relationship="Self.FK__curPlaced__custo__2610A626" FromRole="Users" ToRole="curPlacedOrders" />
+          <NavigationProperty Name="Shoppers" Relationship="Self.FK__Shoppers__userID__02C769E9" FromRole="Users" ToRole="Shoppers" />
+        </EntityType>
+        <Association Name="FK__completed__custo__2AD55B43">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="completedOrders" Type="Self.completedOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="completedOrders">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__completed__shopp__2BC97F7C">
+          <End Role="Shoppers" Type="Self.Shopper" Multiplicity="1" />
+          <End Role="completedOrders" Type="Self.completedOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shoppers">
+              <PropertyRef Name="shopperID" />
+            </Principal>
+            <Dependent Role="completedOrders">
+              <PropertyRef Name="shopperID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__curPlaced__custo__2610A626">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="curPlacedOrders" Type="Self.curPlacedOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="curPlacedOrders">
+              <PropertyRef Name="customerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__curPlaced__shopp__2704CA5F">
+          <End Role="Shoppers" Type="Self.Shopper" Multiplicity="0..1" />
+          <End Role="curPlacedOrders" Type="Self.curPlacedOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Shoppers">
+              <PropertyRef Name="shopperID" />
+            </Principal>
+            <Dependent Role="curPlacedOrders">
+              <PropertyRef Name="shopperID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Shoppers__userID__02C769E9">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Shoppers" Type="Self.Shopper" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="Shoppers">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CapstoneDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="completedOrders" EntityType="Self.completedOrder" />
+          <EntitySet Name="curPlacedOrders" EntityType="Self.curPlacedOrder" />
+          <EntitySet Name="Shoppers" EntityType="Self.Shopper" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__completed__custo__2AD55B43" Association="Self.FK__completed__custo__2AD55B43">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="completedOrders" EntitySet="completedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__completed__shopp__2BC97F7C" Association="Self.FK__completed__shopp__2BC97F7C">
+            <End Role="Shoppers" EntitySet="Shoppers" />
+            <End Role="completedOrders" EntitySet="completedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__curPlaced__custo__2610A626" Association="Self.FK__curPlaced__custo__2610A626">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="curPlacedOrders" EntitySet="curPlacedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__curPlaced__shopp__2704CA5F" Association="Self.FK__curPlaced__shopp__2704CA5F">
+            <End Role="Shoppers" EntitySet="Shoppers" />
+            <End Role="curPlacedOrders" EntitySet="curPlacedOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Shoppers__userID__02C769E9" Association="Self.FK__Shoppers__userID__02C769E9">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Shoppers" EntitySet="Shoppers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CapstoneDBModelStoreContainer" CdmEntityContainer="CapstoneDBEntities">
+          <EntitySetMapping Name="completedOrders">
+            <EntityTypeMapping TypeName="CapstoneDBModel.completedOrder">
+              <MappingFragment StoreEntitySet="completedOrders">
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
+                <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+                <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+                <ScalarProperty Name="deliveryAddress" ColumnName="deliveryAddress" />
+                <ScalarProperty Name="Lists" ColumnName="Lists" />
+                <ScalarProperty Name="estimatedCost" ColumnName="estimatedCost" />
+                <ScalarProperty Name="actualCost" ColumnName="actualCost" />
+                <ScalarProperty Name="orderRating" ColumnName="orderRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="curPlacedOrders">
+            <EntityTypeMapping TypeName="CapstoneDBModel.curPlacedOrder">
+              <MappingFragment StoreEntitySet="curPlacedOrders">
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
+                <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+                <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+                <ScalarProperty Name="deliveryAddress" ColumnName="deliveryAddress" />
+                <ScalarProperty Name="Lists" ColumnName="Lists" />
+                <ScalarProperty Name="estimatedCost" ColumnName="estimatedCost" />
+                <ScalarProperty Name="actualCost" ColumnName="actualCost" />
+                <ScalarProperty Name="orderRating" ColumnName="orderRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shoppers">
+            <EntityTypeMapping TypeName="CapstoneDBModel.Shopper">
+              <MappingFragment StoreEntitySet="Shoppers">
+                <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="CapstoneDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="passHash" ColumnName="passHash" />
+                <ScalarProperty Name="stAddress" ColumnName="stAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

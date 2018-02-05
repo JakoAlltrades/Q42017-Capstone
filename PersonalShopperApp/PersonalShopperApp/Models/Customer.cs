@@ -16,7 +16,7 @@ namespace PersonalShopperApp.Models
 {
     public class Customer : User
     {
-        public Customer(int ID, string userName, byte[] passHash, string fName, string lName, Address address) : base(ID, userName, passHash, fName, lName, address)
+        public Customer(int userID, string userName, byte[] passHash, string fName, string lName, Address address) : base(userID, userName, passHash, fName, lName, address)
         {
         }
 

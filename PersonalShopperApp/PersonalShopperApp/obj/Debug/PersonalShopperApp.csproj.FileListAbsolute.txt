@@ -226,14 +226,6 @@ D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Pe
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\MyDocuments\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll.config
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.dll
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\PersonalShopperApp.pdb
@@ -305,6 +297,13 @@ D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Platform.Androi
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.pdb
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.xml
 D:\PersonalShopperApp\PersonalShopperApp\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Location.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Places.dll.stamp
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csproj.CoreCompileInputs.cache
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.pdb
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\bin\PersonalShopperApp.PersonalShopperApp.apk
@@ -341,3 +340,4 @@ D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShoppe
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\PersonalShopperApp.csprojResolveAssemblyReference.cache

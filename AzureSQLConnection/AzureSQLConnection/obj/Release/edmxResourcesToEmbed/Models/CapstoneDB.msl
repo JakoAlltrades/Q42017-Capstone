@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CapstoneDBModelStoreContainer" CdmEntityContainer="CapstoneDBEntities">
+    <EntitySetMapping Name="completedOrders">
+      <EntityTypeMapping TypeName="CapstoneDBModel.completedOrder">
+        <MappingFragment StoreEntitySet="completedOrders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+          <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+          <ScalarProperty Name="deliveryAddress" ColumnName="deliveryAddress" />
+          <ScalarProperty Name="Lists" ColumnName="Lists" />
+          <ScalarProperty Name="estimatedCost" ColumnName="estimatedCost" />
+          <ScalarProperty Name="actualCost" ColumnName="actualCost" />
+          <ScalarProperty Name="orderRating" ColumnName="orderRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="curPlacedOrders">
+      <EntityTypeMapping TypeName="CapstoneDBModel.curPlacedOrder">
+        <MappingFragment StoreEntitySet="curPlacedOrders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+          <ScalarProperty Name="storeAddress" ColumnName="storeAddress" />
+          <ScalarProperty Name="deliveryAddress" ColumnName="deliveryAddress" />
+          <ScalarProperty Name="Lists" ColumnName="Lists" />
+          <ScalarProperty Name="estimatedCost" ColumnName="estimatedCost" />
+          <ScalarProperty Name="actualCost" ColumnName="actualCost" />
+          <ScalarProperty Name="orderRating" ColumnName="orderRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shoppers">
+      <EntityTypeMapping TypeName="CapstoneDBModel.Shopper">
+        <MappingFragment StoreEntitySet="Shoppers">
+          <ScalarProperty Name="shopperID" ColumnName="shopperID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CapstoneDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="passHash" ColumnName="passHash" />
+          <ScalarProperty Name="stAddress" ColumnName="stAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -11,10 +11,7 @@ public class MainActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
-			"n_SignIn:(Landroid/view/View;)V:__export__\n" +
 			"n_CreateAccount:(Landroid/view/View;)V:__export__\n" +
-			"n_CreateAccountNext:(Landroid/view/View;)V:__export__\n" +
-			"n_FinishCreation:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("PersonalShopperApp.MainActivity, PersonalShopperApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MainActivity.class, __md_methods);
 	}
@@ -36,36 +33,12 @@ public class MainActivity
 	private native void n_onCreate (android.os.Bundle p0);
 
 
-	public void SignIn (android.view.View p0)
-	{
-		n_SignIn (p0);
-	}
-
-	private native void n_SignIn (android.view.View p0);
-
-
 	public void CreateAccount (android.view.View p0)
 	{
 		n_CreateAccount (p0);
 	}
 
 	private native void n_CreateAccount (android.view.View p0);
-
-
-	public void CreateAccountNext (android.view.View p0)
-	{
-		n_CreateAccountNext (p0);
-	}
-
-	private native void n_CreateAccountNext (android.view.View p0);
-
-
-	public void FinishCreation (android.view.View p0)
-	{
-		n_FinishCreation (p0);
-	}
-
-	private native void n_FinishCreation (android.view.View p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

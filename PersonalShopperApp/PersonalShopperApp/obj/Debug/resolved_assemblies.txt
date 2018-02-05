@@ -1,5 +1,8 @@
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PersonalShopperApp.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\FormsViewGroup.dll
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Bson.dll
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.Core.dll
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\MongoDB.Driver.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Newtonsoft.Json.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\PayPal.Forms.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\Square.OkHttp3.dll
@@ -45,10 +48,11 @@ D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Core.dl
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Data.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.IO.Compression.dll
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Net.dll
+D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Net.Http.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Xml.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\mscorlib.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.ComponentModel.Composition.dll
-D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Net.Http.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Numerics.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Xml.Linq.dll
 D:\PersonalShopperApp\PersonalShopperApp\obj\Debug\android\assets\System.Runtime.Serialization.dll

@@ -35,9 +35,9 @@ namespace PersonalShopperApp.Activities
 
             ListView curOrders = FindViewById(Resource.Id.shopperViewOrder) as ListView;
             List<String> orderedItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                orderedItems.Add(curOrder.placedOrder.ElementAt(j).name);
+                orderedItems.Add(curOrder.Lists.placedOrder.ElementAt(j).name);
             }
             curOrders.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, orderedItems));
             curOrders.ItemClick += (sender, e) =>
@@ -52,7 +52,7 @@ namespace PersonalShopperApp.Activities
 
                 SetContentView(Resource.Layout.AssignPriceToItem);
                 TextView itemNameView = FindViewById<TextView>(Resource.Id.ItemNameView);
-                curItem = curOrder.placedOrder.ElementAt(e.Position);
+                curItem = curOrder.Lists.placedOrder.ElementAt(e.Position);
                 itemNameView.Text = "Assign Price to " + curItem.name;
             };
         }
@@ -67,15 +67,14 @@ namespace PersonalShopperApp.Activities
             {
                 curItem.actualPrice = price;
             }
-            curOrder.placedOrder.Remove(temp);
-            curOrder.placedOrder.Add(curItem);
-            curOrder.FoundItem(curItem);
+            curOrder.Lists.placedOrder.Remove(temp);
+            curOrder.Lists.foundItems.Add(curItem);
             SetContentView(Resource.Layout.ShopperViewOrder);
             ListView curOrders = FindViewById(Resource.Id.shopperViewOrder) as ListView;
             List<String> orderedItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                orderedItems.Add(curOrder.placedOrder.ElementAt(j).name);
+                orderedItems.Add(curOrder.Lists.placedOrder.ElementAt(j).name);
             }
             curOrders.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, orderedItems));
             curOrders.ItemClick += (sender, e) =>
@@ -90,7 +89,7 @@ namespace PersonalShopperApp.Activities
 
                 SetContentView(Resource.Layout.AssignPriceToItem);
                 TextView itemNameView = FindViewById<TextView>(Resource.Id.ItemNameView);
-                curItem = curOrder.placedOrder.ElementAt(e.Position);
+                curItem = curOrder.Lists.placedOrder.ElementAt(e.Position);
                 itemNameView.Text = "Assign Price to " + curItem.name;
             };
         }
@@ -102,9 +101,9 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ShopperViewOrder);
             ListView curOrders = FindViewById(Resource.Id.shopperViewOrder) as ListView;
             List<String> orderedItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                orderedItems.Add(curOrder.placedOrder.ElementAt(j).name);
+                orderedItems.Add(curOrder.Lists.placedOrder.ElementAt(j).name);
             }
             curOrders.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, orderedItems));
             curOrders.ItemClick += (sender, e) =>
@@ -119,7 +118,7 @@ namespace PersonalShopperApp.Activities
 
                 SetContentView(Resource.Layout.AssignPriceToItem);
                 TextView itemNameView = FindViewById<TextView>(Resource.Id.ItemNameView);
-                curItem = curOrder.placedOrder.ElementAt(e.Position);
+                curItem = curOrder.Lists.placedOrder.ElementAt(e.Position);
                 itemNameView.Text = "Assign Price to " + curItem.name;
             };
         }
@@ -130,9 +129,9 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ViewFound);
             ListView lv = FindViewById<ListView>(Resource.Id.foundItemsList);
             List<String> foundItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                foundItems.Add(curOrder.foundItems.ElementAt(j).name);
+                foundItems.Add(curOrder.Lists.foundItems.ElementAt(j).name);
             }
             lv.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, foundItems));
         }
@@ -143,9 +142,9 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ViewMissing);
             ListView lv = FindViewById<ListView>(Resource.Id.missingItemsList);
             List<String> missingItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                missingItems.Add(curOrder.missingItems.ElementAt(j).name);
+                missingItems.Add(curOrder.Lists.missingItems.ElementAt(j).name);
             }
             lv.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, missingItems));
             lv.ItemClick += (sender, e) =>
@@ -160,7 +159,7 @@ namespace PersonalShopperApp.Activities
 
                 SetContentView(Resource.Layout.MissingToFoundItem);
                 TextView itemNameView = FindViewById<TextView>(Resource.Id.MissingItemNameView);
-                curItem = curOrder.placedOrder.ElementAt(e.Position);
+                curItem = curOrder.Lists.placedOrder.ElementAt(e.Position);
                 itemNameView.Text = "Missing to Found: " + curItem.name;
             };
         }
@@ -171,9 +170,9 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ShopperViewOrder);
             ListView curOrders = FindViewById(Resource.Id.shopperViewOrder) as ListView;
             List<String> orderedItems = new List<string>();
-            for (int j = 0; j < curOrder.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
             {
-                orderedItems.Add(curOrder.placedOrder.ElementAt(j).name);
+                orderedItems.Add(curOrder.Lists.placedOrder.ElementAt(j).name);
             }
             curOrders.SetAdapter(new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleExpandableListItem1, orderedItems));
             curOrders.ItemClick += (sender, e) =>
@@ -188,7 +187,7 @@ namespace PersonalShopperApp.Activities
 
                 SetContentView(Resource.Layout.AssignPriceToItem);
                 TextView itemNameView = FindViewById<TextView>(Resource.Id.ItemNameView);
-                curItem = curOrder.placedOrder.ElementAt(e.Position);
+                curItem = curOrder.Lists.placedOrder.ElementAt(e.Position);
                 itemNameView.Text = "Assign Price to " + curItem.name;
             };
         }
