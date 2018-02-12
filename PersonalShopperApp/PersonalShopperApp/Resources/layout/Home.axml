@@ -34,7 +34,7 @@
         android:text="Previous Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
+        android:id="@+id/prevOrder"
         android:onClick="PrevOrders"
         android:background="#43C6FF"
         android:textColor="#22637F" />
@@ -58,7 +58,7 @@
         android:text="Previous Deliveries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
+        android:id="@+id/prevDelv"
         android:tag="Shopper"
         android:onClick="PrevDeliv"
         android:background="#43C6FF"

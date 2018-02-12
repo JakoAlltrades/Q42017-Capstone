@@ -32,7 +32,5 @@
         android:layout_height="40dp"
         android:id="@+id/RecieveOrders"
         android:background="#43C6FF"
-        android:textColor="#22637F" 
-        android:onClick="RecieveOrder"        
-/>
+        android:textColor="#22637F" />
 </LinearLayout>

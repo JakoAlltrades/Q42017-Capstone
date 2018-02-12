@@ -18,6 +18,7 @@ namespace PersonalShopperApp.Activities
     [Activity(Label = "ShopperFillOrderActivity")]
     public class ShopperFillOrderActivity : Activity
     {
+        Shopper curShopper;
         Order curOrder;
         OrderItem curItem;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -32,7 +33,11 @@ namespace PersonalShopperApp.Activities
                 var customerSerialized = Intent.GetStringExtra("curOrder");
                 curOrder = JsonConvert.DeserializeObject<Order>(customerSerialized);
             }
-
+            if (Intent.HasExtra("curShopper"))
+            {
+                var customerSerialized = Intent.GetStringExtra("curShopper");
+                curShopper = JsonConvert.DeserializeObject<Shopper>(customerSerialized);
+            }
             ListView curOrders = FindViewById(Resource.Id.shopperViewOrder) as ListView;
             List<String> orderedItems = new List<string>();
             for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
@@ -129,7 +134,7 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ViewFound);
             ListView lv = FindViewById<ListView>(Resource.Id.foundItemsList);
             List<String> foundItems = new List<string>();
-            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.foundItems.Count; j++)
             {
                 foundItems.Add(curOrder.Lists.foundItems.ElementAt(j).name);
             }
@@ -142,7 +147,7 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.ViewMissing);
             ListView lv = FindViewById<ListView>(Resource.Id.missingItemsList);
             List<String> missingItems = new List<string>();
-            for (int j = 0; j < curOrder.Lists.placedOrder.Count; j++)
+            for (int j = 0; j < curOrder.Lists.missingItems.Count; j++)
             {
                 missingItems.Add(curOrder.Lists.missingItems.ElementAt(j).name);
             }
@@ -197,6 +202,8 @@ namespace PersonalShopperApp.Activities
             Intent directions = new Intent(this, typeof(MapActivity));
             string orderJson = JsonConvert.SerializeObject(curOrder);
             directions.PutExtra("curOrder", orderJson);
+            string shopperJson = JsonConvert.SerializeObject(curShopper);
+            directions.PutExtra("curShopper", shopperJson);
             StartActivity(directions);
         }
     }

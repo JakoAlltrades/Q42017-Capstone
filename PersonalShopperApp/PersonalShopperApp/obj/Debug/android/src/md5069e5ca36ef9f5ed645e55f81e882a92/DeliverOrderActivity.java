@@ -11,7 +11,9 @@ public class DeliverOrderActivity
 	static {
 		__md_methods = 
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
-			"n_ConfirmDelivery:(Landroid/view/View;)V:__export__\n" +
+			"n_PreviewFound:(Landroid/view/View;)V:__export__\n" +
+			"n_BackToOrder:(Landroid/view/View;)V:__export__\n" +
+			"n_PreviewMissing:(Landroid/view/View;)V:__export__\n" +
 			"";
 		mono.android.Runtime.register ("PersonalShopperApp.Activities.DeliverOrderActivity, PersonalShopperApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DeliverOrderActivity.class, __md_methods);
 	}
@@ -33,12 +35,28 @@ public class DeliverOrderActivity
 	private native void n_onCreate (android.os.Bundle p0);
 
 
-	public void ConfirmDelivery (android.view.View p0)
+	public void FoundItems (android.view.View p0)
 	{
-		n_ConfirmDelivery (p0);
+		n_PreviewFound (p0);
 	}
 
-	private native void n_ConfirmDelivery (android.view.View p0);
+	private native void n_PreviewFound (android.view.View p0);
+
+
+	public void BackToOrder (android.view.View p0)
+	{
+		n_BackToOrder (p0);
+	}
+
+	private native void n_BackToOrder (android.view.View p0);
+
+
+	public void MissingItems (android.view.View p0)
+	{
+		n_PreviewMissing (p0);
+	}
+
+	private native void n_PreviewMissing (android.view.View p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

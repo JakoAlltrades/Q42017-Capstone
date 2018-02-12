@@ -27,7 +27,7 @@
             android:layout_width="158.0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button1"
-            android:onClick="PreFoundItems"
+            android:onClick="FoundItems"
             android:background="#43C6FF"
             android:textColor="#22637F" />
         <Space
@@ -39,7 +39,7 @@
             android:layout_width="158.0dp"
             android:layout_height="wrap_content"
             android:id="@+id/button1"
-            android:onClick="PreMissItems"
+            android:onClick="MissingItems"
             android:background="#43C6FF"
             android:textColor="#22637F" />
     </LinearLayout>
@@ -62,8 +62,7 @@
         android:text="Confirm Delivery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:onClick="ConfirmDelivery"
+        android:id="@+id/confirmDelivery"
         android:background="#43C6FF"
         android:textColor="#22637F" />
 </LinearLayout>

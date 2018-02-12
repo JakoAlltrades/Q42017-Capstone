@@ -75,6 +75,10 @@ namespace PersonalShopperApp.Activities
             //}
             TextView tv = FindViewById(Resource.Id.homeWelcome) as TextView;
             tv.SetText("Welcome, " + curUser.Username + "!", TextView.BufferType.Normal);
+            Button prevDelv = FindViewById<Button>(Resource.Id.prevDelv);
+            prevDelv.Click += PrevDeliv;
+            Button prevOrder = FindViewById<Button>(Resource.Id.prevOrder);
+            prevOrder.Click += PrevOrders;
         }
 
         #region home
@@ -89,14 +93,12 @@ namespace PersonalShopperApp.Activities
             this.StartActivity(placeOrder);
         }
 
-        [Export("PrevOrders")]
-        public void PrevOrders(View view)
+        
+        public void PrevOrders(object sender, EventArgs e)
         {
             Intent prevOrders = new Intent(this, typeof(PrevOrderActivity));
             string customerJson = JsonConvert.SerializeObject(curCustomer);
             prevOrders.PutExtra("curCustomer", customerJson);
-            //string customerDB = JsonConvert.SerializeObject(CADB);
-            //prevOrders.PutExtra("customerDB", customerDB);
             this.StartActivity(prevOrders);
         }
 
@@ -106,6 +108,8 @@ namespace PersonalShopperApp.Activities
             SetContentView(Resource.Layout.BecomeAShopper);
             Button shopperButton = FindViewById<Button>(Resource.Id.becomeShopper);
             shopperButton.Click += MakeShopper;
+            Button recieveOrder = FindViewById<Button>(Resource.Id.RecieveOrders);
+            recieveOrder.Click += RecieveOrder;
         }
 
         public async void MakeShopper(object sender, EventArgs e)
@@ -146,17 +150,32 @@ namespace PersonalShopperApp.Activities
 
 
 
-        [Export("PrevDeliv")]
-        public void PrevDeliv(View view)
+        
+        public async void PrevDeliv(object sender, EventArgs e)
         {
-            if (curShopper != null)
+            HttpClient httpClient = new HttpClient();
+            var uri = new Uri("https://azuresqlconnection20180123112406.azurewebsites.net/api/Shopper/CheckIfShopper?userId=" + curUser.userID);
+            HttpResponseMessage response;
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            response = await httpClient.GetAsync(uri);
+            if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
             {
-                Intent prevDelvs = new Intent(this, typeof(PrevDeliveriesActivity));
-                string shopperJson = JsonConvert.SerializeObject(curShopper);
-                prevDelvs.PutExtra("curShopper", shopperJson);
-                //string shopperDB = JsonConvert.SerializeObject(SADB);
-                //prevDelvs.PutExtra("shopperDB", shopperDB);
-                this.StartActivity(prevDelvs);
+                var errorMessage1 = response.Content.ReadAsStringAsync().Result.Replace("\\", "").Trim(new char[1] {
+                    '"'
+                });
+                var jsonObject = JsonConvert.DeserializeObject<SQLShopper>(errorMessage1);
+                curShopper = new Shopper(jsonObject.userID, jsonObject.shopperID, jsonObject.User.userName, jsonObject.User.passHash, jsonObject.User.firstName, jsonObject.User.lastName, SQLSerializer.DeserializeAddress(jsonObject.User.stAddress));
+                if (curShopper != null)
+                {
+                    Intent prevDelvs = new Intent(this, typeof(PrevDeliveriesActivity));
+                    string shopperJson = JsonConvert.SerializeObject(curShopper);
+                    prevDelvs.PutExtra("curShopper", shopperJson);
+                    this.StartActivity(prevDelvs);
+                }
+            }
+            else
+            {
+                Toast.MakeText(this, "Error: UserId [" + curUser.userID + "] is not a shopper, add him to get previous deliveries", ToastLength.Short).Show();
             }
         }
 
@@ -167,19 +186,35 @@ namespace PersonalShopperApp.Activities
             this.StartActivity(signIn);
             Finish();
         }
-
-        [Export("RecieveOrder")]
-        public void RecieveOrder(View view)
+        
+        public async void RecieveOrder(object sender, EventArgs e)
         {
             Intent recieveOrders = new Intent(this, typeof(RecieveOrdersActivity));
-
-            string shopperJson = JsonConvert.SerializeObject(curShopper);
-            recieveOrders.PutExtra("curShopper", shopperJson);
-            //string shopperDB = JsonConvert.SerializeObject(SADB);
-            //recieveOrders.PutExtra("shopperDB", shopperDB);
-            string customerJson = Newtonsoft.Json.JsonConvert.SerializeObject(curCustomer);
-            recieveOrders.PutExtra("curCustomer", customerJson);
-            this.StartActivity(recieveOrders);
+            HttpClient httpClient = new HttpClient();
+            var uri = new Uri("https://azuresqlconnection20180123112406.azurewebsites.net/api/Shopper/CheckIfShopper?userId=" + curUser.userID);
+            HttpResponseMessage response;
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            response = await httpClient.GetAsync(uri);
+            if(response.StatusCode == System.Net.HttpStatusCode.Accepted)
+            {
+                var errorMessage1 = response.Content.ReadAsStringAsync().Result.Replace("\\", "").Trim(new char[1] {
+                    '"'
+                });
+                var jsonObject = JsonConvert.DeserializeObject<SQLShopper>(errorMessage1);
+                curShopper = new Shopper(jsonObject.userID, jsonObject.shopperID, jsonObject.User.userName, jsonObject.User.passHash, jsonObject.User.firstName, jsonObject.User.lastName, SQLSerializer.DeserializeAddress(jsonObject.User.stAddress));
+                string shopperJson = JsonConvert.SerializeObject(curShopper);
+                recieveOrders.PutExtra("curShopper", shopperJson);
+                //string shopperDB = JsonConvert.SerializeObject(SADB);
+                //recieveOrders.PutExtra("shopperDB", shopperDB);
+                string customerJson = Newtonsoft.Json.JsonConvert.SerializeObject(curCustomer);
+                recieveOrders.PutExtra("curCustomer", customerJson);
+                this.StartActivity(recieveOrders);
+            }
+            else
+            {
+                Toast.MakeText(this, "Error: UserId [" + curUser.userID + "] is not a shopper, add him to get orders", ToastLength.Short).Show();
+            }
+            
         }
         
         #endregion

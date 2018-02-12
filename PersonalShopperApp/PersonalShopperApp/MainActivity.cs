@@ -86,18 +86,7 @@ namespace PersonalShopperApp
                 var jsonObject = JsonConvert.DeserializeObject<SQLUser>(errorMessage1);
                 Address address = null;
                 var addressBytes = jsonObject.stAddress;
-                try
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    bf.Binder = new VersionConfigToNamespaceAssemblyObjectBinder();
-                    var ms = new MemoryStream();
-                    ms.Write(addressBytes, 0, addressBytes.Length);
-                    ms.Seek(0, SeekOrigin.Begin);
-                    address = (Address)bf.Deserialize(ms);
-                } catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
+                address = SQLSerializer.DeserializeAddress(addressBytes);
                 tempUser = new User(jsonObject.userID, jsonObject.userName, jsonObject.passHash, jsonObject.firstName, jsonObject.lastName, address);
                 Intent home = new Intent(this, typeof(HomeActivity));
                 string userJson = Newtonsoft.Json.JsonConvert.SerializeObject(tempUser);
@@ -228,15 +217,7 @@ namespace PersonalShopperApp
                     BinaryFormatter bf = new BinaryFormatter();
                     byte[] stAddress = null;
                     MemoryStream ms = new MemoryStream();
-                    try
-                    {
-                        bf.Serialize(ms, address);
-                        stAddress = ms.ToArray();
-                    }
-                    catch(Exception ex)
-                    {
-                        Console.Write(ex.ToString());
-                    }
+                    stAddress = SQLSerializer.SerializeAddress(address);
                     Customer newCustomer = new Customer(0, tempUser.Username, tempUser.passHash, tempUser.fName, tempUser.lName, address);
                     SQLUser sUser = new SQLUser(newCustomer.fName, newCustomer.lName, newCustomer.Username, newCustomer.passHash, stAddress);
                     HttpClient client = new HttpClient();

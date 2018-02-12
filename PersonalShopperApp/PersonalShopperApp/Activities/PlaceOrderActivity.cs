@@ -244,24 +244,9 @@ namespace PersonalShopperApp.Activities
                 byte[] storeAddress = null, deliveryAddress = null, Lists = null;
                 BinaryFormatter bf = new BinaryFormatter();
                 MemoryStream ms = new MemoryStream();
-                try
-                {
-                    /*
-                     * Make sure this is not null
-                     * */
-                    bf.Serialize(ms, curOrder.storeAddress);
-                    storeAddress = ms.ToArray();
-
-                    bf.Serialize(ms, curOrder.deliveryAddress);
-                    deliveryAddress = ms.ToArray();
-
-                    bf.Serialize(ms, curOrder.Lists);
-                    Lists = ms.ToArray();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                storeAddress = SQLSerializer.SerializeAddress(curOrder.storeAddress);
+                deliveryAddress = SQLSerializer.SerializeAddress(curOrder.deliveryAddress);
+                Lists = SQLSerializer.SerializeLists(curOrder.Lists);
                 decimal estimateCost = Convert.ToDecimal(curOrder.EstimateCost()), actualCost = 0;
                 SQLOrder sOrder = new SQLOrder(curOrder.customerID, null, storeAddress, deliveryAddress, Lists, estimateCost, actualCost);
                 HttpClient client = new HttpClient();

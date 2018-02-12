@@ -44,10 +44,12 @@ namespace AzureSQLConnection.Controllers
         [ActionName("DeleteOrder")]
         // POST: api/User/XAMARING 
         [HttpPost]
-        public HttpResponseMessage DeleteOrder(int orderID)
+        public HttpResponseMessage DeleteOrder(curPlacedOrder order)
         {
-            curPlacedOrder curOrder = db.curPlacedOrders.Where(x => x.orderID == orderID).FirstOrDefault();
-            db.curPlacedOrders.Remove(curOrder);
+            //order.shopperID = null;
+            int orderId = order.orderID;
+            order = db.curPlacedOrders.Where(x => x.orderID == orderId).First();
+            db.curPlacedOrders.Remove(order);
             db.SaveChanges();
             return Request.CreateResponse(HttpStatusCode.Accepted, "Order Erased");
         }

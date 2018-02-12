@@ -26,6 +26,7 @@ namespace PersonalShopperApp.Activities
         private MapFragment _mapFragment;
         CameraPosition cameraPosition;
         Order curOrder;
+        Shopper curShopper;
         [Export("OnMapReady")]
         public void OnMapReady(GoogleMap map)
         {
@@ -45,8 +46,13 @@ namespace PersonalShopperApp.Activities
             ActionBar.Hide();
             if (Intent.HasExtra("curOrder"))
             {
-                var customerSerialized = Intent.GetStringExtra("curOrder");
-                curOrder = JsonConvert.DeserializeObject<Order>(customerSerialized);
+                var orderSerialized = Intent.GetStringExtra("curOrder");
+                curOrder = JsonConvert.DeserializeObject<Order>(orderSerialized);
+            }
+            if(Intent.HasExtra("curShopper"))
+            {
+                var shopperSerialized = Intent.GetStringExtra("curShopper");
+                curShopper = JsonConvert.DeserializeObject<Shopper>(shopperSerialized);
             }
             // Create your application here
             _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
@@ -96,6 +102,8 @@ namespace PersonalShopperApp.Activities
             Intent atStore = new Intent(this, typeof(ShopperFillOrderActivity));
             string orderJson = JsonConvert.SerializeObject(curOrder);
             atStore.PutExtra("curOrder", orderJson);
+            string shopperJson = JsonConvert.SerializeObject(curShopper);
+            atStore.PutExtra("curShopper", shopperJson);
             StartActivity(atStore);
         }
 
@@ -105,6 +113,8 @@ namespace PersonalShopperApp.Activities
             Intent atDelv = new Intent(this, typeof(DeliverOrderActivity));
             string orderJson = JsonConvert.SerializeObject(curOrder);
             atDelv.PutExtra("curOrder", orderJson);
+            string shopperJson = JsonConvert.SerializeObject(curShopper);
+            atDelv.PutExtra("curShopper", shopperJson);
             StartActivity(atDelv);
         }
     }

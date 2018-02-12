@@ -31,8 +31,38 @@ namespace PersonalShopperApp.Activities
             base.OnCreate(savedInstanceState);
             ActionBar.Hide();
             // Create your application here
+            if (Intent.HasExtra("curShopper"))
+            {
+                var customerSerialized = Intent.GetStringExtra("curShopper");
+                curShopper = JsonConvert.DeserializeObject<Shopper>(customerSerialized);
+            }
             SetContentView(Resource.Layout.ReceiveOrder);
             curOrder = null;
+            #region singleGrab
+            //HttpClient client = new HttpClient();
+            //var uri = new Uri(string.Format("https://azuresqlconnection20180123112406.azurewebsites.net/api/curOrder/GrabOrder?orderID=17"));
+            //HttpResponseMessage response;
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            //OrderLists lists = null;
+            //Address delAddress = null, storeAddress = null;
+            //response = await client.GetAsync(uri);
+            //if (response.StatusCode == System.Net.HttpStatusCode.Accepted)
+            //{
+            //    var errorMessage1 = response.Content.ReadAsStringAsync().Result.Replace("\\", "").Trim(new char[1] {
+            //        '"'
+            //    });
+            //    var jsonObject = JsonConvert.DeserializeObject<SQLOrder>(errorMessage1);
+            //    delAddress = SQLSerializer.DeserializeAddress(jsonObject.deliveryAddress);
+            //    storeAddress = SQLSerializer.DeserializeAddress(jsonObject.storeAddress);
+            //    lists = SQLSerializer.DeserializeLists(jsonObject.Lists);
+                
+            //}
+            //else
+            //{
+
+            //}
+            #endregion
+            #region grab all
             HttpClient client = new HttpClient();
             var uri = new Uri(string.Format("https://azuresqlconnection20180123112406.azurewebsites.net/api/Shopper/GatherCurrentOrders"));
             HttpResponseMessage response;
@@ -40,44 +70,16 @@ namespace PersonalShopperApp.Activities
             response = await client.GetAsync(uri);
             var message = response.Content.ReadAsStringAsync().Result.Replace("\\", "");
             var jsonList = JsonConvert.DeserializeObject<List<SQLOrder>>(message);
-            for(int j = 0; j < jsonList.Count; j++)
+            for (int j = 0; j < jsonList.Count; j++)
             {
-                BinaryFormatter bf1 = new BinaryFormatter(), bf2 = new BinaryFormatter(), bf3 = new BinaryFormatter();
-                MemoryStream ms1, ms2, ms3;
                 OrderLists lists = null;
                 Address delAddress = null, storeAddress = null;
-                try
-                {
-                    ms1 = new MemoryStream(jsonList.ElementAt(j).deliveryAddress);
-                    delAddress = (Address)bf1.Deserialize(ms1);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                try
-                {
-
-                    ms2 = new MemoryStream(jsonList.ElementAt(j).storeAddress);
-                    storeAddress = (Address)bf2.Deserialize(ms2);
-
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
-                try
-                {
-                    ms3 = new MemoryStream(jsonList.ElementAt(j).Lists);
-                    OrderLists listObject = (OrderLists)bf3.Deserialize(ms3);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
+                delAddress = SQLSerializer.DeserializeAddress(jsonList.ElementAt(j).deliveryAddress);
+                storeAddress = SQLSerializer.DeserializeAddress(jsonList.ElementAt(j).storeAddress);
+                lists = SQLSerializer.DeserializeLists(jsonList.ElementAt(j).Lists);
                 curPlacedOrders.Add(new Order(jsonList.ElementAt(j).orderID, jsonList.ElementAt(j).customerID, jsonList.ElementAt(j).shopperID, delAddress, storeAddress, lists));
             }
+            #endregion
             ListView curOrders = FindViewById(Resource.Id.waitingOrders) as ListView;
             List<String> orders = new List<string>();
             for (int j = 0; j < curPlacedOrders.Count; j++)
@@ -111,9 +113,12 @@ namespace PersonalShopperApp.Activities
         [Export("AcceptOrder")]
         public void AcceptOrder(View view)
         {
+            curOrder.shopperID = curShopper.shopperID;
             //var geoUri = Android.Net.Uri.Parse("geo:42.37,-71.12");
             //var mapIntent = new Intent(Intent.ActionView, geoUri);
             Intent directions = new Intent(this, typeof(MapActivity));
+            string shopper = JsonConvert.SerializeObject(curShopper);
+            directions.PutExtra("curShopper", shopper);
             string orderJson = JsonConvert.SerializeObject(curOrder);
             directions.PutExtra("curOrder", orderJson);
             StartActivity(directions);

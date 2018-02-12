@@ -231,6 +231,7 @@
     <Compile Include="Models\Shopper.cs" />
     <Compile Include="Models\ShopperActionsDB.cs" />
     <Compile Include="Models\SQLOrder.cs" />
+    <Compile Include="Models\SQLSerializer.cs" />
     <Compile Include="Models\SQLShopper.cs" />
     <Compile Include="Models\SQLUser.cs" />
     <Compile Include="Models\User.cs" />
